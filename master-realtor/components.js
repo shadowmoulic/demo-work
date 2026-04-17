@@ -87,44 +87,44 @@ const components = {
         </footer>
     `,
     faq: `
-        <section class="py-24 bg-[#f8fafc]" id="faq">
+        <section class="py-24 bg-slate-50" id="faq">
             <div class="max-w-4xl mx-auto px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-headline font-black text-[#1e293b] mb-4 tracking-tighter">Frequently Asked Questions</h2>
-                    <p class="text-slate-500 font-medium">Expert answers for your property journey in Howrah.</p>
+                    <h2 class="text-3xl md:text-5xl font-headline font-black text-slate-900 mb-4 tracking-tighter">Frequently Asked Questions</h2>
+                    <p class="text-slate-600 font-medium text-lg">Expert answers for your property journey in Howrah.</p>
                 </div>
                 
                 <div class="space-y-4">
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden" data-aos="fade-up">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
-                            <summary class="flex justify-between items-center cursor-pointer list-none font-headline font-bold text-[#334155] group-open:text-primary transition-colors">
-                                <span>Where is Master Realtors located?</span>
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Where is Master Realtors located?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
-                            <div class="mt-4 text-slate-600 text-sm leading-relaxed font-body">
-                                Master Realtors is located at 6/5, Carry Road, Shibpur, Howrah – 711104, West Bengal, India. We are easily accessible from Carry Road main junction.
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                Master Realtors is located at <strong>6/5, Carry Road, Shibpur, Howrah – 711104, West Bengal, India</strong>. We are situated near the Carry Road main junction, making us easily accessible for all clients.
                             </div>
                         </details>
                     </div>
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
-                            <summary class="flex justify-between items-center cursor-pointer list-none font-headline font-bold text-[#334155] group-open:text-primary transition-colors">
-                                <span>What are your working hours?</span>
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What are your working hours?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
-                            <div class="mt-4 text-slate-600 text-sm leading-relaxed font-body">
-                                Master Realtors operates from 10 AM to 8 PM on working days. For consultations on Sundays or public holidays, please book an appointment in advance by calling 9874121666.
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                Master Realtors operates from <strong>10:00 AM to 8:00 PM</strong> on all working days (Monday to Saturday). For consultations on Sundays or public holidays, please book an appointment in advance.
                             </div>
                         </details>
                     </div>
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
-                            <summary class="flex justify-between items-center cursor-pointer list-none font-headline font-bold text-[#334155] group-open:text-primary transition-colors">
-                                <span>What services does Master Realtors offer?</span>
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What services does Master Realtors offer?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
-                            <div class="mt-4 text-slate-600 text-sm leading-relaxed font-body">
-                                We provide end-to-end real estate solutions including property buy/sell advisory, rental management, legal documentation assistance, and property valuation in the Howrah region.
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                We provide comprehensive real estate services including <strong>Residential & Commercial Sales, Rental Management, Legal Documentation/Mutation assistance, and Property Valuation</strong> in Howrah.
                             </div>
                         </details>
                     </div>
