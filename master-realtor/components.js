@@ -6,19 +6,19 @@ const components = {
     header: `
         <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full z-[100] bg-white/85 backdrop-blur-md shadow-[0_20_40px_rgba(26,28,31,0.06)] flex justify-between items-center px-8 py-3 transform transition-all duration-700 ease-out translate-y-[-100px] opacity-0" id="main-nav">
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:rotate-[360deg] transition-transform duration-700 cursor-pointer" onclick="window.location.href='index.html'">
-                    <img src="logo.png" alt="MR" class="w-10 h-10 object-contain" onerror="this.src='https://via.placeholder.com/40x40?text=MR'">
+                <div class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:rotate-[360deg] transition-transform duration-700 cursor-pointer" onclick="window.location.href='/master-realtor/'">
+                    <img src="/master-realtor/logo.png" alt="MR" class="w-10 h-10 object-contain" onerror="this.src='https://via.placeholder.com/40x40?text=MR'">
                 </div>
                 <div class="text-2xl font-black text-blue-900 tracking-tighter font-headline">
                     Master Realtors
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-bold">
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="index.html">Home</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="buy.html">Buy</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="sell.html">Sell</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="rent.html">Rent</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="coverage.html">Coverage</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/index.html">Home</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/buy.html">Buy</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/sell.html">Sell</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/rent.html">Rent</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/coverage.html">Coverage</a>
             </div>
             <div class="flex items-center gap-4">
                 <div class="hidden sm:flex flex-col items-end mr-2">
@@ -38,11 +38,11 @@ const components = {
             <button id="close-menu-btn" class="absolute top-8 right-8 text-white">
                 <span class="material-symbols-outlined text-4xl">close</span>
             </button>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="index.html">Home</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="buy.html">Buy</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="sell.html">Sell</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="rent.html">Rent</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="coverage.html">Coverage</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/index.html">Home</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/buy.html">Buy</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/sell.html">Sell</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/rent.html">Rent</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/coverage.html">Coverage</a>
             <div class="mt-8 pt-8 border-t border-white/10 w-full text-center">
                 <p class="text-xs uppercase tracking-widest text-blue-200 mb-4">Urgent Consultation</p>
                 <a href="tel:9874121666" class="text-2xl font-headline font-bold">98741 21666</a>
@@ -60,11 +60,11 @@ const components = {
                     <div>
                         <h5 class="text-sm font-bold uppercase tracking-widest mb-6 text-tertiary-fixed">Quick Navigation</h5>
                         <div class="grid grid-cols-2 gap-4">
-                            <a href="index.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Home</a>
-                            <a href="buy.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Buy</a>
-                            <a href="sell.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Sell</a>
-                            <a href="rent.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Rent</a>
-                            <a href="coverage.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Coverage</a>
+                            <a href="/master-realtor/index.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Home</a>
+                            <a href="/master-realtor/buy.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Buy</a>
+                            <a href="/master-realtor/sell.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Sell</a>
+                            <a href="/master-realtor/rent.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Rent</a>
+                            <a href="/master-realtor/coverage.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Coverage</a>
                         </div>
                     </div>
                     <div>
@@ -278,7 +278,7 @@ function initSharedComponents() {
             if (nav) {
                 nav.classList.remove('translate-y-[-100px]', 'opacity-0');
             }
-        }, 100);
+        }, 300); // Increased delay for network stability on mobile
     }
     if (footerPlaceholder) footerPlaceholder.innerHTML = components.footer;
     if (faqPlaceholder) {
@@ -315,10 +315,15 @@ function initMobileMenu() {
 }
 
 function highlightActiveLink() {
-    const path = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
     const links = document.querySelectorAll('.nav-link');
+
     links.forEach(link => {
-        if (link.getAttribute('href') === path) {
+        const linkHref = link.getAttribute('href').replace(/\/$/, '');
+        const linkHrefClean = linkHref.replace('.html', '');
+
+        // Match absolute paths, clean URLs, and directory roots
+        if (currentPath === linkHref || currentPath === linkHrefClean || (currentPath === '/master-realtor' && linkHrefClean === '/master-realtor/index')) {
             link.classList.add('text-blue-900', 'border-b-2', 'border-tertiary-fixed-dim', 'pb-1');
             link.classList.remove('text-slate-500');
         }
