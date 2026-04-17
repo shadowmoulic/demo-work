@@ -9,40 +9,40 @@ const components = {
                 <div class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:rotate-[360deg] transition-transform duration-700 cursor-pointer" onclick="window.location.href='/master-realtor/'">
                     <img src="/master-realtor/logo.png" alt="MR" class="w-10 h-10 object-contain" onerror="this.src='https://via.placeholder.com/40x40?text=MR'">
                 </div>
-                <div class="text-2xl font-black text-blue-900 tracking-tighter font-headline">
+                <div class="text-xl lg:text-2xl font-black text-blue-900 tracking-tighter font-headline leading-tight">
                     Master Realtors
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-bold">
+            <div class="hidden lg:flex items-center gap-4 xl:gap-8 text-xs xl:text-sm uppercase tracking-widest font-bold">
                 <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/index.html">Home</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/buy.html">Buy</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/sell.html">Sell</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/rent.html">Rent</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/coverage.html">Coverage</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/rent.html">Warehouses</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/rent.html">Factories</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/buy.html">Land</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="/master-realtor/sell.html">Sell Asset</a>
             </div>
             <div class="flex items-center gap-4">
-                <div class="hidden sm:flex flex-col items-end mr-2">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-extrabold opacity-60">Direct Line</span>
-                    <span class="text-primary font-black font-headline text-lg tracking-tighter">98741 21666</span>
+                <div class="hidden lg:flex flex-col items-end mr-2">
+                    <span class="text-[9px] uppercase tracking-widest text-outline font-extrabold opacity-60">Direct Line</span>
+                    <span class="text-primary font-black font-headline text-base xl:text-lg tracking-tighter whitespace-nowrap">98741 21666</span>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-primary hover:rotate-90 transition-transform">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary hover:rotate-90 transition-transform">
                     <span class="material-symbols-outlined text-3xl">menu</span>
                 </button>
                 <a href="https://wa.me/919874121666?text=Hi%20Master%20Realtors%2C%20I'm%20interested%20in%20a%20property%20consultation."
-                    class="hidden sm:flex bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-bold text-sm hover:bg-primary-container transition-all shadow-lg hover:scale-110 active:scale-95 hover:shadow-primary/20">
+                    class="hidden md:flex bg-primary text-on-primary px-4 xl:px-6 py-2 rounded-full font-headline font-bold text-xs xl:text-sm hover:bg-primary-container transition-all shadow-lg hover:scale-110 active:scale-95 hover:shadow-primary/20">
                     Chat Now
                 </a>
             </div>
         </nav>
-        <div id="mobile-menu" class="fixed inset-0 z-[100] bg-primary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 p-8 flex flex-col justify-center items-center gap-8 text-white md:hidden">
+        <div id="mobile-menu" class="fixed inset-0 z-[100] bg-primary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 p-8 flex flex-col justify-center items-center gap-8 text-white lg:hidden">
             <button id="close-menu-btn" class="absolute top-8 right-8 text-white">
                 <span class="material-symbols-outlined text-4xl">close</span>
             </button>
             <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/index.html">Home</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/buy.html">Buy</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/sell.html">Sell</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/rent.html">Rent</a>
-            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/coverage.html">Coverage</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/rent.html">Warehouses</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/rent.html">Factories</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/buy.html">Land Buy/Sell</a>
+            <a class="text-3xl font-headline font-black hover:text-tertiary-fixed transition-colors" href="/master-realtor/sell.html">Liquidate Asset</a>
             <div class="mt-8 pt-8 border-t border-white/10 w-full text-center">
                 <p class="text-xs uppercase tracking-widest text-blue-200 mb-4">Urgent Consultation</p>
                 <a href="tel:9874121666" class="text-2xl font-headline font-bold">98741 21666</a>
@@ -55,16 +55,15 @@ const components = {
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
                     <div>
                         <h4 class="text-2xl font-headline font-black mb-6">Master Realtors</h4>
-                        <p class="text-blue-200/70 text-sm leading-relaxed max-w-xs">The most trusted property advisor in Howrah, delivering excellence since 2014.</p>
+                        <p class="text-blue-200/70 text-sm leading-relaxed max-w-xs">Industrial & Commercial Property Experts in Howrah, specializing in warehouse leasing and factory setup since 2014.</p>
                     </div>
                     <div>
                         <h5 class="text-sm font-bold uppercase tracking-widest mb-6 text-tertiary-fixed">Quick Navigation</h5>
                         <div class="grid grid-cols-2 gap-4">
-                            <a href="/master-realtor/index.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Home</a>
-                            <a href="/master-realtor/buy.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Buy</a>
-                            <a href="/master-realtor/sell.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Sell</a>
-                            <a href="/master-realtor/rent.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Rent</a>
-                            <a href="/master-realtor/coverage.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Coverage</a>
+                            <a href="/master-realtor/index.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Industrial Home</a>
+                            <a href="/master-realtor/rent.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Warehouses</a>
+                            <a href="/master-realtor/rent.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Factories</a>
+                            <a href="/master-realtor/buy.html" class="text-blue-100/60 hover:text-white transition-colors text-sm">Land Sales</a>
                         </div>
                     </div>
                     <div>
@@ -81,7 +80,7 @@ const components = {
                     </div>
                 </div>
                 <div class="pt-8 border-t border-white/5 text-center">
-                    <p class="text-[10px] uppercase tracking-[0.2em] text-blue-200/30">© 2026 Master Realtors. Built for Excellence.</p>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-blue-200/30">© 2026 Master Realtors. Digital Experience by <span class="text-blue-200/60">Sayak (IIT Kharagpur)</span>.</p>
                 </div>
             </div>
         </footer>
@@ -91,18 +90,18 @@ const components = {
             <div class="max-w-4xl mx-auto px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-5xl font-headline font-black text-slate-900 mb-4 tracking-tighter">Frequently Asked Questions</h2>
-                    <p class="text-slate-600 font-medium text-lg">Expert answers for your property journey in Howrah.</p>
+                    <p class="text-slate-600 font-medium text-lg">Industrial expertise for your expansion in Howrah.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 gap-4">
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Where is Master Realtors located?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What types of warehouses are available?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors is located at <strong>6/5, Carry Road, Shibpur, Howrah – 711104, West Bengal, India.</strong>
+                                We offer customized <strong>PEB (Pre-Engineered Building) warehouses</strong> and RCC structures ranging from 5,000 sq.ft to over 2 Lakh sq.ft, compliant with modern fire safety and logistical norms.
                             </div>
                         </details>
                     </div>
@@ -110,11 +109,11 @@ const components = {
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What is the pincode of Master Realtors in Howrah?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Do you handle WBIDC and Pollution Board documentation?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors is located in the <strong>711104</strong> pincode area of Howrah, West Bengal.
+                                Yes, Master Realtors provides <strong>end-to-end liaison services</strong> for WBIDC land transfers, pollution board (PCB) clearances, and fire license approvals for industrial setups.
                             </div>
                         </details>
                     </div>
@@ -122,11 +121,11 @@ const components = {
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What is the contact number of Master Realtors?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Which industrial zones in Howrah do you cover?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                You can contact Master Realtors at <strong>9874121666</strong>. <a href="tel:9874121666" class="text-primary font-bold underline">Click here to call directly.</a>
+                                Our primary dominance is in <strong>Dhulagarh Industrial Belt, Jalan Industrial Complex, Sankrail Food Park,</strong> and prime industrial land pockets along NH-6.
                             </div>
                         </details>
                     </div>
@@ -134,11 +133,22 @@ const components = {
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What are the working hours of Master Realtors?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Is legal due-diligence for industrial land provided?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors opens at <strong>10 AM</strong> on working days. For exact closing time and holiday schedule, please confirm directly by calling 9874121666.
+                                Absolutely. We conduct <strong>30-year title searches</strong> and verified Mutation/Parcha checks for every piece of industrial land listed with us.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
+                        <details class="group p-6">
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Do you facilitate high-tension (HT) power connections?</span>
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+                            </summary>
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                Yes, we assist in applications for <strong>HT/LT power connections</strong> with CESC and WBSEDCL, ensuring your factory or warehouse has the required KVA capacity before you move in.
                             </div>
                         </details>
                     </div>
@@ -146,11 +156,11 @@ const components = {
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Is Master Realtors open on Sunday?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What is the typical lease tenure for industrial assets?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors is listed as open on working days from 10 AM. Whether they operate on Sundays or public holidays should be confirmed directly.
+                                Most industrial leases in Howrah are structured as <strong>3, 5, or 9-year agreements</strong> with a standard escalation clause (usually 10-15% every 3 years).
                             </div>
                         </details>
                     </div>
@@ -158,23 +168,11 @@ const components = {
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What payment methods does Master Realtors accept?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Are floor loading capacity certificates provided?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors accepts <strong>cash payments</strong>. For UPI, card, or other modes, please confirm directly before visiting.
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
-                        <details class="group p-6">
-                            <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What type of business is Master Realtors?</span>
-                                <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
-                            </summary>
-                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors falls under the <strong>Property Dealers</strong> category and serves customers in Howrah and surrounding areas of West Bengal.
+                                Yes, for multi-story industrial buildings, we provide or facilitate <strong>certified structural reports</strong> confirming the floor loading capacity (MT per sq.mt) to ensure suitability for your machinery.
                             </div>
                         </details>
                     </div>
