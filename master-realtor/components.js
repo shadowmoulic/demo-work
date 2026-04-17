@@ -4,7 +4,7 @@
 
 const components = {
     header: `
-        <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full z-50 bg-white/85 backdrop-blur-md shadow-[0_20_40px_rgba(26,28,31,0.06)] flex justify-between items-center px-8 py-3">
+        <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full z-[100] bg-white/85 backdrop-blur-md shadow-[0_20_40px_rgba(26,28,31,0.06)] flex justify-between items-center px-8 py-3 transform transition-all duration-700 ease-out translate-y-[-100px] opacity-0" id="main-nav">
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:rotate-[360deg] transition-transform duration-700 cursor-pointer" onclick="window.location.href='index.html'">
                     <img src="logo.png" alt="MR" class="w-10 h-10 object-contain" onerror="this.src='https://via.placeholder.com/40x40?text=MR'">
@@ -14,22 +14,22 @@ const components = {
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-bold">
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-colors font-headline tracking-tighter" href="index.html">Home</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-colors font-headline tracking-tighter" href="buy.html">Buy</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-colors font-headline tracking-tighter" href="sell.html">Sell</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-colors font-headline tracking-tighter" href="rent.html">Rent</a>
-                <a class="nav-link text-slate-500 hover:text-blue-900 transition-colors font-headline tracking-tighter" href="coverage.html">Coverage</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="index.html">Home</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="buy.html">Buy</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="sell.html">Sell</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="rent.html">Rent</a>
+                <a class="nav-link text-slate-500 hover:text-blue-900 transition-all duration-300 font-headline tracking-tighter hover:scale-110" href="coverage.html">Coverage</a>
             </div>
             <div class="flex items-center gap-4">
                 <div class="hidden sm:flex flex-col items-end mr-2">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-extrabold">Direct Line</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-extrabold opacity-60">Direct Line</span>
                     <span class="text-primary font-black font-headline text-lg tracking-tighter">98741 21666</span>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-primary">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-primary hover:rotate-90 transition-transform">
                     <span class="material-symbols-outlined text-3xl">menu</span>
                 </button>
                 <a href="https://wa.me/919874121666?text=Hi%20Master%20Realtors%2C%20I'm%20interested%20in%20a%20property%20consultation."
-                    class="hidden sm:flex bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-bold text-sm hover:bg-primary-container transition-all shadow-lg hover:scale-105 active:scale-95">
+                    class="hidden sm:flex bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-bold text-sm hover:bg-primary-container transition-all shadow-lg hover:scale-110 active:scale-95 hover:shadow-primary/20">
                     Chat Now
                 </a>
             </div>
@@ -207,6 +207,14 @@ function initSharedComponents() {
         headerPlaceholder.innerHTML = components.header;
         initMobileMenu();
         highlightActiveLink();
+
+        // Immediate animation for navbar
+        setTimeout(() => {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+                nav.classList.remove('translate-y-[-100px]', 'opacity-0');
+            }
+        }, 100);
     }
     if (footerPlaceholder) footerPlaceholder.innerHTML = components.footer;
     if (faqPlaceholder) {
