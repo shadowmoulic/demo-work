@@ -94,7 +94,7 @@ const components = {
                     <p class="text-slate-600 font-medium text-lg">Expert answers for your property journey in Howrah.</p>
                 </div>
                 
-                <div class="space-y-4">
+                <div class="grid grid-cols-1 gap-4">
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
@@ -102,29 +102,79 @@ const components = {
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors is located at <strong>6/5, Carry Road, Shibpur, Howrah – 711104, West Bengal, India</strong>. We are situated near the Carry Road main junction, making us easily accessible for all clients.
+                                Master Realtors is located at <strong>6/5, Carry Road, Shibpur, Howrah – 711104, West Bengal, India.</strong>
                             </div>
                         </details>
                     </div>
+
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What are your working hours?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What is the pincode of Master Realtors in Howrah?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                Master Realtors operates from <strong>10:00 AM to 8:00 PM</strong> on all working days (Monday to Saturday). For consultations on Sundays or public holidays, please book an appointment in advance.
+                                Master Realtors is located in the <strong>711104</strong> pincode area of Howrah, West Bengal.
                             </div>
                         </details>
                     </div>
+
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
                         <details class="group p-6">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
-                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What services does Master Realtors offer?</span>
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What is the contact number of Master Realtors?</span>
                                 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
                             </summary>
                             <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
-                                We provide comprehensive real estate services including <strong>Residential & Commercial Sales, Rental Management, Legal Documentation/Mutation assistance, and Property Valuation</strong> in Howrah.
+                                You can contact Master Realtors at <strong>9874121666</strong>. <a href="tel:9874121666" class="text-primary font-bold underline">Click here to call directly.</a>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
+                        <details class="group p-6">
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What are the working hours of Master Realtors?</span>
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+                            </summary>
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                Master Realtors opens at <strong>10 AM</strong> on working days. For exact closing time and holiday schedule, please confirm directly by calling 9874121666.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
+                        <details class="group p-6">
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">Is Master Realtors open on Sunday?</span>
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+                            </summary>
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                Master Realtors is listed as open on working days from 10 AM. Whether they operate on Sundays or public holidays should be confirmed directly.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
+                        <details class="group p-6">
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What payment methods does Master Realtors accept?</span>
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+                            </summary>
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                Master Realtors accepts <strong>cash payments</strong>. For UPI, card, or other modes, please confirm directly before visiting.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-primary/30">
+                        <details class="group p-6">
+                            <summary class="flex justify-between items-center cursor-pointer list-none">
+                                <span class="font-headline font-bold text-slate-800 group-open:text-primary transition-colors text-lg">What type of business is Master Realtors?</span>
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+                            </summary>
+                            <div class="mt-4 text-slate-600 text-base leading-relaxed font-body border-t border-slate-50 pt-4">
+                                Master Realtors falls under the <strong>Property Dealers</strong> category and serves customers in Howrah and surrounding areas of West Bengal.
                             </div>
                         </details>
                     </div>
@@ -168,7 +218,7 @@ const components = {
         {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          "mainEntity": [{
+           "mainEntity": [{
             "@type": "Question",
             "name": "Where is Master Realtors located?",
             "acceptedAnswer": {
@@ -177,10 +227,24 @@ const components = {
             }
           }, {
             "@type": "Question",
+            "name": "What is the contact number of Master Realtors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact Master Realtors at 9874121666."
+            }
+          }, {
+            "@type": "Question",
             "name": "What are the working hours of Master Realtors?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Master Realtors opens at 10 AM on working days. For exact closing time, please confirm by calling 9874121666."
+              "text": "Master Realtors opens at 10 AM on working days. For exact closing time, please confirm directly by calling 9874121666."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What type of business is Master Realtors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Master Realtors falls under the Property Dealers category and serves customers in Howrah and surrounding areas."
             }
           }]
         }
