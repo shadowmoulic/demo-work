@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -94,42 +95,7 @@
 </head>
 
 <body class="bg-surface font-body text-on-surface antialiased">
-    <!-- Top Navigation Bar -->
-    <nav
-        class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full z-50 bg-white/85 backdrop-blur-md shadow-[0_20_40px_rgba(26,28,31,0.06)] flex justify-between items-center px-8 py-3">
-        <div class="flex items-center gap-3">
-            <div
-                class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:rotate-[360deg] transition-transform duration-700 cursor-pointer">
-                <img src="logo.png" alt="MR" class="w-10 h-10 object-contain"
-                    onerror="this.src='https://via.placeholder.com/40x40?text=MR'">
-            </div>
-            <div class="text-2xl font-black text-blue-900 tracking-tighter font-headline">
-                Master Realtors
-            </div>
-        </div>
-        <div class="hidden md:flex items-center gap-8">
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="index.html">Home</a>
-            <a class="text-blue-900 font-bold border-b-2 border-tertiary-fixed-dim pb-1 font-headline tracking-tight"
-                href="buy.html">Buy</a>
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="sell.html">Sell</a>
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="rent.html">Rent</a>
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="coverage.html">Local Coverage</a>
-        </div>
-        <div class="flex items-center gap-4">
-            <div class="hidden sm:flex flex-col items-end">
-                <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Direct Line</span>
-                <span class="text-primary font-bold font-headline">+91 98741 21666</span>
-            </div>
-            <a href="https://wa.me/919874121666?text=Hi%20Master%20Realtors%2C%20I'm%20interested%20in%20BUYING%20a%20property%20in%20Howrah."
-                class="bg-primary text-on-primary px-6 py-2 rounded-full font-headline font-semibold text-sm hover:bg-primary-container transition-all">
-                Chat Now
-            </a>
-        </div>
-    </nav>
+    <div id="header-placeholder"></div>
 
     <!-- Subpage Hero -->
     <header class="relative pt-32 pb-20 overflow-hidden bg-primary hero-gradient text-white">
@@ -145,7 +111,7 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <!-- Property Card 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
                         alt="Residency" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -157,7 +123,8 @@
                             <li>• Modern Amenities Included</li>
                         </ul>
                         <a href="https://wa.me/919874121666?text=Hi%20Master%20Realtors%2C%20I'm%20enquiring%20about%20Master%20Sakuntala%20Tower."
-                            class="block text-center bg-primary text-white py-3 rounded-lg font-bold">Enquire on
+                            class="block text-center bg-primary text-white py-3 rounded-lg font-bold hover:bg-primary-container transition-all">Enquire
+                            on
                             WhatsApp</a>
                     </div>
                 </div>
@@ -210,12 +177,12 @@
         </div>
     </section>
 
-    <!-- Simple Footer -->
-    <footer class="bg-slate-50 py-12 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-8 text-center">
-            <p class="text-slate-500 text-sm">© 2026 Master Realtors. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script src="components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 
 </html>

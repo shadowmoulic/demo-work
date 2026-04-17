@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -94,42 +95,7 @@
 </head>
 
 <body class="bg-surface font-body text-on-surface antialiased">
-    <!-- Top Navigation Bar -->
-    <nav
-        class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full z-50 bg-white/85 backdrop-blur-md shadow-[0_20_40px_rgba(26,28,31,0.06)] flex justify-between items-center px-8 py-3">
-        <div class="flex items-center gap-3">
-            <div
-                class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:rotate-[360deg] transition-transform duration-700 cursor-pointer">
-                <img src="logo.png" alt="MR" class="w-10 h-10 object-contain"
-                    onerror="this.src='https://via.placeholder.com/40x40?text=MR'">
-            </div>
-            <div class="text-2xl font-black text-blue-900 tracking-tighter font-headline">
-                Master Realtors
-            </div>
-        </div>
-        <div class="hidden md:flex items-center gap-8">
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="index.html">Home</a>
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="buy.html">Buy</a>
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="sell.html">Sell</a>
-            <a class="text-slate-600 hover:text-blue-900 transition-colors font-headline tracking-tight font-semibold"
-                href="rent.html">Rent</a>
-            <a class="text-blue-900 font-bold border-b-2 border-tertiary-fixed-dim pb-1 font-headline tracking-tight"
-                href="coverage.html">Local Coverage</a>
-        </div>
-        <div class="flex items-center gap-4">
-            <div class="hidden sm:flex flex-col items-end">
-                <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Direct Line</span>
-                <span class="text-primary font-bold font-headline">+91 98741 21666</span>
-            </div>
-            <a href="https://wa.me/919874121666?text=Hi%20Master%20Realtors%2C%20I'd%20like%20to%20know%20more%20about%20your%20local%20coverage%20areas."
-                class="bg-primary text-on-primary px-6 py-2 rounded-full font-headline font-semibold text-sm hover:bg-primary-container transition-all">
-                Chat Now
-            </a>
-        </div>
-    </nav>
+    <div id="header-placeholder"></div>
 
     <!-- Subpage Hero -->
     <header class="relative pt-32 pb-20 overflow-hidden bg-primary hero-gradient text-white">
@@ -147,17 +113,20 @@
                 <div>
                     <h2 class="text-3xl font-headline font-bold text-primary mb-6">Our Dominance Zones</h2>
                     <ul class="space-y-6">
-                        <li class="p-6 bg-white rounded-xl shadow-md border-l-4 border-primary">
+                        <li class="p-6 bg-white rounded-xl shadow-md border-l-4 border-primary" data-aos="fade-right"
+                            data-aos-delay="100">
                             <h4 class="font-bold text-lg mb-1">Shibpur & Mandirtala</h4>
                             <p class="text-sm text-on-surface-variant">The heritage residential heart. High demand for
                                 family homes near BE College.</p>
                         </li>
-                        <li class="p-6 bg-white rounded-xl shadow-md border-l-4 border-tertiary-fixed-dim">
+                        <li class="p-6 bg-white rounded-xl shadow-md border-l-4 border-tertiary-fixed-dim"
+                            data-aos="fade-right" data-aos-delay="200">
                             <h4 class="font-bold text-lg mb-1">Carry Road & Chatterjeehat</h4>
                             <p class="text-sm text-on-surface-variant">Rapidly developing commercial and multi-story
                                 apartment corridor.</p>
                         </li>
-                        <li class="p-6 bg-white rounded-xl shadow-md border-l-4 border-primary">
+                        <li class="p-6 bg-white rounded-xl shadow-md border-l-4 border-primary" data-aos="fade-right"
+                            data-aos-delay="300">
                             <h4 class="font-bold text-lg mb-1">Howrah Station Vicinity</h4>
                             <p class="text-sm text-on-surface-variant">Prime commercial hubs and transit-friendly stays
                                 for professionals.</p>
@@ -186,12 +155,13 @@
         </div>
     </section>
 
-    <!-- Simple Footer -->
-    <footer class="bg-slate-50 py-12 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-8 text-center">
-            <p class="text-slate-500 text-sm">© 2026 Master Realtors. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="map-placeholder"></div>
+    <div id="footer-placeholder"></div>
+    <script src="components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 
 </html>
