@@ -100,7 +100,7 @@ body {
 }
 
 section {
-    padding: 100px 0;
+    padding: 3rem 0;
 }
 
 /* Typography */
@@ -139,6 +139,9 @@ nav.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
 }
 
 .logo {
@@ -385,6 +388,97 @@ nav.scrolled {
     color: var(--gray);
 }
 
+/* Latest Update Section */
+.latest-update-section {
+    padding: 2rem 0;
+}
+
+.latest-update-card {
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    border: 1px solid var(--glass-border);
+}
+
+.update-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.update-sub {
+    color: var(--gray);
+}
+
+.update-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+/* Learning Resources */
+.learning-resources {
+    padding: 8rem 0;
+}
+
+.lr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.lr-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lr-card {
+    height: 100%;
+    padding: 2.5rem;
+    position: relative;
+    transition: 0.4s;
+}
+
+.lr-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.coming-soon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: var(--dark);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.lr-card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.lr-card-content p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
 /* Courses Section */
 .section-header {
     text-align: center;
@@ -408,7 +502,7 @@ nav.scrolled {
 
 .course-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
     gap: 2.5rem;
 }
 
@@ -850,27 +944,41 @@ footer {
     .nav-links {
         display: flex;
         position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
         background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
         flex-direction: column;
-        padding: 3rem 1.5rem;
-        gap: 2rem;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transform: translateY(-20px);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
+        justify-content: center;
+        padding: 4rem 2rem;
+        gap: 2.5rem;
+        box-shadow: -20px 0 50px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1001;
     }
 
     .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-actions .btn-primary {
+        display: none; /* Hide login button on small mobile nav if preferred, or keep it */
     }
 
     .container {
@@ -1192,4 +1300,160 @@ footer {
     font-size: 4rem;
     color: #10b981;
     margin-bottom: 1.5rem;
+}
+
+/* Slider Section for Results */
+.slider-section {
+    padding: 6rem 0;
+    background: radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.05), transparent);
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.slider-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.4s ease;
+}
+
+.slider-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    min-width: 300px;
+    flex: 0 0 auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.05);
+}
+
+.slider-card img {
+    width: 280px;
+    height: 280px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.slider-card h3 {
+    margin: 12px 0 6px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.slider-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #64748b;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background: #818cf8;
+}
+
+@media (max-width: 768px) {
+    .slider-card {
+        min-width: 220px;
+    }
+
+    .slider-card img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    cursor: pointer;
+    z-index: 9999;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-5px);
+    background: #128C7E;
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-popup {
+    position: fixed;
+    bottom: 6.5rem;
+    right: 2rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 9998;
+    border: 1px solid #e2e8f0;
+    animation: bounceIn 1s ease 2s both;
+    max-width: 250px;
+}
+
+.whatsapp-popup::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: white transparent;
+    display: block;
+    width: 0;
+}
+
+.whatsapp-popup p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+    60% { opacity: 1; transform: translateY(-5px) scale(1.05); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
 }

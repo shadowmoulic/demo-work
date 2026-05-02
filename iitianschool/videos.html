@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lectures & Resources | IITian School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <header class="video-header" style="margin-top: 120px; text-align: center; padding: 3rem 0;">
+        <div class="container">
+            <h1>Our <span class="gradient-text">Video Tutorials</span></h1>
+            <p>Access high-quality revision videos direct from the expertise of Bhaskar Sir.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="video-grid" id="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-bottom: 5rem;">
+            <!-- Videos will be populated by script -->
+        </div>
+
+        <div class="cta-section" style="background: var(--dark); color: white; padding: 4rem 2rem; border-radius: 24px; text-align: center; margin-bottom: 5rem;">
+            <h2>Master Your Concepts with Bhaskar Sir</h2>
+            <p>Join our premium batches for complete course coverage and personalized guidance.</p>
+            <a href="https://wa.me/919692792825" class="btn-primary" target="_blank" style="background: #25D366; border: none; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+    <script src="components.js"></script>
+    <script>
+        // 16 Video Lectures Master Array
+        const videos = [
+            { id: "hpkkCPmTKgg", title: "Aeroplane Wind Problem", desc: "Advanced physics tricks to solve relative velocity equations." },
+            { id: "6IGsBm2oS5I", title: "Rain Man Problem", desc: "Vector representation shortcuts for quick calculation." },
+            { id: "_Vbkwmf-Po4", title: "Vernier Caliper Concepts", desc: "Understand zero errors and least count methodology." },
+            { id: "3T0sn7nKZYk", title: "Screw Gauge Problems", desc: "Mastering error analysis criteria effortlessly." },
+            { id: "JgitBj-KH48", title: "Thermodynamics", desc: "Important Graphical Problems evaluated step-by-step." },
+            { id: "S3KaE_pL3IY", title: "Gravitation Formulas", desc: "Review key planetary motion parameters cleanly." },
+            { id: "-I4uujiFqoM", title: "Zener Diode Circuits", desc: "Perfect mapping sequences for quick review." },
+            { id: "XeXVEVXXbDQ", title: "Resistance & Capacitance", desc: "Derive equivalent values confidently." },
+            { id: "UVf7Hw0JGw8", title: "Equivalent Resistance P6", desc: "Equivalent resistance problems class 12 shortcuts." },
+            { id: "HCZ3_pXfSHo", title: "Equivalent Resistance P5", desc: "Equivalent resistance tricks for standard networks." },
+            { id: "V-zyxbpbHUg", title: "Equivalent Resistance P4", desc: "Simplifying bridging and parallel connections." },
+            { id: "UaZ4u-gxQAE", title: "Equivalent Resistance P44", desc: "Tough configurations cracked effortlessly." },
+            { id: "wrpJiNTQyuc", title: "Equivalent Resistance P3", desc: "Symmetry principles applied to circuits." },
+            { id: "ovYgJsdEaXk", title: "LC Oscillations", desc: "Ideal energy distribution analysis." },
+            { id: "nvf4YlXQ79E", title: "Discharging of Capacitor", desc: "Derive exponential decay boundaries." },
+            { id: "ct2LHL7IEFA", title: "Charging of Capacitor", desc: "RC time constant derivation steps." }
+        ];
+
+        const grid = document.getElementById('video-grid');
+        
+        videos.forEach(v => {
+            const card = document.createElement('div');
+            card.className = 'video-card glass';
+            card.innerHTML = `
+                <div class="video-frame" style="position: relative; width: 100%; padding-top: 56.25%;">
+                    <iframe src="https://www.youtube.com/embed/${v.id}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px 20px 0 0;" title="${v.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-info" style="padding: 1.5rem;">
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">${v.title}</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">${v.desc}</p>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+        
+        lucide.createIcons();
+    </script>
+</body>
+</html>

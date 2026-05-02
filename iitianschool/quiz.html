@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Mock Test | IITian School</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://demo-work-alpha.vercel.app/iitianschool/style.css">
+    <title>JEE & NEET Mock Test | IITian School</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .quiz-container {
             max-width: 800px;
@@ -120,12 +121,7 @@
 </head>
 
 <body>
-    <nav class="scrolled">
-        <div class="container nav-content">
-            <a href="index.html" class="logo">IITian<span>school</span></a>
-            <div class="timer" id="timer">30:00</div>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <div class="quiz-container glass" id="quiz-box">
         <div class="progress-bar">
@@ -151,7 +147,7 @@
             <span>/ 10</span>
         </div>
         <h2>Test Completed!</h2>
-        <p style="margin: 1rem 0 2rem; color: var(--gray);">Great effort! You've successfully completed the JEE Mains
+        <p style="margin: 1rem 0 2rem; color: var(--gray);">Great effort! You've successfully completed the JEE & NEET
             Mock Test.</p>
         <div class="result-stats"
             style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
@@ -170,6 +166,8 @@
         </div>
         <a href="index.html" class="btn-primary">Back to Home</a>
     </div>
+
+    <div id="footer-placeholder"></div>
 
     <script>
         const quizData = [
@@ -301,6 +299,8 @@
 
         loadQuestion();
     </script>
+    <script src="script.js"></script>
+    <script src="components.js"></script>
 </body>
 
 </html>

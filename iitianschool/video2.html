@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lectures | IITian School</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --video-card-bg: rgba(255, 255, 255, 0.7);
+            --video-card-border: rgba(255, 255, 255, 0.3);
+        }
+
+        body {
+            background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 400px),
+                        radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.05), transparent 400px);
+            min-height: 100vh;
+        }
+
+        .video-page-header {
+            padding: 140px 1.5rem 4rem;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+        }
+
+        .video-page-header h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .search-wrapper {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--video-card-border);
+            border-radius: 24px;
+            font-size: 1.1rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .search-bar:focus {
+            outline: none;
+            background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+            border-color: var(--primary);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .search-bar:focus + .search-icon {
+            color: var(--primary);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 2rem 1.5rem 5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Mobile First Card Styling */
+        .video-card {
+            background: var(--video-card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--video-card-border);
+            border-radius: 32px;
+            overflow: hidden;
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .video-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .video-thumbnail-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 */
+            background: #000;
+        }
+
+        .video-thumbnail-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-card-body {
+            padding: 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card-body h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            line-height: 1.3;
+        }
+
+        .video-card-body p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .play-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .load-more-container {
+            text-align: center;
+            padding: 2rem 0 6rem;
+        }
+
+        .btn-load-more {
+            background: #fff;
+            color: var(--dark);
+            padding: 1.2rem 3rem;
+            border-radius: 20px;
+            font-weight: 800;
+            border: 1px solid #e2e8f0;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: none; /* Controlled by JS */
+        }
+
+        .btn-load-more:hover {
+            background: var(--dark);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 5rem 2rem;
+            display: none;
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .video-page-header {
+                padding-top: 100px;
+            }
+            .video-grid {
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+            .video-card {
+                border-radius: 24px;
+            }
+            .video-card-body {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <header class="video-page-header">
+        <div class="container">
+            <span class="sub-header" style="justify-content: center;">Knowledge Hub</span>
+            <h1>Video <span class="gradient-text">Lectures</span></h1>
+            <p>Master complex physics & math concepts with Bhaskar Sir's curated revision series.</p>
+            
+            <div class="search-wrapper">
+                <input type="text" id="video-search" class="search-bar" placeholder="Search topics, formulas, chapters...">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="video-grid" id="video-grid">
+            <!-- Dynamic Video Cards -->
+            <div id="no-results" class="no-results">
+                <i class="fa-regular fa-face-frown-open"></i>
+                <h3>No lectures found</h3>
+                <p>Try searching for different keywords or browse all videos.</p>
+            </div>
+        </div>
+
+        <div class="load-more-container">
+            <button id="load-more-btn" class="btn-load-more">Show More Lectures</button>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+    <script src="components.js"></script>
+    <script>
+        const videos = [
+            { id: "hpkkCPmTKgg", title: "Aeroplane Wind Problem", desc: "Advanced physics tricks to solve relative velocity equations." },
+            { id: "6IGsBm2oS5I", title: "Rain Man Problem", desc: "Vector representation shortcuts for quick calculation." },
+            { id: "_Vbkwmf-Po4", title: "Vernier Caliper Concepts", desc: "Understand zero errors and least count methodology." },
+            { id: "3T0sn7nKZYk", title: "Screw Gauge Problems", desc: "Mastering error analysis criteria effortlessly." },
+            { id: "JgitBj-KH48", title: "Thermodynamics", desc: "Important Graphical Problems evaluated step-by-step." },
+            { id: "S3KaE_pL3IY", title: "Gravitation Formulas", desc: "Review key planetary motion parameters cleanly." },
+            { id: "-I4uujiFqoM", title: "Zener Diode Circuits", desc: "Perfect mapping sequences for quick review." },
+            { id: "XeXVEVXXbDQ", title: "Resistance & Capacitance", desc: "Derive equivalent values confidently." },
+            { id: "UVf7Hw0JGw8", title: "Equivalent Resistance P6", desc: "Equivalent resistance problems class 12 shortcuts." },
+            { id: "HCZ3_pXfSHo", title: "Equivalent Resistance P5", desc: "Equivalent resistance tricks for standard networks." },
+            { id: "V-zyxbpbHUg", title: "Equivalent Resistance P4", desc: "Simplifying bridging and parallel connections." },
+            { id: "UaZ4u-gxQAE", title: "Equivalent Resistance P44", desc: "Tough configurations cracked effortlessly." },
+            { id: "wrpJiNTQyuc", title: "Equivalent Resistance P3", desc: "Symmetry principles applied to circuits." },
+            { id: "ovYgJsdEaXk", title: "LC Oscillations", desc: "Ideal energy distribution analysis." },
+            { id: "nvf4YlXQ79E", title: "Discharging of Capacitor", desc: "Derive exponential decay boundaries." },
+            { id: "ct2LHL7IEFA", title: "Charging of Capacitor", desc: "RC time constant derivation steps." }
+        ];
+
+        let visibleCount = 6;
+        let currentList = videos;
+
+        const grid = document.getElementById('video-grid');
+        const searchInput = document.getElementById('video-search');
+        const noResults = document.getElementById('no-results');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
+        function renderVideos() {
+            // Clear existing video cards
+            const cards = grid.querySelectorAll('.video-card');
+            cards.forEach(c => c.remove());
+
+            if (currentList.length === 0) {
+                noResults.style.display = 'block';
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            noResults.style.display = 'none';
+            const sliced = currentList.slice(0, visibleCount);
+
+            sliced.forEach(v => {
+                const card = document.createElement('div');
+                card.className = 'video-card';
+                card.innerHTML = `
+                    <div class="video-thumbnail-wrap">
+                        <iframe src="https://www.youtube.com/embed/${v.id}" title="${v.title}" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>${v.title}</h3>
+                        <p>${v.desc}</p>
+                        <div class="video-card-footer">
+                            <span class="play-indicator"><i class="fa-solid fa-circle-play"></i> Watch Now</span>
+                            <span style="font-size: 0.8rem; color: #94a3b8; font-weight: 600;">Physics</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            loadMoreBtn.style.display = (visibleCount < currentList.length) ? 'inline-block' : 'none';
+        }
+
+        loadMoreBtn.addEventListener('click', () => {
+            visibleCount += 3;
+            renderVideos();
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            currentList = videos.filter(v =>
+                v.title.toLowerCase().includes(query) ||
+                v.desc.toLowerCase().includes(query)
+            );
+            visibleCount = 6;
+            renderVideos();
+        });
+
+        // Initial Render
+        renderVideos();
+    </script>
+</body>
+</html>

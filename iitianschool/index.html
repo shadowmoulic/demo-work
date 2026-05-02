@@ -5,358 +5,490 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IITian School | Premium Coaching for JEE & NEET</title>
-    <link rel="icon" type="image/png" href="https://demo-work-alpha.vercel.app/iitianschool/favicon.png">
-    <link rel="stylesheet" href="https://demo-work-alpha.vercel.app/iitianschool/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Slider Section for Results */
+        .slider-section {
+            padding: 6rem 0;
+            background: radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.05), transparent);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .slider-track {
+            display: flex;
+            gap: 30px;
+            transition: transform 0.4s ease;
+            width: max-content;
+        }
+
+        .slider-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            width: 300px;
+            flex: 0 0 300px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.05);
+            box-sizing: border-box;
+        }
+
+        .slider-card img {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+
+        .slider-card h3 {
+            margin: 12px 0 6px 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .slider-card p {
+            margin: 0;
+            font-size: 16px;
+            color: #64748b;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #6366f1;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .slider-btn.prev {
+            left: 10px;
+        }
+
+        .slider-btn.next {
+            right: 10px;
+        }
+
+        .slider-btn:hover {
+            background: #818cf8;
+        }
+    </style>
 </head>
 
 <body>
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <i data-lucide="graduation-cap" class="text-primary"></i>
-                IITian<span>school</span>
-            </a>
-            <div class="nav-links">
-                <a href="#courses">Courses</a>
-                <a href="#about">About</a>
-                <a href="#tests">Free Tests</a>
-                <a href="#apps">Mobile App</a>
-                <a href="#" class="btn-primary">My Course</a>
-            </div>
-            <div class="mobile-menu-btn" style="display: none;">
-                <i data-lucide="menu"></i>
-            </div>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content animate-in">
-                <div class="badge-new">
-                    <span class="pulse"></span> New Admissions Open 2028
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content animate-in">
+                    <div class="badge-new">
+                        <span class="pulse"></span> New Admissions Open 2028
+                    </div>
+                    <h1>Empowering <span class="gradient-text">IITians & Medicos</span> of Tomorrow</h1>
+                    <p>Experience the next generation of online & offline coaching. IITian School provides high-quality
+                        guidance with a dedicated focus on academic excellence and results.</p>
+                    <div class="hero-cta">
+                        <a href="#courses" class="btn-primary">Explore Batches</a>
+                        <a href="#apps" class="btn-secondary">
+                            <i data-lucide="play-circle"></i> View Demo
+                        </a>
+                    </div>
+
+                    <div class="stats-badges">
+                        <div class="stat-badge">
+                            <i data-lucide="users"></i>
+                            <div class="stat-info">
+                                <span>10k+</span>
+                                <p>Students</p>
+                            </div>
+                        </div>
+                        <div class="stat-badge">
+                            <i data-lucide="star"></i>
+                            <div class="stat-info">
+                                <span>4.9/5</span>
+                                <p>Rating</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1>Empowering <span class="gradient-text">IITians</span> of Tomorrow</h1>
-                <p>Experience the next generation of online & offline coaching. IITian School provides high-quality
-                    guidance with a dedicated focus on academic excellence and results.</p>
-                <div class="hero-cta">
-                    <a href="#courses" class="btn-primary">Explore Batches</a>
-                    <a href="#apps" class="btn-secondary">
-                        <i data-lucide="play-circle"></i> View Demo
+                <div class="hero-image">
+                    <img src="/hero.png" alt="IITian School Learning">
+                    <div class="floating-card glass top-card">
+                        <i data-lucide="zap" style="color: #f59e0b;"></i>
+                        <span>Live Classes</span>
+                    </div>
+                    <div class="floating-card glass bottom-card">
+                        <i data-lucide="book-open" style="color: #6366f1;"></i>
+                        <span>Study Materials</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Update -->
+        <section id="latest-update" class="latest-update-section">
+            <div class="container">
+                <div class="latest-update-card glass">
+                    <div class="update-left">
+                        <h2 class="update-title">Latest Update</h2>
+                        <p class="update-sub">Important announcement from IITian's School</p>
+                    </div>
+                    <div class="update-right">
+                        <div class="update-number" aria-live="polite">Upto 100% scholarship for 26-28 batch</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="slider-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-header">Our Success Stories</span>
+                    <h2>Outstanding Results</h2>
+                    <p>Our students consistently secure top ranks in JEE & NEET.</p>
+                </div>
+            </div>
+            <div class="slider-container">
+                <button class="slider-btn prev">&lt;</button>
+                <div class="slider-track">
+                    <div class="slider-card">
+                        <img src="./IITian's School_files/pragya.jpg" alt="Pragya Choudhary">
+                        <h3>Pragya Choudhary</h3>
+                        <p>IIT Kharagpur</p>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./IITian's School_files/abhijit.jpg" alt="Abhijit Manu">
+                        <h3>Abhijit Manu</h3>
+                        <p>IIT Bhuvneshwar</p>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./IITian's School_files/aditya.jpg" alt="Aditya Behera">
+                        <h3>Aditya Behera</h3>
+                        <p>NIT Rourkela</p>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./IITian's School_files/ayiman.png" alt="Ayiman Mohanty">
+                        <h3>Ayiman Mohanty</h3>
+                        <p>NIT Manglore</p>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./IITian's School_files/moon.jpg" alt="Somsubhra Mukherjee">
+                        <h3>Somsubhra Mukherjee</h3>
+                        <p>IIT Kharagpur</p>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./IITian's School_files/sun.jpeg" alt="Sourasish Mukherjee">
+                        <h3>Sourasish Mukherjee</h3>
+                        <p>IIT Kharagpur</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&gt;</button>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="about" class="why-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose IITian School?</h2>
+                    <p>We blend technology with traditional teaching for best results.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card glass">
+                        <div class="feature-icon"><i data-lucide="video"></i></div>
+                        <h3>Interactive Live Classes</h3>
+                        <p>Real-time doubt clearing with our expert educators from across India.</p>
+                    </div>
+                    <div class="feature-card glass">
+                        <div class="feature-icon"><i data-lucide="file-text"></i></div>
+                        <h3>Curated Study Material</h3>
+                        <p>Comprehensive notes and assignments designed by top IITian & Medico mentors.</p>
+                    </div>
+                    <div class="feature-card glass">
+                        <div class="feature-icon"><i data-lucide="bar-chart"></i></div>
+                        <h3>Performance Tracking</h3>
+                        <p>Detailed analytics and personalized feedback on every test you take.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Resources -->
+        <section id="learning-resources" class="learning-resources">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-header">Tools for Success</span>
+                    <h2>Learning Resources</h2>
+                    <p>Chapterwise practice questions, DPPs, Test series and PYQs</p>
+                </div>
+                <div class="lr-grid" data-stagger-parent>
+                    <a href="https://drive.google.com/drive/folders/1m7u-0k3jYnkPdStDFPBJdHWfm4DlqNwQ?usp=drive_link"
+                        target="_blank" class="lr-card-link" data-stagger>
+                        <div class="lr-card glass">
+                            <span class="coming-soon">Coming Soon</span>
+                            <div class="lr-card-content">
+                                <h3>Chapterwise Practice</h3>
+                                <p>Structured practice arranged chapter by chapter to strengthen fundamentals.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1HLj_1eFLBcb0JoL6ArHmqINci6FDYW3c?usp=drive_link"
+                        target="_blank" class="lr-card-link" data-stagger>
+                        <div class="lr-card glass">
+                            <span class="coming-soon">Coming Soon</span>
+                            <div class="lr-card-content">
+                                <h3>DPPs</h3>
+                                <p>Daily Practice Problems to build speed and accuracy over time.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1WWnPNxEn620nwDm4jYEf6ZNPNkL1VcOx?usp=drive_link"
+                        target="_blank" class="lr-card-link" data-stagger>
+                        <div class="lr-card glass">
+                            <span class="coming-soon">Coming Soon</span>
+                            <div class="lr-card-content">
+                                <h3>Test Series</h3>
+                                <p>Full-length & sectional tests to simulate actual exam conditions.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1KhrClSTUpHbFg8iXaD-SPFO9xCa55svF?usp=drive_link"
+                        target="_blank" class="lr-card-link" data-stagger>
+                        <div class="lr-card glass">
+                            <span class="coming-soon">Coming Soon</span>
+                            <div class="lr-card-content">
+                                <h3>PYQs</h3>
+                                <p>Previous years' questions for targeted revision and pattern analysis.</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
+            </div>
+        </section>
 
-                <div class="stats-badges">
-                    <div class="stat-badge">
-                        <i data-lucide="users"></i>
-                        <div class="stat-info">
-                            <span>10k+</span>
-                            <p>Students</p>
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-header">Premium Programs</span>
+                    <h2>Our Latest Batches</h2>
+                </div>
+
+                <div class="course-grid" data-stagger-parent>
+                    <!-- Course Card 1 -->
+                    <div class="course-card glass" data-stagger>
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&auto=format&fit=crop"
+                                alt="Dhyeya Batch 11th">
+                            <div class="course-tag">89% OFF</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>STATE BOARD Dhyeya Batch for Class 11th</h3>
+                            <div class="course-price">
+                                <span class="current-price" data-price="1999">₹1,999</span>
+                                <span class="old-price" data-old="18000">₹18,000</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn-buy">Enroll Now</a>
+                                <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="stat-badge">
-                        <i data-lucide="star"></i>
-                        <div class="stat-info">
-                            <span>4.9/5</span>
-                            <p>Rating</p>
+
+                    <!-- Course 2 -->
+                    <div class="course-card glass" data-stagger>
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&auto=format&fit=crop"
+                                alt="Foundation 2028">
+                            <div class="course-tag">79% OFF</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Foundation Batch 2028 For UP & Bihar</h3>
+                            <div class="course-price">
+                                <span class="current-price" data-price="1499">₹1,499</span>
+                                <span class="old-price" data-old="7000">₹7,000</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn-buy">Enroll Now</a>
+                                <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card glass" data-stagger>
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop"
+                                alt="NEET 2028">
+                            <div class="course-tag">77% OFF</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>11th Fighter Standard Batch NEET 2028</h3>
+                            <div class="course-price">
+                                <span class="current-price" data-price="3499">₹3,499</span>
+                                <span class="old-price" data-old="15000">₹15,000</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn-buy">Enroll Now</a>
+                                <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="course-card glass" data-stagger>
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop"
+                                alt="Foundation 2028 9th">
+                            <div class="course-tag">87% OFF</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>9th Dhurandhar Foundation Batch For 2028</h3>
+                            <div class="course-price">
+                                <span class="current-price" data-price="1999">₹1,999</span>
+                                <span class="old-price" data-old="15000">₹15,000</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn-buy">Enroll Now</a>
+                                <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="course-card glass" data-stagger>
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800&auto=format&fit=crop"
+                                alt="JEE 2028">
+                            <div class="course-tag">77% OFF</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>11th Fighter Standard Batch JEE 2028</h3>
+                            <div class="course-price">
+                                <span class="current-price" data-price="3499">₹3,499</span>
+                                <span class="old-price" data-old="15000">₹15,000</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn-buy">Enroll Now</a>
+                                <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="course-card glass" data-stagger>
+                        <div class="course-img">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop"
+                                alt="Dhyeya Batch 12th">
+                            <div class="course-tag">89% OFF</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>DHYEYA BATCH FOR 12TH STATE BOARD STUDENTS</h3>
+                            <div class="course-price">
+                                <span class="current-price" data-price="1999">₹1,999</span>
+                                <span class="old-price" data-old="18000">₹18,000</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn-buy">Enroll Now</a>
+                                <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem;">
+                    <a href="#" class="btn-secondary">View All Courses <i data-lucide="chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Tests Section -->
+        <section id="tests" class="tests">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest Free Mock Tests</h2>
+                    <p>Test your knowledge with our curated mock exams.</p>
+                </div>
+                <div class="test-grid" data-stagger-parent>
+                    <div class="test-card glass" data-stagger>
+                        <div class="test-type">Physics</div>
+                        <h3>Kinematics & Motion</h3>
+                        <div class="test-meta">
+                            <span><i data-lucide="help-circle"></i> 20 Qns</span>
+                            <span><i data-lucide="clock"></i> 40 Mins</span>
+                        </div>
+                        <a href="quiz.html" class="btn-test">Start Now</a>
+                    </div>
+                    <div class="test-card glass" data-stagger>
+                        <div class="test-type">ICT</div>
+                        <h3>Mock Test ICT</h3>
+                        <div class="test-meta">
+                            <span><i data-lucide="help-circle"></i> 12 Qns</span>
+                            <span><i data-lucide="clock"></i> 25 Mins</span>
+                        </div>
+                        <a href="quiz.html" class="btn-test">Start Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Downloads Section -->
+        <section id="apps" class="app-download-wrap">
+            <div class="container">
+                <div class="app-section">
+                    <div class="app-grid">
+                        <div class="app-content">
+                            <h2>Learn Anywhere, <span class="gradient-text">Anytime.</span></h2>
+                            <p>Get our official app for a seamless mobile learning experience. Download now on Play
+                                Store.</p>
+                            <div class="app-btns">
+                                <a href="https://play.google.com/store/apps/details?id=com.lct.mlkpbvtgh"
+                                    class="app-btn" target="_blank">
+                                    <i class="fab fa-google-play"></i>
+                                    <div class="app-btn-text">
+                                        <span>Get it on</span>
+                                        <strong>Google Play</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="app-visual">
+                            <div class="phone-mockup">
+                                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&fit=crop"
+                                    alt="Mobile App">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://demo-work-alpha.vercel.app/iitianschool/hero.png" alt="IITian School Learning">
-                <div class="floating-card glass top-card">
-                    <i data-lucide="zap" style="color: #f59e0b;"></i>
-                    <span>Live Classes</span>
-                </div>
-                <div class="floating-card glass bottom-card">
-                    <i data-lucide="book-open" style="color: #6366f1;"></i>
-                    <span>Study Materials</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Us Section -->
-    <section id="about" class="why-us">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose IITian School?</h2>
-                <p>We blend technology with traditional teaching for best results.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card glass">
-                    <div class="feature-icon"><i data-lucide="video"></i></div>
-                    <h3>Interactive Live Classes</h3>
-                    <p>Real-time doubt clearing with our expert educators from across India.</p>
-                </div>
-                <div class="feature-card glass">
-                    <div class="feature-icon"><i data-lucide="file-text"></i></div>
-                    <h3>Curated Study Material</h3>
-                    <p>Comprehensive notes and assignments designed by top IITian mentors.</p>
-                </div>
-                <div class="feature-card glass">
-                    <div class="feature-icon"><i data-lucide="bar-chart"></i></div>
-                    <h3>Performance Tracking</h3>
-                    <p>Detailed analytics and personalized feedback on every test you take.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <!-- Courses Section -->
-    <section id="courses" class="courses">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-header">Premium Programs</span>
-                <h2>Our Latest Batches</h2>
-            </div>
-
-            <div class="course-grid" data-stagger-parent>
-                <!-- Course Card 1 -->
-                <div class="course-card glass" data-stagger>
-                    <div class="course-img">
-                        <img src="https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?w=800&auto=format&fit=crop"
-                            alt="Dhyeya Batch 11th">
-                        <div class="course-tag">89% OFF</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>STATE BOARD Dhyeya Batch for Class 11th</h3>
-                        <div class="course-price">
-                            <span class="current-price" data-price="1999">₹1,999</span>
-                            <span class="old-price" data-old="18000">₹18,000</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="#" class="btn-buy">Enroll Now</a>
-                            <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Course 2 -->
-                <div class="course-card glass" data-stagger>
-                    <div class="course-img">
-                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop"
-                            alt="Foundation 2028">
-                        <div class="course-tag">79% OFF</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Foundation Batch 2028 For UP & Bihar</h3>
-                        <div class="course-price">
-                            <span class="current-price" data-price="1499">₹1,499</span>
-                            <span class="old-price" data-old="7000">₹7,000</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="#" class="btn-buy">Enroll Now</a>
-                            <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Course 3 -->
-                <div class="course-card glass" data-stagger>
-                    <div class="course-img">
-                        <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=800&auto=format&fit=crop"
-                            alt="NEET 2028">
-                        <div class="course-tag">77% OFF</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>11th Fighter Standard Batch NEET 2028</h3>
-                        <div class="course-price">
-                            <span class="current-price" data-price="3499">₹3,499</span>
-                            <span class="old-price" data-old="15000">₹15,000</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="#" class="btn-buy">Enroll Now</a>
-                            <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Course 4 -->
-                <div class="course-card glass" data-stagger>
-                    <div class="course-img">
-                        <img src="https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?w=800&auto=format&fit=crop"
-                            alt="Foundation 2028 9th">
-                        <div class="course-tag">87% OFF</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>9th Dhurandhar Foundation Batch For 2028</h3>
-                        <div class="course-price">
-                            <span class="current-price" data-price="1999">₹1,999</span>
-                            <span class="old-price" data-old="15000">₹15,000</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="#" class="btn-buy">Enroll Now</a>
-                            <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Course 5 -->
-                <div class="course-card glass" data-stagger>
-                    <div class="course-img">
-                        <img src="https://images.unsplash.com/photo-1635350736475-c8cef4b21906?w=800&auto=format&fit=crop"
-                            alt="JEE 2028">
-                        <div class="course-tag">77% OFF</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>11th Fighter Standard Batch JEE 2028</h3>
-                        <div class="course-price">
-                            <span class="current-price" data-price="3499">₹3,499</span>
-                            <span class="old-price" data-old="15000">₹15,000</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="#" class="btn-buy">Enroll Now</a>
-                            <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Course 6 -->
-                <div class="course-card glass" data-stagger>
-                    <div class="course-img">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop"
-                            alt="Dhyeya Batch 12th">
-                        <div class="course-tag">89% OFF</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>DHYEYA BATCH FOR 12TH STATE BOARD STUDENTS</h3>
-                        <div class="course-price">
-                            <span class="current-price" data-price="1999">₹1,999</span>
-                            <span class="old-price" data-old="18000">₹18,000</span>
-                        </div>
-                        <div class="course-footer">
-                            <a href="#" class="btn-buy">Enroll Now</a>
-                            <a href="#" class="btn-icon"><i data-lucide="play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 4rem;">
-                <a href="#" class="btn-secondary">View All Courses <i data-lucide="chevron-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Free Tests Section -->
-    <section id="tests" class="tests">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Free Mock Tests</h2>
-                <p>Test your knowledge with our curated mock exams.</p>
-            </div>
-            <div class="test-grid" data-stagger-parent>
-                <div class="test-card glass" data-stagger>
-                    <div class="test-type">Physics</div>
-                    <h3>Kinematics & Motion</h3>
-                    <div class="test-meta">
-                        <span><i data-lucide="help-circle"></i> 20 Qns</span>
-                        <span><i data-lucide="clock"></i> 40 Mins</span>
-                    </div>
-                    <a href="quiz.html" class="btn-test">Start Now</a>
-                </div>
-                <div class="test-card glass" data-stagger>
-                    <div class="test-type">ICT</div>
-                    <h3>Mock Test ICT</h3>
-                    <div class="test-meta">
-                        <span><i data-lucide="help-circle"></i> 12 Qns</span>
-                        <span><i data-lucide="clock"></i> 25 Mins</span>
-                    </div>
-                    <a href="quiz.html" class="btn-test">Start Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- App Downloads Section -->
-    <section id="apps" class="app-download-wrap">
-        <div class="container">
-            <div class="app-section">
-                <div class="app-grid">
-                    <div class="app-content">
-                        <h2>Learn Anywhere, <span class="gradient-text">Anytime.</span></h2>
-                        <p>Get our official app for a seamless mobile learning experience. Download now on Play Store
-                            and Windows.</p>
-                        <div class="app-btns">
-                            <a href="#" class="app-btn">
-                                <i class="fab fa-google-play"></i>
-                                <div class="app-btn-text">
-                                    <span>Get it on</span>
-                                    <strong>Google Play</strong>
-                                </div>
-                            </a>
-                            <a href="#" class="app-btn">
-                                <i class="fab fa-windows"></i>
-                                <div class="app-btn-text">
-                                    <span>Download for</span>
-                                    <strong>Windows</strong>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="app-visual">
-                        <div class="phone-mockup">
-                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&fit=crop"
-                                alt="Mobile App">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="#" class="logo">IITian<span>school</span></a>
-                    <p>IITian School is a leading educational platform committed to providing high-quality coaching
-                        services with a dedicated focus on academic excellence.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="#tests">Free Tests</a></li>
-                        <li><a href="#about">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Disclaimer</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact Us</h4>
-                    <p><i data-lucide="map-pin"></i> Old Town Tankapani Road Near Appolo Pharmacy, Bhubaneswar</p>
-                    <p><i data-lucide="mail"></i> iitianschoolonline@gmail.com</p>
-                    <p><i data-lucide="phone"></i> +91 9827618994</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 IITian School. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <!-- Auth Modal -->
     <div id="auth-modal" class="modal">
@@ -462,10 +594,8 @@
         </div>
     </div>
 
-    <script src="https://demo-work-alpha.vercel.app/iitianschool/script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script src="script.js"></script>
+    <script src="components.js"></script>
 </body>
 
 </html>
