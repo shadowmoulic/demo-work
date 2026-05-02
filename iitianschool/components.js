@@ -4,9 +4,14 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Shared state for the component
+    const currentPath = window.location.pathname;
+    // Detect if we are in a monorepo subdirectory or root deployment
+    const base = currentPath.startsWith('/iitianschool') ? '/iitianschool' : '';
+
     // Inject Shared Components
-    injectNavbar();
-    injectFooter();
+    injectNavbar(base, currentPath);
+    injectFooter(base);
     injectWhatsApp();
 
     // Re-initialize Lucide Icons after injection
@@ -18,27 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigationLogic();
 });
 
-function injectNavbar() {
+function injectNavbar(base, currentPath) {
     const navPlaceholder = document.getElementById('nav-placeholder');
     if (!navPlaceholder) return;
 
-    const currentPath = window.location.pathname;
     const isAbout = currentPath.includes('/about');
     const isVideos = currentPath.includes('/videos') || currentPath.includes('videos.html') || currentPath.includes('video2.html');
 
     const navbarHTML = `
     <nav id="navbar">
         <div class="container nav-content">
-            <a href="/iitianschool/" class="logo">
+            <a href="${base}/" class="logo">
                 <i data-lucide="graduation-cap" class="text-primary"></i>
                 IITian<span>school</span>
             </a>
             <div class="nav-links">
-                <a href="/iitianschool/#courses">Courses</a>
-                <a href="/iitianschool/about" class="${isAbout ? 'active' : ''}">About</a>
-                <a href="/iitianschool/videos" class="${isVideos ? 'active' : ''}">Videos</a>
-                <a href="/iitianschool/#tests">Free Tests</a>
-                <a href="/iitianschool/#apps">Mobile App</a>
+                <a href="${base}/#courses">Courses</a>
+                <a href="${base}/about" class="${isAbout ? 'active' : ''}">About</a>
+                <a href="${base}/videos" class="${isVideos ? 'active' : ''}">Videos</a>
+                <a href="${base}/#tests">Free Tests</a>
+                <a href="${base}/#apps">Mobile App</a>
             </div>
             <div class="mobile-menu-btn">
                 <i class="fa-solid fa-bars"></i>
@@ -49,7 +53,7 @@ function injectNavbar() {
     navPlaceholder.outerHTML = navbarHTML;
 }
 
-function injectFooter() {
+function injectFooter(base) {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (!footerPlaceholder) return;
 
@@ -58,7 +62,7 @@ function injectFooter() {
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="/iitianschool/" class="logo">IITian<span>school</span></a>
+                    <a href="${base}/" class="logo">IITian<span>school</span></a>
                     <p>IITian School is a leading educational platform committed to providing high-quality coaching
                         services with a dedicated focus on academic excellence.</p>
                     <div class="social-links">
@@ -69,11 +73,11 @@ function injectFooter() {
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/iitianschool/">Home</a></li>
-                        <li><a href="/iitianschool/#courses">Courses</a></li>
-                        <li><a href="/iitianschool/#tests">Free Tests</a></li>
-                        <li><a href="/iitianschool/about">About Us</a></li>
-                        <li><a href="/iitianschool/videos">Video Lectures</a></li>
+                        <li><a href="${base}/">Home</a></li>
+                        <li><a href="${base}/#courses">Courses</a></li>
+                        <li><a href="${base}/#tests">Free Tests</a></li>
+                        <li><a href="${base}/about">About Us</a></li>
+                        <li><a href="${base}/videos">Video Lectures</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
