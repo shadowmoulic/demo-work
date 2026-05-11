@@ -1,7 +1,6 @@
-import * as THREE from 'three';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './style.css';
+import * as THREE from 'https://esm.sh/three';
+import { gsap } from 'https://esm.sh/gsap';
+import { ScrollTrigger } from 'https://esm.sh/gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,16 +82,21 @@ function initScrollFlow() {
   });
 
   // Horizontal Scroll for Core Systems
-  const horizontalSection = document.querySelector('.horizontal-scroll');
-  gsap.to(horizontalSection, {
-    xPercent: -75,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".core-systems",
-      pin: true,
-      scrub: 1,
-      end: () => "+=" + horizontalSection.offsetWidth
-    }
+  let mm = gsap.matchMedia();
+  
+  mm.add("(min-width: 769px)", () => {
+    const horizontalSection = document.querySelector('.horizontal-scroll');
+    gsap.to(horizontalSection, {
+      xPercent: -75,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".core-systems",
+        pin: true,
+        start: "top top",
+        scrub: 1,
+        end: () => "+=" + horizontalSection.offsetWidth
+      }
+    });
   });
 
   // Pulse Intensity on Scroll
