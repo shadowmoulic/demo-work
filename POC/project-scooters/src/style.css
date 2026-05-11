@@ -1,0 +1,381 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --subtext: #666666;
+  --accent-color: #0047ff; /* Alpha Cobalt */
+  --accent-soft: rgba(0, 71, 255, 0.05);
+  --border: rgba(0,0,0,0.1);
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Layout Containers */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 8rem 0;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.5;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* Scrollytelling Story Container */
+.story-container {
+  position: relative;
+  display: flex;
+  background: #ffffff;
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+.scooter-viewer {
+  position: sticky;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  z-index: 10;
+}
+
+.garage-lighting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 40%, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.garage-floor {
+  position: absolute;
+  bottom: 25%;
+  width: 150%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  box-shadow: 0 40px 100px var(--accent-soft);
+}
+
+.scooter-wrapper {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  transition: transform 0.1s linear;
+}
+
+#scooter-svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.6;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.08));
+}
+
+.data-tag {
+  position: absolute;
+  font-family: monospace;
+  font-size: 0.6rem;
+  color: var(--accent-color);
+  padding: 2px 8px;
+  border-left: 1px solid var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#tag-front { top: 0; left: 0; }
+#tag-back { bottom: 20%; right: 0; }
+
+.tech-lines .line {
+  position: absolute;
+  background: var(--accent-color);
+  opacity: 0.05;
+}
+
+.line.l1 { width: 100px; height: 1px; top: 15%; left: -80px; }
+.line.l2 { width: 1px; height: 150px; bottom: -20px; right: 15%; }
+.line.l3 { width: 200px; height: 1px; top: 50%; right: -100px; transform: rotate(-45deg); }
+
+/* Scrolling Content */
+.story-content {
+  width: 50%;
+  position: relative;
+  z-index: 5;
+}
+
+.story-slide {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15%;
+  opacity: 0.15;
+  transform: translateY(20px);
+  transition: all 1s cubic-bezier(0.2, 1, 0.2, 1);
+  margin-bottom: -10vh; /* Lowered margin */
+}
+
+.story-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .story-container {
+    flex-direction: column;
+  }
+
+  .scooter-viewer {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    order: 1;
+  }
+
+  .story-content {
+    width: 100%;
+    order: 2;
+  }
+
+  .story-slide {
+    height: auto;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    opacity: 1;
+    transform: none;
+  }
+
+  .story-slide h1, .story-slide h2 {
+    font-size: 2.5rem;
+  }
+
+  .scooter-wrapper {
+    max-width: 300px;
+  }
+}
+
+.product-showcase {
+  background: #f9f9f9;
+  position: relative;
+  z-index: 20;
+  padding: 6rem 0; /* Tightened padding */
+}
+
+/* Product Showcase */
+.product-showcase {
+  background: var(--accent);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6rem;
+}
+
+.showcase-content h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Shop Preview */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.4s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+/* Custom Cursor (Optional but keeps the nostalgia) */
+#pencil-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>') no-repeat center;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.1s ease;
+}
+
+/* Info Section Animation */
+.automation-viz {
+  height: 400px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-line {
+  position: absolute;
+  background: var(--border);
+}

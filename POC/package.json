@@ -1,0 +1,17 @@
+{
+  "name": "poc-master-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd project-scooters && npm install && cd ../ignite-global && npm install && cd ../greatest-luxury && npm install",
+    "dev:scooters": "cd project-scooters && npx vite --port 5173 --strictPort",
+    "dev:ignite": "cd ignite-global && npx vite --port 5174 --strictPort",
+    "dev:luxury": "cd greatest-luxury && npx vite --port 5175 --strictPort",
+    "dev:hub": "npx vite --port 5000 --strictPort",
+    "dev": "npx concurrently \"npm run dev:scooters\" \"npm run dev:ignite\" \"npm run dev:luxury\" \"npm run dev:hub\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^6.4.2"
+  }
+}

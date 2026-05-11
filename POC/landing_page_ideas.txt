@@ -1,0 +1,191 @@
+5 improved landing page concepts
+8.5
+/ 10
+Ignite Global — "The Portal to Solitude"
+Travel / Experiences
+Dark Luxury
+Cinematic
+Exotic
+What changes
+✓ keep
+Particle vortex hero — pure Three.js, cursor-reactive. This is the money shot.
+✓ keep
+Scroll-triggered geometric mask reveals. Add a faint audio cue on each slice (Web Audio API, 1 short tone).
+↑ upgrade
+Warp CTA: instead of "collapses to a point," do a camera-fly-through that punches into the particle field, then cross-dissolves to the form. More cinematic, less jarring.
++ add
+Destination Whisper Layer: floating destination names drift as particles in the vortex. Cursor proximity causes them to crystallise into legible text, then dissolve back.
++ add
+Time-of-day ambient shift: the obsidian canvas subtly shifts warmth based on client local time. Midnight = colder blue-black. Evening = deep amber-black. Pure CSS + JS clock.
+✕ cut
+Glassmorphic contact form — too trendy, dilutes the dark luxury brand. Replace with an ultra-minimal full-black form, single field visible at a time (typeform-style).
+Tech stack
+Three.js (particles)
+GSAP ScrollTrigger
+SVG clipPath masks
+Web Audio API
+CSS custom props
+WOW moment — explicit spec
+Where: Hero → first destination reveal (scroll 30%). What: As the mask slices open, the particle vortex inside the mask gets "sucked into" the revealed footage — particles scatter into the video pixels, then reform as the next mask closes. One seamless loop of destruction → creation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+8
+/ 10
+Greatest — "The Urban Blueprint"
+Real Estate / Luxury Condos
+Cyber-Chic
+Modern
+Important
+What changes
+✓ keep
+Wireframe building assembly with floors dropping in + purple window glow. This is your anchor — don't touch it.
+↑ upgrade
+"X-Ray Vision" hover: make the scanline effect run top-to-bottom as a visible sweep beam (CSS animation), not just a fade. The beam physically "reads" the building section before the floor plan appears.
+↑ upgrade
+Parallax: add two depth layers — foreground city haze + background skyline. The building sits between them. Gives genuine 3D depth without heavy Three.js overhead. Use CSS perspective + transform.
++ add
+Live pricing pulse: small price badges on each floor blink on/off with a "sold" or "available" status as the building assembles. Creates urgency + real estate context instantly.
++ add
+Night/Day toggle: A single switch morphs the entire building from daytime blueprint (white wireframe, daylight) to night mode (dark canvas, every window glowing purple). Uses GSAP timeline.
+✕ cut
+"Green spaces sprout" — feels inconsistent with the electric cyber-chic vibe. Replace with a rooftop helipad with blinking nav lights for brand consistency.
+Tech stack
+CSS 3D perspective
+GSAP timeline
+SVG building layers
+CSS keyframes (scanline)
+Intersection Observer
+WOW moment — explicit spec
+Where: Final scroll position (building fully assembled). What: The wireframe building fills in — glass panels slide into each floor simultaneously, the purple glow intensifies, and a single camera pull-back reveals the full skyline context. Like a real estate render coming to life.
+
+
+
+
+
+
+
+
+
+
+
+
+9.5
+/ 10
+Project — "The Sketchbook Automaton"
+Custom Scooter / Mobility Product
+Minimalist
+Technical
+Nostalgic
+What changes
+✓ keep
+SVG draw animation of the scooter sketch. This is the highest-craft opening on the list — protect it at all costs.
+✓ keep
+Sketch → 3D morph transition. Needs to be the literal page centrepiece — a full-viewport moment, not tucked inside a section.
+↑ upgrade
+Drag & Drop customiser: add live spec readout — when a part snaps on, a small data panel animates in beside it with weight, range impact, price delta. Like a real engineer's notebook.
+↑ upgrade
+Sound design: give each component a different snap sound (mechanical click for frame, rubber thud for wheels, digital beep for tech parts). Web Audio API, 3–4 synthesised tones. No file loading needed.
++ add
+Pencil cursor mode: when in the sketch section, replace the cursor with a custom pencil SVG. When idle for 2s, it starts auto-doodling small annotations on the canvas (speed lines, measurement brackets). Delightful easter egg.
++ add
+Build summary export card: after customising, a "tear-out" animation peels a spec card from the sketchbook — downloadable as a PNG. Shareable, viral mechanic.
+Tech stack
+SVG stroke-dashoffset
+Three.js (3D model)
+GSAP morph
+Web Audio API
+HTML5 Drag API
+html2canvas (export)
+WOW moment — explicit spec
+Where: Sketch-to-3D transition (catalogue section entry). What: The 2D SVG lines fold into themselves — like origami — using a GSAP morph + Z-axis extrude, emerging as a spinning Three.js model. The pencil-paper texture fades to clean white simultaneously. Full-screen. No UI chrome. Pure craft moment.
+
+
+
+
+
+
+
+
+
+
+
+
+7
+/ 10
+Biggest Town — "The Crimson Network"
+SaaS / Manufacturing Platform
+Tech-Integrated
+Elegant
+Data-Driven
+What changes
+✓ keep
+Mascot as page navigator. This is the most charming mechanic on the list — but needs heavy refinement (see upgrades).
+↑ upgrade
+Replace "liquid blob" hero with a live data network graph — animated nodes and edges representing supply chain connections. Crimson edges pulse with data flow. Built with D3.js force simulation. Much more on-brand for a manufacturing SaaS.
+↑ upgrade
+Data Point Bursts: don't make them feel random. Each node should represent a real stat (factories connected, orders processed, uptime %). The burst reveals a mini stat card, not a generic info card.
++ add
+Mascot emotional states: the geometric mascot reacts differently to different interactions — curious lean when cursor hovers a node, satisfied "pulse" when CTA is clicked, impatient animation if user is idle 10s. Adds personality without being gimmicky.
+✕ cut
+"Cloud Flow" liquid blob — too abstract for a B2B manufacturing platform. Users won't connect it to the product. The network graph does this job better.
+✕ cut
+Mascot "pulling up" the next section — physically fights the user's scroll intent. Instead: mascot runs ahead, then turns and gestures. Less resistance, more delight.
+Tech stack
+D3.js force graph
+CSS Lottie / GSAP (mascot)
+SVG filters
+Intersection Observer
+WOW moment — explicit spec
+Where: Hero load (first 2 seconds). What: The network graph boots up like a real system initialising — nodes appear one by one, edges draw between them with a crimson travelling pulse, then the mascot emerges from the centre node last, as if born from the network. Sets the brand story instantly.
+
+
+
+
+
+
+
+
+
+
+
+
+9
+/ 10
+Red Seeker — "The Noir Gallery"
+Creative Agency / Comic Brand
+Luxurious
+Comic-Modern
+Professional
+What changes
+✓ keep
+Z-axis parallax inside comic panels. Legitimately unique. Characters and speech bubbles on separate depth layers via CSS transforms.
+✓ keep
+2.5D character pop-out on hover with bokeh background blur. This is the showstopper — it needs to be fast (60fps) and precise. Use CSS filter:blur + z-index, not Three.js DOF.
+↑ upgrade
+Page flip: add ink-bleed resistance — as the page curls, a subtle ink-smear effect bleeds from the curl edge (CSS radial gradient + blend mode). Makes the paper feel real, not just a CSS transform.
+↑ upgrade
+Gallery layout: ditch uniform grid. Use an intentionally irregular panel layout — different heights, a tilted panel, one full-bleed panel. Mirrors real comic composition, which is never a regular grid.
++ add
+Sound panel: hovering a panel triggers a faint "THWACK" or "WHOOSH" onomatopoeia that floats up as styled comic text, then fades. Web Audio API + custom SVG text burst. Ties the homemade feel to the luxury execution.
++ add
+Halftone scroll shader: as you scroll, a subtle halftone dot pattern overlays the page — denser at page edges, gone at centre. Reinforces the print-comic aesthetic without overpowering content. Pure CSS radial-gradient trick.
+Tech stack
+CSS 3D transform (flip)
+GSAP (parallax layers)
+CSS filter:blur (bokeh)
+Web Audio API
+CSS blend modes
+SVG text burst
+WOW moment — explicit spec
+Where: Product hover (anywhere in gallery). What: Character breaks the panel border — literally crosses the black gutter line into the negative space of the page — background panels blur to bokeh, a speech bubble pops up with the product USP, an onomatopoeia floats. The entire sequence takes 300ms. It's fast, punchy, and totally unexpected.

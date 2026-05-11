@@ -1,0 +1,39 @@
+ALPHA SCOOTER - PROJECT OVERVIEW
+================================
+
+1. SITE MISSION
+---------------
+The site is a premium, storytelling-driven e-commerce platform for 'Alpha Scooters'. 
+The goal is to justify a high-end price point by showcasing technical innovation 
+and a specific philosophy (Intentional Solitude).
+
+2. CORE PAGES
+-------------
+- Landing Page (index.html): The main storytelling hub.
+- Shop (shop.html): The product catalogue where users select their unit.
+- Technology (info.html): Deep dive into the Alpha Core v4 intelligence.
+- Privacy Policy (privacy.html): Legal documentation regarding autonomous data.
+
+3. KEY FEATURES
+---------------
+- Scrollytelling: The scooter moves and evolves as you scroll.
+- Neural Grid: Interactive data visualization of AI thinking.
+- Blueprint Aesthetic: Technical SVG drawing and blueprint backgrounds.
+- High-Fidelity UI: Monochromatic 'Alpha Cobalt' palette with custom cursor.
+- Serialized Units: Marketing focus on claiming a specific numbered unit.
+
+4. RESPONSIVENESS
+-----------------
+- Desktop: Split-screen scrollytelling (50/50).
+- Tablet/Mobile: Stacking layout (Scooter on top, Content below).
+- Liquid Typography: Font sizes and margins scale based on viewport.
+
+5. TECHNICAL STACK
+------------------
+- Core: HTML5, Vanilla CSS3.
+- Animation: GSAP 3.x with ScrollTrigger.
+- Framework: Vite (Build tool/Dev server).
+- Graphics: SVG (Technical Drawing), CSS Gradients (Lighting).
+
+================================
+[ SN: #2026-ALPHA-DOC-01 ]

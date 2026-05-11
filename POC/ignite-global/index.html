@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IGNITE GLOBAL | Acceleration Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Space+Mono&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <canvas id="webgl-canvas"></canvas>
+    <div id="noise-overlay"></div>
+
+    <!-- CINEMATIC UI -->
+    <div id="ui-frame">
+      <div class="ui-corner top-left">IG_CORE_V1</div>
+      <div class="ui-corner top-right">SYSTEM_STATUS: ACTIVE</div>
+      <div class="ui-corner bottom-left">GLOBAL_LATENCY: 0.04ms</div>
+      <div class="ui-corner bottom-right">© 2026 IGNITE</div>
+    </div>
+
+    <div class="whisper-layer" id="whisper-layer"></div>
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- SECTION 01: HERO -->
+        <section class="section hero">
+          <div class="hero-content">
+            <span class="caps glow-text" style="letter-spacing: 0.5em; font-size: 10px;">IGNITION SEQUENCE START</span>
+            <h1 class="kinetic-title">IGNITE<br><span class="outline-text">GLOBAL</span></h1>
+            <p class="hero-sub">The acceleration layer for the modern world. Scaling impact at the speed of thought.</p>
+          </div>
+          <div class="scroll-hint">
+            <div class="mouse-icon"></div>
+            <span>SCROLL TO ACCELERATE</span>
+          </div>
+        </section>
+
+        <!-- SECTION 02: MANIFESTO -->
+        <section class="section manifesto">
+          <div class="container">
+            <div class="manifesto-grid">
+              <div class="manifesto-text">
+                <span class="step-num">01 / PHILOSOPHY</span>
+                <h2>The world is slowing down. <br><span class="accent-red">We are the friction.</span></h2>
+                <p>Most systems are built for stability. We build for ignition. In a landscape of stagnation, we provide the spark that forces evolution.</p>
+              </div>
+              <div class="manifesto-visual">
+                <div class="glitch-box"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02.1: THE FRICTION (THE PROBLEM) -->
+        <section class="section friction" style="background: #000; overflow: hidden;">
+          <div class="container" style="text-align: center;">
+            <span class="caps" style="color: var(--ignite-red); opacity: 0.5;">THE DIAGNOSIS</span>
+            <h2 class="reveal-text" style="font-size: 8vw; margin: 2rem 0; line-height: 0.9;">STAGNATION <br><span class="outline-text">IS THE ENEMY.</span></h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; margin-top: 6rem;">
+              <div class="reveal-card">
+                <h4 class="caps" style="color: var(--ignite-red); margin-bottom: 1rem;">Fragmented</h4>
+                <p style="opacity: 0.5; font-size: 14px;">Disconnected systems that bleed value at every junction.</p>
+              </div>
+              <div class="reveal-card">
+                <h4 class="caps" style="color: var(--ignite-red); margin-bottom: 1rem;">Lethargic</h4>
+                <p style="opacity: 0.5; font-size: 14px;">Legacy architectures that move at the speed of the 90s.</p>
+              </div>
+              <div class="reveal-card">
+                <h4 class="caps" style="color: var(--ignite-red); margin-bottom: 1rem;">Opaque</h4>
+                <p style="opacity: 0.5; font-size: 14px;">The "black box" of global scaling that nobody can explain.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02.2: THE CATALYST (THE TRANSITION) -->
+        <section class="section catalyst" style="background: linear-gradient(to bottom, #000, var(--ignite-red));">
+          <div class="container">
+            <h2 style="font-family: var(--font-display); font-size: 4rem; text-align: center; color: white;">The moment of <br>Ignition.</h2>
+            <p style="text-align: center; max-width: 600px; margin: 3rem auto; color: white; opacity: 0.9;">We don't just solve problems. We accelerate outcomes. By injecting our neural layer into your core, we turn latency into velocity.</p>
+          </div>
+        </section>
+
+        <!-- SECTION 03: CORE SYSTEMS (HORIZONTAL) -->
+        <section class="section core-systems">
+          <div class="horizontal-scroll">
+            <div class="system-card">
+              <span class="card-num">SC1</span>
+              <h3>VELOCITY</h3>
+              <p>Deployment cycles measured in milliseconds, not months.</p>
+            </div>
+            <div class="system-card">
+              <span class="card-num">SC2</span>
+              <h3>SYNERGY</h3>
+              <p>Unified neural networks connecting global talent pools.</p>
+            </div>
+            <div class="system-card">
+              <span class="card-num">SC3</span>
+              <h3>IMPACT</h3>
+              <p>Measurable transformation across every vertical.</p>
+            </div>
+            <div class="system-card" style="background: rgba(232, 232, 236, 0.03); backdrop-filter: blur(10px); border-left: 1px solid rgba(255,26,26,0.2);">
+              <span class="card-num" style="color: var(--ignite-red);">SC4</span>
+              <h3 style="color: var(--off-white);">AUTONOMY</h3>
+              <p style="opacity: 0.7;">Self-correcting systems that grow with your ambitions.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 04: CTA -->
+        <section class="section final-cta">
+          <div class="cta-container">
+            <h2 class="reveal-text">Ready for Ignition?</h2>
+            <div class="contact-form" id="contact-form">
+              <div class="form-step active" data-step="1">
+                <p class="caps">IDENTITY</p>
+                <input type="text" placeholder="ENTER YOUR FULL NAME" />
+              </div>
+              <div class="form-step" data-step="2">
+                <p class="caps">OBJECTIVE</p>
+                <input type="text" placeholder="DEFINE YOUR VISION" />
+              </div>
+              <button class="btn-ignite" id="submit-btn">INITIATE WARP</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- WARP OVERLAY (POPUP) -->
+    <div id="warp-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--obsidian); z-index: 5000; display: none; align-items: center; justify-content: center; text-align: center;">
+      <div id="warp-modal" style="max-width: 500px; padding: 4rem; border: 1px solid var(--ignite-red); background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); position: relative; opacity: 0; transform: scale(0.8);">
+        <div class="glow-ring" style="position: absolute; top: 50%; left: 50%; width: 150%; height: 150%; transform: translate(-50%, -50%); border: 1px solid var(--ignite-red); border-radius: 50%; opacity: 0.1; animation: ringPulse 2s infinite;"></div>
+        
+        <span class="caps" style="color: var(--ignite-red); font-family: var(--font-mono); font-size: 10px; display: block; margin-bottom: 2rem; letter-spacing: 0.5em;">TRANSMISSION COMPLETE</span>
+        <h2 style="font-family: var(--font-display); font-size: 3rem; line-height: 1; margin-bottom: 2rem;">SIGNAL<br>RECEIVED.</h2>
+        <p style="opacity: 0.6; font-size: 14px; margin-bottom: 3rem; line-height: 1.6;">Your vision has been neural-mapped. Ignite Global systems are now synchronizing with your objective.</p>
+        
+        <div id="tracer-id" style="font-family: var(--font-mono); color: var(--ignite-red); font-size: 10px; margin-bottom: 3rem; opacity: 0.5;">TRACER_ID: X-774-IGNITE</div>
+        
+        <button onclick="window.location.reload()" class="btn-ignite" style="padding: 1rem 2rem; font-size: 10px; background: var(--ignite-red); color: white;">RE-ENTRY SYSTEM</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

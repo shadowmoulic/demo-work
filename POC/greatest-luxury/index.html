@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GREATEST LUXURY | The Art of Refinement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Inter:wght@200;400&display=swap" rel="stylesheet">
+  </head>
+  <body style="cursor: none; overflow: hidden;">
+    <!-- SILK LOOM PRELOADER -->
+    <div id="preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--ivory); z-index: 10000; display: flex; align-items: center; justify-content: center;">
+      <svg id="silk-loom" viewBox="0 0 200 200" style="width: 150px; height: 150px;">
+        <path class="silk-strand" d="M100,20 Q120,60 100,100 T100,180" fill="none" stroke="var(--gold)" stroke-width="0.5" opacity="0" />
+        <path class="silk-strand" d="M20,100 Q60,120 100,100 T180,100" fill="none" stroke="var(--gold)" stroke-width="0.5" opacity="0" />
+        <path class="silk-strand" d="M40,40 Q100,100 160,160" fill="none" stroke="var(--gold)" stroke-width="0.5" opacity="0" />
+        <path class="silk-strand" d="M160,40 Q100,100 40,160" fill="none" stroke="var(--gold)" stroke-width="0.5" opacity="0" />
+      </svg>
+      <div id="preloader-text" style="position: absolute; bottom: 15%; font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.5em; color: var(--gold); opacity: 0;">REFINING...</div>
+    </div>
+
+    <!-- LUXURY LIGHT ENGINE -->
+    <div id="cursor"></div>
+    <canvas id="bokeh-canvas"></canvas>
+    <div id="luxury-glow"></div>
+    <div id="grain-texture"></div>
+
+    <main id="luxury-wrapper">
+      <!-- SECTION 01: THE AWAKENING -->
+      <section class="section hero">
+        <div class="hero-content">
+          <span class="caps gold-text" style="letter-spacing: 0.6em; font-size: 11px;">ESTABLISHED IN REFINEMENT</span>
+          <h1 class="breathing-title">The Silence of<br><i style="font-weight: 300;">Perfection.</i></h1>
+          <p class="hero-sub">True luxury doesn't scream. It whispers. Experience the quiet power of curated living.</p>
+        </div>
+        <div class="scroll-prompt">
+          <div class="luxury-line"></div>
+          <span>DESCEND</span>
+        </div>
+      </section>
+
+      <!-- SECTION 02: THE MATERIAL -->
+      <section class="section refinement">
+        <div class="container">
+          <div class="luxury-grid">
+            <div class="luxury-text">
+              <span class="gold-text">01 / MATERIAL</span>
+              <h2>A Symphony of <br>Fine Silk.</h2>
+              <p>The touch of raw, hand-woven champagne silk. It's the first friction of luxury.</p>
+            </div>
+            <div class="luxury-visual">
+              <img src="/silk.png" class="luxury-img" alt="Macro Silk">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 03: THE HERITAGE -->
+      <section class="section heritage" style="background: var(--obsidian); color: var(--ivory);">
+        <div class="container" style="text-align: center; max-width: 800px;">
+          <span class="gold-text">02 / LEGACY</span>
+          <h2 style="font-family: var(--font-serif); font-size: 5vw; line-height: 1.1; margin: 3rem 0;">A century of doing one thing perfectly.</h2>
+          <p style="opacity: 0.6; font-size: 1.2rem; line-height: 1.8;">Our artisans don't follow trends. They follow the grain. They follow the light. They follow the silent standards of those who know.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 04: THE CURATION -->
+      <section class="section refinement">
+        <div class="container">
+          <div class="luxury-grid" style="grid-template-columns: 0.8fr 1.2fr;">
+            <div class="luxury-visual">
+              <img src="/marble.png" class="luxury-img" alt="Marble Detail">
+            </div>
+            <div class="luxury-text">
+              <span class="gold-text">03 / CURATION</span>
+              <h2>Weightless <br>Precision.</h2>
+              <p>Calacatta marble meet hand-poured glass. A balance of gravity and light.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 05: THE ZENITH -->
+      <section class="section atmosphere" style="height: 100vh; overflow: hidden; background: var(--obsidian); color: var(--ivory);">
+        <div id="zenith-glow" style="position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, var(--gold-glow), transparent 70%); opacity: 0.3;"></div>
+        <div class="zenith-content" style="text-align: center; position: relative; z-index: 10;">
+          <h2 class="breathing-title" style="font-size: 8vw; letter-spacing: 0.3em; opacity: 0; filter: blur(10px); will-change: filter, opacity, transform, letter-spacing;">TRANSCEND</h2>
+          <p class="caps gold-text" style="opacity: 0.5;">The peak of curated existence.</p>
+        </div>
+        <!-- Animated Silk Threads -->
+        <svg class="silk-thread" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <path id="thread-path" d="M0,500 Q250,400 500,500 T1000,500" fill="none" stroke="var(--gold)" stroke-width="0.5" opacity="0.3" />
+        </svg>
+      </section>
+
+      <!-- SECTION 06: THE CIRCLE (CTA) -->
+      <section class="section elite-cta" style="background: var(--ivory); color: var(--obsidian);">
+        <div class="cta-wrap">
+          <!-- LUXURY SEAL SVG -->
+          <svg id="luxury-seal" viewBox="0 0 100 100" style="width: 80px; margin-bottom: 3rem; opacity: 0.6;">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="var(--gold)" stroke-width="0.5" />
+            <path id="seal-path" d="M30,50 L45,65 L70,35" fill="none" stroke="var(--gold)" stroke-width="1" stroke-dasharray="100" stroke-dashoffset="100" />
+            <text x="50" y="52" font-family="var(--font-serif)" font-size="10" text-anchor="middle" fill="var(--gold)">GL</text>
+          </svg>
+
+          <h2 class="soft-reveal" style="font-family: var(--font-serif); font-size: 5vw; line-height: 1; margin-bottom: 2rem;">Authenticate.</h2>
+          <p style="font-family: var(--font-sans); opacity: 0.6; font-size: 14px; max-width: 400px; margin: 0 auto 4rem;">Access to the Greatest Luxury collection is strictly limited to 50 active members per cycle.</p>
+          
+          <div class="luxury-form">
+            <input type="text" placeholder="SECURE CODE" style="border-bottom-color: var(--obsidian); color: var(--obsidian);" />
+            <button class="btn-gold" style="background: var(--obsidian); color: var(--ivory);">REQUEST CREDENTIALS</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="luxury-footer">
+        <div class="footer-line"></div>
+        <div class="footer-info">
+          <span>GENEVA</span>
+          <span>PARIS</span>
+          <span>TOKYO</span>
+          <span>NEW YORK</span>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

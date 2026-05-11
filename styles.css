@@ -287,3 +287,16 @@ h1 {
         gap: 2rem;
     }
 }
+
+/* Mobile Heading Normalization */
+@media (max-width: 768px) {
+    .text-4xl, 
+    .text-5xl, 
+    .text-6xl, 
+    .text-7xl,
+    .text-8xl {
+        font-size: 3rem !important;
+        line-height: 1 !important;
+        letter-spacing: -0.05em !important;
+    }
+}

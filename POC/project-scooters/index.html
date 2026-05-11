@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPHA | Autonomous Mobility</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Mono:wght@400;700&family=Homemade+Apple&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --obsidian: #0A0A0C;
+      --cobalt: #1A6BFF;
+      --off-white: #E8E8EC;
+      --grid-opacity: 0.04;
+      --font-mono: 'Space Mono', monospace;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: none;
+      /* Custom crosshair */
+    }
+
+    body {
+      background-color: var(--obsidian);
+      color: var(--off-white);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      overflow: hidden;
+      /* Controlled by preloader */
+      height: 100vh;
+    }
+
+    /* Blueprint Grid */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(26, 107, 255, var(--grid-opacity)) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 107, 255, var(--grid-opacity)) 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: -1;
+      pointer-events: none;
+      transition: opacity 2s ease;
+    }
+
+    /* Custom Cursor */
+    #cursor {
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--cobalt);
+      border-radius: 50%;
+      pointer-events: none;
+      position: fixed;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s, height 0.3s, transform 0.1s;
+    }
+
+    #cursor-icon {
+      display: none;
+      width: 14px;
+      fill: var(--cobalt);
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--obsidian);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #preloader-text {
+      font-family: var(--font-mono);
+      color: var(--cobalt);
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+    }
+
+    #scanline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--cobalt);
+      box-shadow: 0 0 10px var(--cobalt);
+      animation: scan 0.6s linear infinite;
+    }
+
+    @keyframes scan {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    .split-gate {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: var(--obsidian);
+      z-index: 10;
+    }
+
+    #gate-left {
+      left: 0;
+    }
+
+    #gate-right {
+      right: 0;
+    }
+
+    /* Rail */
+    #rail {
+      position: fixed;
+      right: 24px;
+      top: 0;
+      width: 1px;
+      height: 0%;
+      background: var(--cobalt);
+      z-index: 1000;
+    }
+
+    .act-label {
+      position: absolute;
+      right: 12px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--cobalt);
+      text-transform: uppercase;
+      opacity: 0;
+      white-space: nowrap;
+    }
+
+    /* Layout */
+    .viewport {
+      position: relative;
+      width: 100%;
+      height: 700vh;
+      /* Total scroll height */
+    }
+
+    .main-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .panel-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 12%;
+      /* Increased breathing room */
+      z-index: 5;
+    }
+
+    .panel-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+
+      .panel-left,
+      .panel-right {
+        width: 100%;
+        height: 50%;
+        padding: 2rem;
+      }
+
+      .panel-left {
+        order: 2;
+        padding-left: 2rem;
+      }
+
+      .panel-right {
+        order: 1;
+      }
+    }
+
+    /* Typography Styles */
+    h1.alpha-title {
+      font-size: 5vw;
+      letter-spacing: 0.3em;
+      font-weight: 700;
+      opacity: 0;
+      text-transform: uppercase;
+    }
+
+    .subline {
+      opacity: 0;
+      font-size: 1.4rem;
+      color: var(--off-white);
+      margin-top: 1.5rem;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+
+    .status-badge {
+      font-family: var(--font-mono);
+      color: var(--cobalt);
+      font-size: 14px;
+      margin-top: 3rem;
+      opacity: 0;
+      letter-spacing: 0.2em;
+    }
+
+    .blink {
+      animation: blinkAnim 0.8s infinite;
+    }
+
+    @keyframes blinkAnim {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Solitude Words */
+    .solitude-words {
+      font-size: 3.2rem;
+      font-weight: 500;
+      line-height: 1.6;
+      max-width: 85%;
+      color: var(--off-white);
+      white-space: pre-wrap;
+      display: none;
+      opacity: 0;
+    }
+
+    .solitude-words span {
+      margin-right: 2rem;
+      display: inline-block;
+    }
+
+    /* SVG Styles */
+    #scooter-wrapper {
+      width: 85%;
+      height: 85%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    svg#scooter-svg {
+      width: 100%;
+      height: auto;
+      fill: none;
+      stroke: var(--cobalt);
+      stroke-width: 0.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .leader-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      opacity: 0;
+      stroke-width: 0.3;
+    }
+
+    .label-text {
+      font-family: var(--font-mono);
+      font-size: 2px;
+      fill: var(--off-white);
+      opacity: 0;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+    }
+
+    /* Box Draw Animation */
+    .reveal-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(26,107,255,0.05) !important;
+    }
+    .reveal-card::before, .reveal-card::after {
+      content: '';
+      position: absolute;
+      background: var(--cobalt);
+      transition: transform 0.8s ease;
+      z-index: 2;
+    }
+    /* Horizontal lines */
+    .reveal-card::before {
+      top: 0; left: 0; width: 100%; height: 1px;
+      transform: scaleX(0); transform-origin: left;
+    }
+    /* Vertical lines */
+    .reveal-card::after {
+      top: 0; right: 0; width: 1px; height: 100%;
+      transform: scaleY(0); transform-origin: top;
+    }
+    .reveal-card.active::before { transform: scaleX(1); }
+    .reveal-card.active::after { transform: scaleY(1); }
+
+    @keyframes coreGlow {
+
+      0%,
+      100% {
+        stroke-width: 0.6;
+      }
+
+      50% {
+        stroke-width: 1.5;
+        filter: drop-shadow(0 0 5px var(--cobalt));
+      }
+    }
+
+    .pulsing-core {
+      animation: coreGlow 1.5s infinite;
+    }
+
+    /* Neural Grid */
+    #neural-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .node {
+      fill: var(--cobalt);
+    }
+
+    .node-pulse {
+      animation: nodePulseAnim 0.8s infinite alternate;
+    }
+
+    @keyframes nodePulseAnim {
+      from {
+        opacity: 0.3;
+      }
+
+      to {
+        opacity: 0.8;
+      }
+    }
+
+    /* Map Wireframe */
+    #map-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Counters */
+    .data-counters {
+      margin-top: 5rem;
+      display: none;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      opacity: 0;
+    }
+
+    .counter-item {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--cobalt);
+      letter-spacing: 0.2em;
+    }
+
+    .counter-val {
+      font-size: 4rem;
+      color: var(--off-white);
+      display: block;
+      margin-top: 1rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* CTA */
+    #claim-btn {
+      display: none;
+      margin-top: 3rem;
+      padding: 1.5rem 3rem;
+      border: 1px solid var(--cobalt);
+      color: var(--off-white);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s;
+    }
+
+    #claim-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--cobalt);
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 0.3s ease-out;
+      z-index: -1;
+    }
+
+    #claim-btn:hover::before {
+      clip-path: inset(0 0% 0 0);
+    }
+
+    /* Serial Section */
+    #serial-plate {
+      opacity: 0;
+      transform-origin: center;
+    }
+
+    /* Footer */
+    footer {
+      position: absolute;
+      bottom: 5vh;
+      left: 8%;
+      width: 84%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      opacity: 0;
+    }
+
+    .footer-nav a {
+      color: var(--subtext);
+      text-decoration: none;
+      font-size: 11px;
+      margin-right: 2rem;
+      opacity: 0.6;
+    }
+
+    .footer-sys-text {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--cobalt);
+    }
+
+    /* Ghost Text */
+    #ghost-text {
+      position: fixed;
+      bottom: 10vh;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: white;
+      opacity: 0.08;
+      white-space: nowrap;
+      pointer-events: none;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cursor">
+    <svg id="cursor-icon" viewBox="0 0 24 24">
+      <path
+        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+    </svg>
+  </div>
+
+  <!-- Sticky Sales Navigation -->
+  <nav
+    style="position: fixed; top: 0; width: 100%; padding: 2rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000;">
+    <div class="logo" style="font-weight: 700; font-size: 1.2rem; letter-spacing: 0.2em;">ALPHA<span
+        style="color: var(--cobalt);">.</span></div>
+    <div style="display: flex; gap: 3rem; align-items: center;">
+      <a href="/shop.html"
+        style="color: var(--off-white); text-decoration: none; font-size: 11px; letter-spacing: 0.1em;" class="caps">The
+        Fleet</a>
+      <a href="/shop.html" class="btn btn-primary"
+        style="padding: 0.8rem 1.5rem; background: var(--cobalt); color: white; text-decoration: none; font-weight: 700; font-size: 11px; border-radius: 2px;">RESERVE
+        NOW — $2,499</a>
+    </div>
+  </nav>
+
+  <div id="preloader">
+    <div id="gate-left" class="split-gate"></div>
+    <div id="gate-right" class="split-gate"></div>
+    <div id="scanline"></div>
+
+    <div id="boot-container" style="position: absolute; width: 300px; text-align: left; z-index: 10;">
+      <div id="preloader-text"
+        style="font-family: var(--font-mono); color: var(--off-white); font-size: 14px; margin-bottom: 10px; letter-spacing: 0.2em;">
+      </div>
+      <div id="progress-container"
+        style="width: 100%; height: 1px; background: rgba(26,107,255,0.1); position: relative;">
+        <div id="progress-bar"
+          style="width: 0%; height: 100%; background: var(--cobalt); box-shadow: 0 0 10px var(--cobalt);"></div>
+      </div>
+      <div id="loading-logs"
+        style="font-family: var(--font-mono); color: var(--cobalt); font-size: 8px; margin-top: 10px; opacity: 0.6; line-height: 1.4; height: 40px; overflow: hidden;">
+      </div>
+    </div>
+
+    <div id="grid-coords"
+      style="position: absolute; color: var(--cobalt); font-family: var(--font-mono); font-size: 10px; opacity: 0.6;">
+    </div>
+  </div>
+
+  <div id="rail">
+    <span class="act-label" style="top: 15%;">The Machine</span>
+    <span class="act-label" style="top: 35%;">Innovation</span>
+    <span class="act-label" style="top: 55%;">Intelligence</span>
+    <span class="act-label" style="top: 70%;">Solitude</span>
+    <span class="act-label" style="top: 88%;">Deploy</span>
+  </div>
+
+  <div class="viewport">
+    <div class="main-container">
+      <div class="panel-left">
+        <!-- HERO CONTENT -->
+        <div id="hero-copy">
+          <span class="caps" style="color: var(--cobalt); margin-bottom: 1rem; display: block;">2026 ALPHA SERIES
+            01</span>
+          <h1 class="alpha-title">THE FUTURE OF SOLO TRAVEL.</h1>
+          <p class="subline">Precision engineered, self-evolving, and strictly personal. Meet the world's most advanced
+            autonomous urban vehicle.</p>
+          <div class="status-badge" id="status-line">SYSTEM STATUS: READY FOR CONFIGURATION</div>
+        </div>
+
+        <!-- INNOVATION CONTENT -->
+        <div id="innovation-copy" style="display: none;">
+          <span class="caps" style="color: var(--cobalt); margin-bottom: 1rem; display: block;">ENGINEERING</span>
+          <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 2rem;">Born from Blueprints, Perfected by Code.
+          </h2>
+          <ul style="list-style: none; color: var(--off-white); font-size: 1.1rem; opacity: 0.8;">
+            <li style="margin-bottom: 1.5rem;">• 70KM Range per charging cycle</li>
+            <li style="margin-bottom: 1.5rem;">• Titanium-Polymer Composite Frame</li>
+            <li style="margin-bottom: 1.5rem;">• Integrated Alpha-Core AI Control</li>
+          </ul>
+        </div>
+
+        <!-- INTELLIGENCE CONTENT -->
+        <div id="intelligence-copy" style="display: none;">
+          <span class="caps" style="color: var(--cobalt); margin-bottom: 1rem; display: block;">ALPHA CORE V4</span>
+          <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 2rem;">Invisible Intelligence.</h2>
+          <div class="data-counters" style="display: grid; opacity: 1; margin-top: 2rem;">
+            <div class="counter-item">TORQUE <span class="counter-val" id="torque-val">94</span> Nm</div>
+            <div class="counter-item">CONFIDENCE <span class="counter-val" id="conf-val">99.1</span> %</div>
+          </div>
+        </div>
+
+        <!-- SOLITUDE CONTENT -->
+        <div id="solitude-copy" style="display: none;">
+          <span class="caps" style="color: var(--cobalt); margin-bottom: 1rem; display: block;">PHILOSOPHY</span>
+          <div class="solitude-words" style="display: block; opacity: 1;">
+            <!-- Managed by GSAP -->
+          </div>
+        </div>
+
+        <!-- DEPLOY CONTENT -->
+        <div id="deploy-copy" style="display: none;">
+          <span class="caps" style="color: var(--cobalt); margin-bottom: 1rem; display: block;">DEPLOYMENT</span>
+          <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 2rem;">Your Alpha is Ready.</h2>
+          <div id="unit-info" style="display: block; margin-top: 2rem;">
+            <span class="caps"
+              style="color: var(--cobalt); font-family: var(--font-mono); font-size: 14px; display: block; margin-bottom: 2rem;"
+              id="unit-count">47 UNITS REMAIN.</span>
+            <a href="/shop.html" id="claim-btn" style="display: inline-block; opacity: 1;">CLAIM YOUR SERIAL →</a>
+          </div>
+        </div>
+      </div> <!-- END PANEL LEFT -->
+
+      <div class="panel-right">
+        <div id="scooter-wrapper">
+          <!-- CITY MAP -->
+          <svg id="map-overlay" viewBox="0 0 100 100">
+            <path id="map-grid"
+              d="M0 20 H100 M0 40 H100 M0 60 H100 M0 80 H100 M20 0 V100 M40 0 V100 M60 0 V100 M80 0 V100"
+              stroke="rgba(26,107,255,0.2)" stroke-width="0.2" />
+            <path id="route-path" d="M20 80 L20 40 L60 40 L60 20" stroke="var(--cobalt)" stroke-width="0.5" fill="none"
+              stroke-dasharray="1000" stroke-dashoffset="1000" />
+            <circle id="route-end" cx="60" cy="20" r="0" fill="var(--cobalt)" />
+            <text x="63" y="18" class="label-text" id="map-label">YOUR AXIS.</text>
+          </svg>
+
+          <!-- NEURAL GRID -->
+          <svg id="neural-grid" viewBox="0 0 100 100">
+            <g id="edges" stroke="var(--cobalt)" stroke-width="0.1" opacity="0.2">
+              <line x1="20" y1="20" x2="40" y2="30" />
+              <line x1="40" y1="30" x2="60" y2="20" />
+              <line x1="60" y1="20" x2="80" y2="40" />
+              <line x1="80" y1="40" x2="70" y2="60" />
+              <line x1="70" y1="60" x2="50" y2="80" />
+              <line x1="50" y1="80" x2="30" y2="70" />
+              <line x1="30" y1="70" x2="20" y2="50" />
+              <line x1="20" y1="50" x2="20" y2="20" />
+              <line x1="40" y1="50" x2="20" y2="50" />
+              <line x1="40" y1="50" x2="70" y2="60" />
+            </g>
+            <g id="nodes">
+              <circle class="node" cx="20" cy="20" r="0.8" />
+              <circle class="node" cx="40" cy="30" r="0.8" />
+              <circle class="node" cx="60" cy="20" r="0.8" />
+              <circle class="node" cx="80" cy="40" r="0.8" />
+              <circle class="node" cx="70" cy="60" r="0.8" />
+              <circle class="node" cx="50" cy="80" r="0.8" />
+              <circle class="node" cx="30" cy="70" r="0.8" />
+              <circle class="node" cx="20" cy="50" r="0.8" />
+            </g>
+          </svg>
+
+          <!-- SCOOTER SVG -->
+          <svg id="scooter-svg" viewBox="0 0 200 120">
+            <g id="wheels">
+              <circle id="wheel-back" cx="40" cy="90" r="15" />
+              <circle id="wheel-front" cx="180" cy="90" r="15" />
+              <!-- Axle centers for explosion labels -->
+              <circle cx="40" cy="90" r="0.5" fill="none" class="axle-ref" />
+              <circle cx="180" cy="90" r="0.5" fill="none" class="axle-ref" />
+            </g>
+            <g id="frame">
+              <path d="M40 90 L60 90 L85 45 L175 45 L180 90" />
+              <path d="M85 45 L80 35 L120 35 L120 45" />
+            </g>
+            <g id="handlebars">
+              <path d="M175 45 L170 20 L155 20" />
+              <circle cx="155" cy="20" r="1.5" />
+            </g>
+            <g id="details">
+              <rect x="90" y="38" width="25" height="5" rx="1" /> <!-- seat -->
+              <circle cx="55" cy="85" r="4" /> <!-- motor detail -->
+              <path d="M172 25 L180 25" stroke-width="0.5" /> <!-- light -->
+            </g>
+            <g id="core-module">
+              <rect x="95" y="48" width="15" height="15" rx="1" class="pulsing-core" id="alpha-core-unit" />
+            </g>
+
+            <!-- Explosion Labels -->
+            <g id="explode-labels">
+              <path class="leader-line" d="M40 90 L20 110" id="line-wheels" />
+              <text x="5" y="115" class="label-text">AXIS_WHEEL_V1</text>
+              <text x="15" y="125" class="engineer-note">"Grippy as the old BMX."</text>
+
+              <path class="leader-line" d="M120 45 L140 30" id="line-frame" />
+              <text x="142" y="28" class="label-text">CHASSIS_MONO</text>
+              <text x="145" y="38" class="engineer-note">"Feels solid... indestructible."</text>
+
+              <path class="leader-line" d="M170 20 L190 10" id="line-bars" />
+              <text x="192" y="8" class="label-text">NAV_STEM_V4</text>
+              <text x="180" y="5" class="engineer-note">"Direct response. No lag."</text>
+
+              <path class="leader-line" d="M102 55 L120 70" id="line-core" />
+              <text x="122" y="75" class="label-text">ALPHA_CORE_V4</text>
+              <text x="125" y="85" class="engineer-note">"It's smarter than I am."</text>
+            </g>
+
+            <!-- Serial Plate -->
+            <g id="serial-plate" opacity="0">
+              <rect x="50" y="40" width="100" height="40" fill="var(--obsidian)" stroke="var(--cobalt)"
+                stroke-width="0.5" />
+              <text x="100" y="60" text-anchor="middle" fill="var(--off-white)" font-family="var(--font-mono)"
+                font-size="6">SN: #2026-ALPHA-01</text>
+              <text x="100" y="72" text-anchor="middle" fill="var(--cobalt)" font-family="var(--font-mono)"
+                font-size="4">AUTHENTICATED UNIT</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 06: SHUTDOWN -->
+    <div id="shutdown-act" style="height: 100vh;"></div>
+  </div> <!-- END VIEWPORT -->
+
+  <!-- NEW: OUR VALUES SECTION (Post-Scroll) -->
+  <section id="values" class="reveal-section"
+    style="background: #000; padding: 10rem 8%; position: relative; z-index: 100;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <span class="caps" style="color: var(--cobalt); display: block; margin-bottom: 2rem;">The Human Element</span>
+      <h2 class="reveal-text" style="font-size: 4rem; margin-bottom: 6rem; line-height: 1;">A Machine with Memory.</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem;">
+        <div class="reveal-card">
+          <h3 style="font-family: var(--font-mono); color: var(--cobalt); margin-bottom: 1.5rem;">01 / SILENCE</h3>
+          <p style="opacity: 0.7; line-height: 1.6;">Remember the early mornings when the world was quiet? Alpha is designed to preserve that. No engine roar, no rattle. Just you and the road.</p>
+        </div>
+        <div class="reveal-card">
+          <h3 style="font-family: var(--font-mono); color: var(--cobalt); margin-bottom: 1.5rem;">02 / HONESTY</h3>
+          <p style="opacity: 0.7; line-height: 1.6;">We use raw titanium and polymer composites. No plastic fake-chrome. It’s built to last like your grandfather’s tools, but engineered for tomorrow.</p>
+        </div>
+        <div class="reveal-card">
+          <h3 style="font-family: var(--font-mono); color: var(--cobalt); margin-bottom: 1.5rem;">03 / COMPANION</h3>
+          <p style="opacity: 0.7; line-height: 1.6;">It’s not a gadget. It learns your favorite shortcuts, your morning coffee stop, and your late-night rides. It’s an evolution of the solo explorer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: SERIES LINEUP -->
+  <section id="fleet" class="reveal-section"
+    style="background: #000; padding: 10rem 8%; position: relative; z-index: 100;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <span class="caps" style="color: var(--cobalt); display: block; margin-bottom: 2rem;">The Fleet</span>
+      <h2 class="reveal-text" style="font-size: 3.5rem; margin-bottom: 5rem;">Choose your companion.</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <!-- Model 01 -->
+        <div class="reveal-card"
+          style="background: var(--obsidian); border: 1px solid rgba(26,107,255,0.1); padding: 3rem;">
+          <span class="caps" style="font-size: 10px; opacity: 0.5;">Series 01</span>
+          <h3 style="font-size: 2rem; margin: 1rem 0;">ALPHA S1</h3>
+          <p style="opacity: 0.7; margin-bottom: 2rem; font-size: 0.9rem;">The standard in solo urban mobility.
+            Lightweight, agile, and fully autonomous.</p>
+          <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">$2,499</div>
+          <a href="/shop.html"
+            style="color: var(--cobalt); text-decoration: none; font-family: var(--font-mono); font-size: 11px;">VIEW
+            SPECS →</a>
+        </div>
+        <!-- Model 02 -->
+        <div class="reveal-card"
+          style="background: var(--obsidian); border: 1px solid var(--cobalt); padding: 3rem; position: relative;">
+          <div
+            style="position: absolute; top: -12px; left: 20px; background: var(--cobalt); padding: 2px 10px; font-size: 9px; font-weight: 700;">
+            MOST POPULAR</div>
+          <span class="caps" style="font-size: 10px; opacity: 0.5;">Series 01+</span>
+          <h3 style="font-size: 2rem; margin: 1rem 0;">ALPHA S1+</h3>
+          <p style="opacity: 0.7; margin-bottom: 2rem; font-size: 0.9rem;">Extended range and neural-enhanced torque for
+            the long-distance explorer.</p>
+          <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">$2,999</div>
+          <a href="/shop.html"
+            style="color: var(--cobalt); text-decoration: none; font-family: var(--font-mono); font-size: 11px;">VIEW
+            SPECS →</a>
+        </div>
+        <!-- Model 03 -->
+        <div class="reveal-card"
+          style="background: var(--obsidian); border: 1px solid rgba(26,107,255,0.1); padding: 3rem;">
+          <span class="caps" style="font-size: 10px; opacity: 0.5;">Max Series</span>
+          <h3 style="font-size: 2rem; margin: 1rem 0;">ALPHA MAX</h3>
+          <p style="opacity: 0.7; margin-bottom: 2rem; font-size: 0.9rem;">The pinnacle of mobility. Dual motors, carbon
+            frame, and unrestricted speed.</p>
+          <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">$3,899</div>
+          <a href="/shop.html"
+            style="color: var(--cobalt); text-decoration: none; font-family: var(--font-mono); font-size: 11px;">VIEW
+            SPECS →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: TRUST / RECOGNITION -->
+  <section
+    style="background: #000; padding: 4rem 8%; border-top: 1px solid rgba(26,107,255,0.05); position: relative; z-index: 100;">
+    <div
+      style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; opacity: 0.3;">
+      <span class="caps" style="font-size: 11px;">WIRED</span>
+      <span class="caps" style="font-size: 11px;">THE VERGE</span>
+      <span class="caps" style="font-size: 11px;">TECHCRUNCH</span>
+      <span class="caps" style="font-size: 11px;">MOBILITY SYSTEMS 2026</span>
+      <span class="caps" style="font-size: 11px;">URBAN INNOVATION</span>
+    </div>
+  </section>
+
+  <!-- NEW: FINAL CTA / PROTOCOL -->
+  <section id="final-cta" style="background: linear-gradient(to bottom, #000, var(--obsidian)); padding: 15rem 8%; text-align: center; position: relative; z-index: 100; border-top: 1px solid rgba(26,107,255,0.1);">
+    <div class="reveal-section" style="max-width: 900px; margin: 0 auto;">
+      <span class="caps" style="color: var(--cobalt); font-size: 12px; letter-spacing: 0.4em; display: block; margin-bottom: 2rem;">FINAL AUTHENTICATION</span>
+      <h2 class="reveal-text" style="font-size: 5vw; line-height: 1; margin-bottom: 3rem; text-transform: uppercase; font-weight: 700;">Secure the Protocol.</h2>
+      <p style="opacity: 0.6; font-size: 1.2rem; max-width: 600px; margin: 0 auto 4rem; line-height: 1.6;">The first 50 units are serialized and neural-mapped. Your axis is waiting. Don't just travel. Evolve.</p>
+      
+      <div style="display: flex; justify-content: center; gap: 2rem;">
+        <a href="/shop.html" style="padding: 2rem 4rem; background: var(--cobalt); color: white; text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 0.2em; box-shadow: 0 0 30px rgba(26,107,255,0.4);">RESERVE YOUR ALPHA</a>
+      </div>
+      
+      <div id="footer-sys-text" style="margin-top: 6rem; font-family: var(--font-mono); color: var(--cobalt); font-size: 10px; opacity: 0.4;">
+        // TRACE_ID: 2026_X_ALPHA_INIT // READY_FOR_DEPLOYMENT
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: NEWSLETTER / PROTOCOL -->
+  <section
+    style="background: var(--obsidian); padding: 10rem 8%; text-align: center; position: relative; z-index: 100;">
+    <div class="reveal-section" style="max-width: 600px; margin: 0 auto;">
+      <h2 class="reveal-text" style="font-size: 3rem; margin-bottom: 1.5rem;">Join the Protocol.</h2>
+      <p style="opacity: 0.7; margin-bottom: 3rem;">Get early access to firmware updates, new unit drops, and the future
+        of solo travel.</p>
+      <div style="display: flex; gap: 1rem; border: 1px solid rgba(26,107,255,0.2); padding: 0.5rem;">
+        <input type="email" placeholder="ENTER EMAIL ADDRESS"
+          style="background: transparent; border: none; color: white; flex: 1; padding: 1rem; font-family: var(--font-mono); font-size: 11px; outline: none;">
+        <button
+          style="background: var(--cobalt); color: white; border: none; padding: 1rem 2rem; font-weight: 700; font-size: 11px;">SUBSCRIBE</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL FOOTER -->
+  <footer
+    style="background: #000; padding: 4rem 8%; border-top: 1px solid rgba(26,107,255,0.1); position: relative; z-index: 100; color: var(--off-white);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <div class="logo" style="font-weight: 700; font-size: 1.2rem; letter-spacing: 0.2em; margin-bottom: 1rem;">
+          ALPHA<span style="color: var(--cobalt);">.</span></div>
+        <p style="font-size: 10px; opacity: 0.5;">© 2026 PROJECT MOBILITY SYSTEMS. ALL RIGHTS RESERVED.</p>
+        <div id="footer-sys-text-static" class="footer-sys-text" style="margin-top: 1rem;"></div>
+      </div>
+      <div style="display: flex; gap: 4rem;">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <span class="caps" style="font-size: 10px; color: var(--cobalt); margin-bottom: 0.5rem;">The Unit</span>
+          <a href="/shop.html"
+            style="color: var(--off-white); text-decoration: none; font-size: 11px; opacity: 0.6;">Catalogue</a>
+          <a href="/info.html"
+            style="color: var(--off-white); text-decoration: none; font-size: 11px; opacity: 0.6;">Engineering</a>
+          <a href="/shop.html"
+            style="color: var(--off-white); text-decoration: none; font-size: 11px; opacity: 0.6;">Support</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <span class="caps" style="font-size: 10px; color: var(--cobalt); margin-bottom: 0.5rem;">Protocol</span>
+          <a href="/privacy.html"
+            style="color: var(--off-white); text-decoration: none; font-size: 11px; opacity: 0.6;">Privacy Policy</a>
+          <a href="/privacy.html"
+            style="color: var(--off-white); text-decoration: none; font-size: 11px; opacity: 0.6;">Terms of Use</a>
+          <a href="/privacy.html"
+            style="color: var(--off-white); text-decoration: none; font-size: 11px; opacity: 0.6;">Automation Ethics</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ghost-text">// unit awaiting deployment</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // --- GLOBAL UTILS ---
+    const typewriter = (el, text, speed = 60, callback) => {
+      let i = 0;
+      const timer = setInterval(() => {
+        el.innerHTML += text.charAt(i);
+        i++;
+        if (i >= text.length) {
+          clearInterval(timer);
+          if (callback) callback();
+        }
+      }, speed);
+    };
+
+    const playTone = (freq, type = 'square', duration = 0.08, volume = 0.1) => {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(volume, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + duration);
+      } catch (e) { }
+    };
+
+    // --- CURSOR ---
+    const cursor = document.getElementById('cursor');
+    const cursorIcon = document.getElementById('cursor-icon');
+    window.addEventListener('mousemove', (e) => {
+      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+    });
+
+    document.querySelectorAll('.panel-right').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '30px';
+        cursor.style.height = '30px';
+        cursorIcon.style.display = 'block';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '20px';
+        cursor.style.height = '20px';
+        cursorIcon.style.display = 'none';
+      });
+    });
+
+    // --- SCENE 00: PRELOADER ---
+    const preloaderText = document.getElementById('preloader-text');
+    const progressBar = document.getElementById('progress-bar');
+    const loadingLogs = document.getElementById('loading-logs');
+    const coordsEl = document.getElementById('grid-coords');
+
+    const logs = [
+      "INITIALIZING NEURAL CORE...",
+      "SYNCING SOLITUDE PROTOCOL...",
+      "CALIBRATING TORQUE VECTORING...",
+      "FETCHING BLUEPRINT DATA...",
+      "DRIVE SYSTEMS: ONLINE",
+      "ALPHA CORE V4: READY"
+    ];
+
+    let logIdx = 0;
+    const logTimer = setInterval(() => {
+      if (logIdx < logs.length) {
+        loadingLogs.innerHTML += `> ${logs[logIdx]}<br>`;
+        loadingLogs.scrollTop = loadingLogs.scrollHeight;
+        playTone(440 + (logIdx * 50), 'sine', 0.05, 0.05);
+        logIdx++;
+      } else {
+        clearInterval(logTimer);
+      }
+    }, 400);
+
+    gsap.to(progressBar, {
+      width: '100%',
+      duration: 3,
+      ease: 'none',
+      onComplete: () => {
+        setTimeout(() => {
+          const tl = gsap.timeline({
+            onComplete: () => {
+              document.body.style.overflow = 'auto';
+              document.getElementById('preloader').style.display = 'none';
+              initApp();
+            }
+          });
+          playTone(60, 'sine', 0.3, 0.4); // Deep thud
+          tl.to('#gate-left', { x: '-100%', duration: 1.2, ease: 'expo.inOut' })
+            .to('#gate-right', { x: '100%', duration: 1.2, ease: 'expo.inOut' }, 0)
+            .to('#boot-container', { opacity: 0, scale: 0.9, duration: 0.5 }, 0);
+        }, 500);
+      }
+    });
+
+    typewriter(preloaderText, "SN: #2026-ALPHA-01", 60);
+
+    const coordInterval = setInterval(() => {
+      const coords = ['A7', 'C12', 'F3', 'B9', 'E5', 'G2'];
+      coordsEl.innerHTML = coords[Math.floor(Math.random() * coords.length)] + ' : ' + Math.random().toString().slice(2, 6);
+      coordsEl.style.left = Math.random() * 80 + '%';
+      coordsEl.style.top = Math.random() * 80 + '%';
+    }, 80);
+
+    // --- SCENE 01: HERO ---
+    function initApp() {
+      const scooterPaths = document.querySelectorAll('#scooter-svg path, #scooter-svg circle, #scooter-svg rect');
+
+      // Set initial dasharray
+      scooterPaths.forEach(path => {
+        const len = path.getTotalLength ? path.getTotalLength() : 100;
+        path.style.strokeDasharray = len;
+        path.style.strokeDashoffset = len;
+      });
+
+      const drawTl = gsap.timeline({ delay: 0.5 });
+
+      const groups = ['wheels', 'frame', 'handlebars', 'details', 'core-module'];
+      const freqs = [220, 330, 440, 550, 660];
+
+      groups.forEach((gid, idx) => {
+        const groupPaths = document.querySelectorAll(`#${gid} path, #${gid} circle, #${gid} rect`);
+        drawTl.to(groupPaths, {
+          strokeDashoffset: 0,
+          duration: 0.6,
+          stagger: 0.05,
+          onStart: () => playTone(freqs[idx]),
+          ease: 'power2.inOut'
+        }, idx === 0 ? 0 : '>-0.2');
+      });
+
+      gsap.to('.alpha-title', { opacity: 1, y: -20, duration: 1.5, delay: 1, ease: 'expo.out' });
+      gsap.to('.subline', { opacity: 1, duration: 1, delay: 1.3 });
+      gsap.to('.status-badge', {
+        opacity: 1,
+        delay: 1.8,
+        onStart: () => document.getElementById('status-line').classList.add('blink')
+      });
+
+      initScrollSystems();
+    }
+
+    // --- SCROLL SYSTEMS ---
+    function initScrollSystems() {
+      const rail = document.getElementById('rail');
+      const masterTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.viewport',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1,
+          onUpdate: (self) => {
+            rail.style.height = (self.progress * 100) + '%';
+          }
+        }
+      });
+
+      // Act Labels
+      const acts = [15, 35, 55, 70, 88];
+      const labels = document.querySelectorAll('.act-label');
+      ScrollTrigger.create({
+        trigger: '.viewport',
+        start: 'top top',
+        end: 'bottom bottom',
+        onUpdate: (self) => {
+          const p = self.progress * 100;
+          labels.forEach((l, i) => {
+            l.style.opacity = Math.abs(p - acts[i]) < 5 ? 1 : 0.2;
+          });
+        }
+      });
+
+      // SCENE 01: HERO RESET (0-15%)
+      masterTl.addLabel('start', 0);
+      masterTl.to('.alpha-title, .subline, .status-badge', { opacity: 1, y: 0, duration: 0.1 }, 'start');
+
+      // SCENE 02: EXPLODED VIEW (15-35%)
+      masterTl.addLabel('explode', 0.15);
+      masterTl.to('#wheels', { x: -80, y: 40, duration: 1 }, 'explode')
+        .to('#frame', { x: 0, y: -60, duration: 1 }, 'explode')
+        .to('#handlebars', { x: 60, y: -30, duration: 1 }, 'explode')
+        .to('#details', { x: 80, y: 20, duration: 1 }, 'explode')
+        .to('.leader-line', { strokeDashoffset: 0, opacity: 1, duration: 0.5 }, 'explode+=0.5')
+        .to('.label-text', { opacity: 1, duration: 0.5 }, 'explode+=0.7')
+        .to('.engineer-note', { opacity: 0.6, y: -2, duration: 0.8, stagger: 0.1 }, 'explode+=0.8')
+        .to('.alpha-title, .subline, .status-badge', { opacity: 0, y: -50, duration: 0.5 }, 'explode');
+
+      // SCENE 03: REASSEMBLY (35-55%)
+      masterTl.addLabel('reassembly', 0.35);
+      masterTl.to('#wheels, #frame, #handlebars, #details', { x: 0, y: 0, duration: 1 }, 'reassembly')
+        .to('.leader-line, .label-text, .engineer-note', { opacity: 0, duration: 0.3 }, 'reassembly')
+        .to('.data-counters', { opacity: 1, y: 0, duration: 0.5 }, 'reassembly+=0.5');
+
+      // Thock sounds on reassembly completion (handled via trigger)
+      ScrollTrigger.create({
+        trigger: '.viewport',
+        start: '35% top',
+        onEnter: () => {
+          setTimeout(() => playTone(80, 'sine', 0.1, 0.2), 500);
+        }
+      });
+
+      // Counters
+      const counterObj = { t: 0, e: 0, c: 0 };
+      masterTl.to(counterObj, {
+        t: 94, e: 97.3, c: 99.1,
+        duration: 1,
+        onUpdate: () => {
+          document.getElementById('torque-val').innerText = Math.round(counterObj.t);
+          document.getElementById('eff-val').innerText = counterObj.e.toFixed(1);
+          document.getElementById('conf-val').innerText = counterObj.c.toFixed(1);
+        }
+      }, 'reassembly+=0.5');
+
+      // Shockwave
+      masterTl.to('#edges', { opacity: 1, duration: 0.2 }, 'reassembly+=0.7')
+        .to('#edges', { opacity: 0.2, duration: 0.2 }, 'reassembly+=0.9');
+
+      // SCENE 04: SOLITUDE (55-70%)
+      masterTl.addLabel('solitude', 0.55);
+      masterTl.to('#scooter-wrapper', { skewX: -8, scaleX: 0.92, duration: 1 }, 'solitude')
+        .to('#map-overlay', { opacity: 1, duration: 0.5 }, 'solitude')
+        .to('#route-path', { strokeDashoffset: 0, duration: 1 }, 'solitude+=0.5')
+        .to('#route-end', { r: 6, duration: 0.5, ease: 'back.out' }, 'solitude+=1.5')
+        .to('.data-counters', { opacity: 0, duration: 0.5 }, 'solitude');
+
+      // Solitude Words
+      const manifesto = "Designed for the solo navigator. Our AI handles the variables, so you can handle the experience.";
+      const manifestoEl = document.querySelector('.solitude-words');
+      manifestoEl.style.display = 'block';
+      manifesto.split(' ').forEach(word => {
+        const span = document.createElement('span');
+        span.innerText = word + ' ';
+        span.style.opacity = 0;
+        span.style.display = 'inline-block';
+        manifestoEl.appendChild(span);
+      });
+      masterTl.to('.solitude-words span', {
+        opacity: 1, y: -5,
+        stagger: 0.05,
+        duration: 0.5
+      }, 'solitude');
+
+      // SCENE 05: SERIAL (70-88%)
+      masterTl.addLabel('serial', 0.70);
+      masterTl.to('.panel-left', { width: '0%', opacity: 0, duration: 0.8 }, 'serial')
+        .to('.panel-right', { width: '100%', duration: 0.8 }, 'serial')
+        .to('#serial-plate', { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(3)' }, 'serial+=0.5')
+        .to('#unit-info', { display: 'block', opacity: 1, duration: 0.5 }, 'serial+=0.8')
+        .to('#claim-btn', { display: 'inline-block', opacity: 1, duration: 0.5 }, 'serial+=0.8');
+
+      // Shake + Thud
+      ScrollTrigger.create({
+        trigger: '.viewport',
+        start: '70% top',
+        onEnter: () => {
+          gsap.to('.main-container', { x: [-4, 4, -3, 3, -1, 1, 0], duration: 0.3 });
+          playTone(55, 'sine', 0.15, 0.4);
+        }
+      });
+
+      // Unit Counter
+      let count = parseInt(localStorage.getItem('alpha_units') || 50);
+      if (!sessionStorage.getItem('alpha_decremented')) {
+        count = Math.max(0, count - 1);
+        localStorage.setItem('alpha_units', count);
+        sessionStorage.setItem('alpha_decremented', 'true');
+      }
+      document.getElementById('unit-count').innerText = `${count} UNITS REMAIN.`;
+
+      // SCENE 06: SHUTDOWN (88-100%)
+      masterTl.addLabel('shutdown', 0.88);
+      masterTl.to('#scooter-svg path, #scooter-svg circle, #scooter-svg rect', {
+        strokeDashoffset: (i, el) => el.getTotalLength ? el.getTotalLength() : 100,
+        duration: 1,
+        stagger: 0.01
+      }, 'shutdown');
+      // --- NEW: REVEAL ANIMATIONS FOR STATIC SECTIONS ---
+      gsap.utils.toArray('.reveal-section').forEach(section => {
+        const text = section.querySelector('.reveal-text');
+        const cards = section.querySelectorAll('.reveal-card');
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            onEnter: () => section.querySelectorAll('.reveal-card').forEach(c => c.classList.add('active')),
+            toggleActions: "play none none none"
+          }
+        });
+
+        if (text) tl.from(text, { y: 50, opacity: 0, duration: 1, ease: "power3.out" });
+        if (cards.length) tl.from(cards, { y: 30, opacity: 0, duration: 0.8, stagger: 0.2, ease: "power3.out" }, "-=0.5");
+      });
+
+      // Ghost Text Drift
+      const ghost = document.getElementById('ghost-text');
+      ghost.style.display = 'block';
+      let ghostX = window.innerWidth;
+      function animateGhost() {
+        ghostX -= 0.4;
+        if (ghostX < -200) ghostX = window.innerWidth;
+        ghost.style.left = ghostX + 'px';
+        requestAnimationFrame(animateGhost);
+      }
+      animateGhost();
+
+      // Footer Typewriter
+      ScrollTrigger.create({
+        trigger: 'footer',
+        start: 'top 95%',
+        onEnter: () => {
+          const footerSys = document.getElementById('footer-sys-text-static');
+          if (footerSys && !footerSys.innerHTML) {
+            typewriter(footerSys, "PROJECT MOBILITY SYSTEMS. SN: #2026-ALPHA-DOC-01.", 40);
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
