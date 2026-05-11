@@ -185,6 +185,7 @@ canvas {
 .core-systems {
   padding: 0;
   overflow: hidden;
+  display: block;
 }
 
 .horizontal-scroll {
