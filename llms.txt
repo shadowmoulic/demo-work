@@ -1,0 +1,34 @@
+# Hustle House
+
+> Premium AI Automation & MVP Development by elite IIT Kharagpur engineers.
+
+Hustle House is a high-performance engineering squad specializing in cinematic digital experiences, AI-driven workflow automations, and high-fidelity MVPs. We operate with a selective partnership model, delivering world-class software at the intersection of production-grade design and robust backend architecture.
+
+## Capabilities
+- **AI Automations**: Custom LLM workflows, automated lead machines, and voice agents.
+- **MVP Development**: Rapid end-to-end engineering of scalable products (Fintech, Edtech, Agritech).
+- **Cinematic Web Design**: Editorial, high-impact front-end experiences (Next.js, Vite, Tailwind).
+- **Voice Systems**: Intelligent Vapi-powered voice AI for business operations.
+
+## Featured Projects
+- **Liquivest**: Automated liquidity management and predictive accounting for MSMEs.
+- **IITian's School**: Premium LMS and coaching ecosystem.
+- **Toyadhi**: High-performance agritech scaling platform.
+- **AbroadFit**: Comprehensive undergrad study abroad guidance system.
+- **Inknarc**: High-fidelity creative agency portfolio.
+
+## Technical Experiments (POCs)
+- **Greatest Luxury**: A 6-act narrative journey into high-ticket curation.
+- **Ignite Global**: Cyber-architecture for rapid global technical deployment.
+- **Alpha Series**: Blueprint-inspired autonomous mobility showcase.
+
+## Contact
+- **Founder**: Sayak Moulic ([LinkedIn](https://www.linkedin.com/in/sayak-moulic-seo-web-dev-ai-automations/))
+- **Website**: https://hustle-house-work.vercel.app
+- **WhatsApp**: https://wa.me/919062031737
+- **Schedule Call**: https://cal.com/kgphustlehouse/seo
+
+## Tech Stack
+- Frontend: Vite, Next.js, Tailwind CSS, AOS, GSAP.
+- Backend: Custom Python/Node.js automations, LLM Integrations (OpenAI, Anthropic).
+- Deployment: Vercel, AWS.

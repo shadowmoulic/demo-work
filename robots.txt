@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap for search engines
+Sitemap: https://hustle-house-work.vercel.app/sitemap.xml
