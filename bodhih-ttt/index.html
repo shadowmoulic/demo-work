@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Train The Trainer (TTT) Certification | Bodhih</title>
+    <meta name="description"
+        content="Premium B2B Train The Trainer certification for HR Leaders, L&D Managers, and Subject Matter Experts. Master facilitation, ADDIE, and Kirkpatrick evaluation.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <strong>BODHIH</strong> <span class="sheen-text">EXECUTIVE TTT</span>
+            </a>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#cohorts">Upcoming Cohorts</a>
+                <a href="#curriculum">The Framework</a>
+                <a href="#alumni">Verified Alumni</a>
+                <a href="#consultation" class="btn btn-sm btn-primary">Check Availability <span
+                        class="arrow">&rarr;</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION WITH PREMIUM CINEMATIC VIDEO BACKGROUND -->
+        <section class="hero">
+            <div class="hero-media-bg">
+                <video autoplay muted loop playsinline
+                    poster="https://images.unsplash.com/photo-1542744094-3a3124295971?w=1800&auto=format&fit=crop&q=80">
+                    <source src="hero-bg.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="glow-bg"></div>
+
+            <div class="container hero-container">
+                <div class="badge pulse-badge">
+                    <span class="pulse-dot"></span>
+                    <span>B2B Executive Certification • Enrolling 2026 Cohorts</span>
+                </div>
+
+                <h1>Master the Art of <br><span class="highlight">Transformative Facilitation</span></h1>
+
+                <p class="hero-sub">
+                    The premier certification for HR Leaders, Corporate L&D Managers, and Subject Matter Experts. Master
+                    adult learning principles and Kirkpatrick Level-4 evaluation to turn internal training into proven
+                    business ROI.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#consultation" class="btn btn-lg btn-primary">
+                        Check Batch Dates & Availability <span class="arrow">&rarr;</span>
+                    </a>
+                    <a href="#syllabus-capture" class="btn btn-lg btn-secondary">
+                        Download Corporate ROI Kit & Syllabus
+                    </a>
+                </div>
+
+                <div class="secondary-enroll">
+                    <span>Looking for immediate registration?</span>
+                    <a href="https://pages.razorpay.com/Classroom2026" target="_blank" class="hover-underline">Secure
+                        Direct Upfront Enrollment (₹40,000 + GST) <span class="arrow">&rarr;</span></a>
+                </div>
+
+                <div class="trust-bar">
+                    <p>TRUSTED BY LEARNING LEADERS AT GLOBALLY RESPECTED ENTERPRISES</p>
+                    <div class="logos">
+                        <span class="trust-logo">ISRO</span>
+                        <span class="trust-logo">FLIPKART</span>
+                        <span class="trust-logo">GE OIL & GAS</span>
+                        <span class="trust-logo">VEOLIA</span>
+                        <span class="trust-logo">GALLAGHER</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPCOMING COHORTS SCHEDULE (Requirement #2) -->
+        <section class="cohorts-section" id="cohorts">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Upcoming Cohorts Schedule</h2>
+                    <p>To ensure intensive 1-on-1 Master Trainer feedback, classroom cohorts are strictly capped at 15
+                        delegates.</p>
+                </div>
+
+                <div class="cohorts-grid">
+                    <div class="cohort-card interactive-card urgent">
+                        <div class="card-content">
+                            <div class="tag tag-urgent">3 Seats Left</div>
+                            <div class="loc">Bangalore</div>
+                            <div class="venue">UB City Executive Center</div>
+                            <div class="date">July 14 – July 17, 2026 (4 Days)</div>
+                            <div class="fee">₹40,000 + GST</div>
+                            <a href="#consultation" class="btn btn-primary btn-block"
+                                onclick="selectBatch('Bangalore • July 14-17')">Hold Seat <span
+                                    class="arrow">&rarr;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="cohort-card interactive-card fast">
+                        <div class="card-content">
+                            <div class="tag tag-warn">6 Seats Left</div>
+                            <div class="loc">Mumbai</div>
+                            <div class="venue">BKC Learning Hub</div>
+                            <div class="date">August 11 – August 14, 2026 (4 Days)</div>
+                            <div class="fee">₹40,000 + GST</div>
+                            <a href="#consultation" class="btn btn-primary btn-block"
+                                onclick="selectBatch('Mumbai • August 11-14')">Hold Seat <span
+                                    class="arrow">&rarr;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="cohort-card interactive-card open">
+                        <div class="card-content">
+                            <div class="tag tag-open">Enrolling Now</div>
+                            <div class="loc">Delhi NCR</div>
+                            <div class="venue">Cyber City Executive Lounge</div>
+                            <div class="date">September 08 – September 11, 2026</div>
+                            <div class="fee">₹40,000 + GST</div>
+                            <a href="#consultation" class="btn btn-primary btn-block"
+                                onclick="selectBatch('Delhi NCR • September 08-11')">Hold Seat <span
+                                    class="arrow">&rarr;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="cohort-card interactive-card virtual">
+                        <div class="card-content">
+                            <div class="tag tag-virtual">Live Virtual</div>
+                            <div class="loc">Executive Virtual</div>
+                            <div class="venue">HD Studio Interactive Broadcast</div>
+                            <div class="date">October 05 – October 08, 2026</div>
+                            <div class="fee">₹35,000 + GST</div>
+                            <a href="#consultation" class="btn btn-secondary btn-block"
+                                onclick="selectBatch('Virtual Executive • October 05-08')">Inquire Batch <span
+                                    class="arrow">&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MID-PAGE SYLLABUS MICRO-CAPTURE (Requirement #3) -->
+        <section class="capture-section" id="syllabus-capture">
+            <div class="container">
+                <div class="capture-banner interactive-card">
+                    <div class="card-content banner-inner">
+                        <div class="content">
+                            <h3>Download the Complete 32-Hour Syllabus & Corporate ROI Kit</h3>
+                            <p>Receive our detailed module breakdown, Competency Evaluation Matrix, and the L&D Manager
+                                Justification letter template directly in your inbox.</p>
+                        </div>
+                        <form class="capture-form" onsubmit="submitMicroCapture(event)">
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="Enter your corporate email address" required>
+                                <div class="focus-border"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Get Access Kit <span
+                                    class="arrow">&rarr;</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AT A GLANCE: CORE PROGRAM PILLARS -->
+        <section class="framework-section" id="curriculum">
+            <div class="framework-media-bg">
+                <img src="framework-bg.jpg" alt="Executive Coaching">
+                <div class="framework-overlay"></div>
+            </div>
+            <div class="container framework-container">
+                <div class="section-title text-center">
+                    <h2>The 4-Day Facilitation Framework</h2>
+                    <p>Designed for immediate workplace integration. 80% practical delivery and expert critique, 20%
+                        cognitive theory.</p>
+                </div>
+
+                <div class="pillars-grid">
+                    <div class="pillar-card interactive-card">
+                        <div class="card-content">
+                            <div class="num">01</div>
+                            <h3>Cognitive Adult Learning</h3>
+                            <p>Apply Knowles' Andragogy and Kolb's Experiential Learning Cycle to design high-retention
+                                corporate learning loops.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card interactive-card">
+                        <div class="card-content">
+                            <div class="num">02</div>
+                            <h3>ADDIE Module Engineering</h3>
+                            <p>Systematically execute Training Needs Analysis (TNA), storyboarding, and custom
+                                simulation design.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card interactive-card">
+                        <div class="card-content">
+                            <div class="num">03</div>
+                            <h3>Executive Room Mastery</h3>
+                            <p>Command complex group dynamics, Socratic facilitation, and psychological frameworks for
+                                difficult participants.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card interactive-card">
+                        <div class="card-content">
+                            <div class="num">04</div>
+                            <h3>Kirkpatrick ROI Validation</h3>
+                            <p>Measure Level-4 business results to prove indisputable financial return on training hours
+                                to executive leadership.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VERIFIED SOCIAL PROOF (Requirement #4) -->
+        <section class="alumni-section" id="alumni">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Endorsed by Enterprise L&D Leaders</h2>
+                    <p>Real experiences from executives who standardized their training delivery with Bodhih.</p>
+                </div>
+
+                <div class="alumni-grid">
+                    <div class="alumni-card interactive-card">
+                        <div class="card-content">
+                            <div class="user-info">
+                                <div class="img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"
+                                        alt="Rajesh Kumar">
+                                </div>
+                                <div>
+                                    <h4>Rajesh Kumar</h4>
+                                    <span>Senior L&D Manager, Infosys</span>
+                                </div>
+                                <a href="https://www.linkedin.com/search/results/people/?keywords=Rajesh+Kumar+Infosys"
+                                    target="_blank" class="verify-badge">Verify Profile ↗</a>
+                            </div>
+                            <p class="quote">"I have attended three TTT programs in my career. Bodhih's was the first to
+                                genuinely upgrade how our internal academy designs and delivers training. The
+                                Kirkpatrick evaluation framework alone justified our entire investment."</p>
+                        </div>
+                    </div>
+
+                    <div class="alumni-card interactive-card">
+                        <div class="card-content">
+                            <div class="user-info">
+                                <div class="img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80"
+                                        alt="Priya Sharma">
+                                </div>
+                                <div>
+                                    <h4>Priya Sharma</h4>
+                                    <span>Technical Capability Lead, TCS</span>
+                                </div>
+                                <a href="https://www.linkedin.com/search/results/people/?keywords=Priya+Sharma+TCS"
+                                    target="_blank" class="verify-badge">Verify Profile ↗</a>
+                            </div>
+                            <p class="quote">"As an engineering SME transitioning into a global capability role, I was
+                                intimidated by leading executive workshops. Bodhih gave me structured behavioral
+                                frameworks and an elite credential that commanded instant credibility."</p>
+                        </div>
+                    </div>
+
+                    <div class="alumni-card interactive-card">
+                        <div class="card-content">
+                            <div class="user-info">
+                                <div class="img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80"
+                                        alt="Anita Mehta">
+                                </div>
+                                <div>
+                                    <h4>Anita Mehta</h4>
+                                    <span>VP of Human Resources</span>
+                                </div>
+                                <a href="https://www.linkedin.com/search/results/people/?keywords=Anita+Mehta+VP+Human+Resources"
+                                    target="_blank" class="verify-badge">Verify Profile ↗</a>
+                            </div>
+                            <p class="quote">"The enterprise ROI on this program is undeniable. We sent 6 internal
+                                technical trainers through Bodhih's certification. Within 6 months, our training quality
+                                scores jumped 42% and we eliminated $120,000 in external vendor spend."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INQUIRY / CONSULTATION FORM (Requirement #3) -->
+        <section class="consultation-section" id="consultation">
+            <div class="container">
+                <div class="consultation-wrapper interactive-card">
+                    <div class="card-content form-wrapper-inner">
+                        <div class="info">
+                            <h2>Request Cohort Placement & Consultation</h2>
+                            <p>Connect with our Program Directors to verify batch availability, discuss corporate group
+                                bookings (3+ delegates), or explore custom private workshops.</p>
+                            <div class="helpline">
+                                <span>Direct L&D Priority Helpline</span>
+                                <strong>+91 99000 11601 / solutions@bodhih.com</strong>
+                            </div>
+                        </div>
+
+                        <form class="lead-form" onsubmit="submitConsultation(event)">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="formName" required placeholder="e.g. Vikramaditya Sharma">
+                                    <div class="focus-border"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Corporate Email *</label>
+                                    <div class="input-wrapper">
+                                        <input type="email" required placeholder="name@company.com">
+                                        <div class="focus-border"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile Number *</label>
+                                    <div class="input-wrapper">
+                                        <input type="tel" required placeholder="+91 98765 43210">
+                                        <div class="focus-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Organization / Company *</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" required placeholder="e.g. Tata Consultancy Services">
+                                        <div class="focus-border"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Designation *</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" required placeholder="e.g. Head of Talent Development">
+                                        <div class="focus-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Preferred Cohort *</label>
+                                <div class="input-wrapper">
+                                    <select id="formCohort" required>
+                                        <option value="" disabled selected>Select an upcoming batch...</option>
+                                        <option value="Bangalore • July 14-17 (3 Seats Left)">Bangalore • July 14-17,
+                                            2026 (3 Seats Remaining)</option>
+                                        <option value="Mumbai • August 11-14 (6 Seats Left)">Mumbai • August 11-14, 2026
+                                            (Enrolling Fast)</option>
+                                        <option value="Delhi NCR • September 08-11">Delhi NCR • September 08-11, 2026
+                                            (Open)</option>
+                                        <option value="Virtual Executive • October 05-08">Global Virtual • October
+                                            05-08, 2026</option>
+                                        <option value="Custom Private Enterprise Batch">Custom Private Corporate Batch
+                                            (5+ Delegates)</option>
+                                    </select>
+                                    <div class="focus-border"></div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Consultation Inquiry
+                                <span class="arrow">&rarr;</span></button>
+                            <span class="confidential-note">🔒 Confidential submission. Response guaranteed within 24
+                                business hours.</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo"><strong>BODHIH</strong> Executive TTT</div>
+            <div class="footer-copy">&copy; 2026 Bodhih Training Solutions. All Rights Reserved. ISO 9001:2015 L&D
+                Partner.</div>
+        </div>
+    </footer>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal" id="successModal">
+        <div class="modal-card text-center">
+            <div class="icon-check">✓</div>
+            <h3>Inquiry Successfully Received</h3>
+            <p>Thank you for connecting with Bodhih. Our Senior Program Coordinator will contact you within 24 business
+                hours.</p>
+            <button onclick="document.getElementById('successModal').style.display='none'"
+                class="btn btn-primary mt-4">Got it <span class="arrow">&rarr;</span></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
