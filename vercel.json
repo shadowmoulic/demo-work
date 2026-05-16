@@ -1,4 +1,20 @@
 {
     "cleanUrls": true,
-    "trailingSlash": false
+    "trailingSlash": false,
+    "rewrites": [
+        { "source": "/bodhih-ttt", "destination": "/bodhih-ttt/index.html" },
+        { "source": "/bodhih-ttt/", "destination": "/bodhih-ttt/index.html" },
+        { "source": "/POC/ignite-global", "destination": "/POC/ignite-global/index.html" },
+        { "source": "/POC/ignite-global/", "destination": "/POC/ignite-global/index.html" },
+        { "source": "/iitianschool", "destination": "/iitianschool/index.html" },
+        { "source": "/iitianschool/", "destination": "/iitianschool/index.html" },
+        { "source": "/master-realtor", "destination": "/master-realtor/index.html" },
+        { "source": "/master-realtor/", "destination": "/master-realtor/index.html" },
+        { "source": "/monetify-finance-newsletter", "destination": "/monetify-finance-newsletter/index.html" },
+        { "source": "/monetify-finance-newsletter/", "destination": "/monetify-finance-newsletter/index.html" },
+        { "source": "/reddit-idea-validator", "destination": "/reddit-idea-validator/index.html" },
+        { "source": "/reddit-idea-validator/", "destination": "/reddit-idea-validator/index.html" },
+        { "source": "/youtube-analyzer", "destination": "/youtube-analyzer/index.html" },
+        { "source": "/youtube-analyzer/", "destination": "/youtube-analyzer/index.html" }
+    ]
 }
