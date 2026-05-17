@@ -1941,6 +1941,9 @@ body.high-contrast .ethics-icon { background-color: #222; color: var(--accent-go
 body.high-contrast .index-logo-icon { color: var(--accent-gold); }
 
 .indexing-badge {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1949,7 +1952,7 @@ body.high-contrast .index-logo-icon { color: var(--accent-gold); }
 }
 
 .indexing-badge.planned { background-color: var(--bg-subtle-gray); color: var(--text-secondary); }
-.indexing-badge.progress { background-color: #eebf3733; color: #927233; }
+.indexing-badge.in-progress { background-color: #eebf3733; color: #927233; }
 
 .indexing-card h3 {
     font-size: 1.35rem;
