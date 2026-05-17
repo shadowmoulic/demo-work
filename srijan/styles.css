@@ -76,6 +76,9 @@ body.high-contrast {
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 body {
@@ -84,6 +87,8 @@ body {
     background-color: var(--bg-white);
     line-height: 1.65;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -2501,10 +2506,42 @@ body.high-contrast .toast { background-color: #222; border-color: #ffd700; color
 }
 
 @media (max-width: 768px) {
+    :root {
+        --container-padding: 1.25rem;
+    }
+
     html { font-size: 15px; }
 
     .header-container {
         position: relative;
+    }
+
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar-left {
+        justify-content: center;
+    }
+
+    .banner-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banner-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .banner-search {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .banner-search input {
+        width: 100%;
     }
 
     .mobile-menu-toggle {
@@ -2568,6 +2605,10 @@ body.high-contrast .toast { background-color: #222; border-color: #ffd700; color
         grid-template-columns: 1fr;
     }
 
+    .format-spec-grid {
+        grid-template-columns: 1fr;
+    }
+
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -2585,11 +2626,40 @@ body.high-contrast .toast { background-color: #222; border-color: #ffd700; color
         transform: rotate(90deg);
         margin: 1rem 0;
     }
+
+    .issn-accreditation-banner {
+        padding: 2rem 1.5rem;
+    }
+
+    .review-guarantee {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .editorial-recruitment-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-bottom-content {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 }
 
 @media (max-width: 480px) {
     .scope-grid, .indexing-grid, .editorial-grid, .ethics-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-metrics {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
     .issue-header-card {
@@ -2606,6 +2676,18 @@ body.high-contrast .toast { background-color: #222; border-color: #ffd700; color
 
     .hero-title {
         font-size: 2.2rem;
+    }
+
+    .toast {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #toast-container {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        width: calc(100% - 2rem);
     }
 }
 
