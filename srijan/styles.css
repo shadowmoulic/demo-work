@@ -2023,6 +2023,16 @@ body.high-contrast .index-logo-icon { color: var(--accent-gold); }
     background: var(--bg-light);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-card > div:not(.c-icon) {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-card .c-icon {
@@ -2615,6 +2625,11 @@ body.high-contrast .toast { background-color: #222; border-color: #ffd700; color
 
     .archive-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 
     .review-workflow {

@@ -221,37 +221,64 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const paperSubmitForm = document.getElementById('paper-submit-form');
     if (paperSubmitForm) {
-        paperSubmitForm.addEventListener('submit', (e) => {
+        paperSubmitForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const title = document.getElementById('sub-title').value;
+            const fname = document.getElementById('sub-fname')?.value || '';
+            const email = document.getElementById('sub-email')?.value || '';
+            const affil = document.getElementById('sub-affil')?.value || '';
+            const title = document.getElementById('sub-title')?.value || '';
+            const domain = document.getElementById('sub-domain')?.value || '';
+            const type = document.getElementById('sub-type')?.value || '';
+            const abstract = document.getElementById('sub-abstract')?.value || '';
+            const fileInput = document.getElementById('sub-file');
+            const file = fileInput && fileInput.files[0] ? fileInput.files[0].name : 'manuscript.docx';
+
+            const saved = await SrijanDB.saveSubmission({ author: fname, email, institution: affil, title, domain, type, abstract, file });
+            
             closeModal(submitModal);
             paperSubmitForm.reset();
             if (selectedFileNameDisplay) selectedFileNameDisplay.innerHTML = '';
             
-            showToast(`Manuscript "${title.substring(0, 35)}..." successfully transmitted to Editorial Screening. Tracking ID: SRJ-2026-${Math.floor(1000 + Math.random() * 9000)}`, 'success', 8000);
+            showToast(`Manuscript "${title.substring(0, 35)}..." transmitted securely to Supabase. Tracking ID: ${saved.id}`, 'success', 8000);
         });
     }
 
     const reviewerApplyForm = document.getElementById('reviewer-apply-form');
     if (reviewerApplyForm) {
-        reviewerApplyForm.addEventListener('submit', (e) => {
+        reviewerApplyForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const name = document.getElementById('rev-name').value;
+            const name = document.getElementById('rev-name')?.value || '';
+            const email = document.getElementById('rev-email')?.value || '';
+            const inst = document.getElementById('rev-inst')?.value || '';
+            const country = document.getElementById('rev-country')?.value || '';
+            const expertise = document.getElementById('rev-exp')?.value || '';
+            const link = document.getElementById('rev-link')?.value || '';
+            const cvInput = document.getElementById('rev-cv');
+            const cv = cvInput && cvInput.files[0] ? cvInput.files[0].name : 'curriculum_vitae.pdf';
+
+            const saved = await SrijanDB.saveReviewer({ name, email, institution: inst, country, expertise, link, cv });
+            
             closeModal(reviewerModal);
             reviewerApplyForm.reset();
             if (selectedCvNameDisplay) selectedCvNameDisplay.innerHTML = '';
 
-            showToast(`Thank you ${name}. Your Academic Reviewer credentials have been logged for Executive Board assessment.`, 'success', 7000);
+            showToast(`Thank you ${name}. Application (${saved.id}) logged securely in Supabase for Executive Board screening.`, 'success', 7000);
         });
     }
 
     const editorialContactForm = document.getElementById('editorial-contact-form');
     if (editorialContactForm) {
-        editorialContactForm.addEventListener('submit', (e) => {
+        editorialContactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const name = document.getElementById('c-name').value;
+            const name = document.getElementById('c-name')?.value || '';
+            const email = document.getElementById('c-email')?.value || '';
+            const subject = document.getElementById('c-subject')?.value || 'Editorial Query';
+            const message = document.getElementById('c-msg')?.value || '';
+
+            const saved = await SrijanDB.saveContact({ name, email, subject, message });
+            
             editorialContactForm.reset();
-            showToast(`Official message from ${name} received securely. Our editorial assistant will respond within 48 hours.`, 'success', 6000);
+            showToast(`Official message from ${name} (${saved.id}) logged in Supabase. Our editorial assistant will respond within 48 hours.`, 'success', 6000);
         });
     }
 
@@ -329,6 +356,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.template-download-toast').forEach(btn => {
         btn.addEventListener('click', () => {
             showToast('Downloading Official SRIJAN Manuscript Template (.docx)...', 'success');
+            const link = document.createElement('a');
+            link.href = 'SRIJAN_Manuscript_Template_2026.docx';
+            link.download = 'SRIJAN_Manuscript_Template_2026.docx';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     });
 
