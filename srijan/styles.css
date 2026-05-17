@@ -2605,3 +2605,93 @@ body.high-contrast .toast { background-color: #222; border-color: #ffd700; color
         font-size: 2.2rem;
     }
 }
+
+/* ==========================================================================
+   LEGAL PAGES STYLING (Privacy Policy, Terms of Submission, Disclaimer)
+   ========================================================================== */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #1a2a3a 100%);
+    color: var(--text-on-dark);
+    padding: 4.5rem 0 5rem;
+    position: relative;
+    border-bottom: 3px solid var(--accent-gold);
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bg-white);
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.legal-content {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 4rem 5rem;
+    box-shadow: var(--shadow-lg);
+    margin: 4rem auto 6rem;
+    max-width: 1000px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+body.high-contrast .legal-content {
+    background: #111;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.legal-content h2 {
+    font-size: 2rem;
+    color: var(--primary-navy);
+    margin: 3rem 0 1.25rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+body.high-contrast .legal-content h2 { color: var(--accent-gold); }
+
+.legal-content h3 {
+    font-size: 1.45rem;
+    color: var(--secondary-slate);
+    margin: 2rem 0 1rem;
+}
+
+body.high-contrast .legal-content h3 { color: #fff; }
+
+.legal-content p {
+    margin-bottom: 1.5rem;
+}
+
+.legal-content ul {
+    list-style: disc;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 2.5rem 2rem;
+        margin: 2.5rem auto 4rem;
+    }
+    .page-title {
+        font-size: 2.35rem;
+    }
+}
+
