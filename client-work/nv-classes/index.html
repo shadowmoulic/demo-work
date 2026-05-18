@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NV Classes | Premium IIT-JEE, NEET & Foundation Coaching in Bangalore</title>
+    <meta name="description" content="NV Classes Bangalore offers concept-focused coaching for IIT-JEE (Mains & Advanced), NEET, Pure Science, and Foundation (Class 9 & 10) with small batches and personalized attention.">
+    <meta name="keywords" content="IIT-JEE Coaching in Bangalore, NEET Coaching in Bangalore, Foundation Coaching for Class 9 & 10, NV Classes Haralur, Varthur coaching institute, JEE Advanced Bangalore">
+    <meta name="author" content="NV Classes">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="NV Classes | Concept-Focused IIT-JEE & NEET Coaching in Bangalore">
+    <meta property="og:description" content="Small batches, experienced faculty, and personalized mentorship. 50% students join Tier-1 colleges every year.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23F56527'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='white'>NV</text></svg>">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- RemixIcon CDN for crisp modern icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- JSON-LD Schema for SEO & Trust -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "NV Classes",
+          "legalName": "Neev Vidyapeeth Pvt Ltd",
+          "url": "https://neevclasses.com",
+          "logo": "https://neevclasses.com/logo.png",
+          "description": "Premium IIT-JEE, NEET, and Foundation coaching institute in Bangalore focusing on concept-based learning and personalized attention.",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "2nd Floor, SNN Raj Etternia Commercial Building, Silver County Road, Haralur",
+              "addressLocality": "Bengaluru",
+              "postalCode": "560068",
+              "addressRegion": "Karnataka",
+              "addressCountry": "IN"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Brigade Cornerstone Utopia SH 35, Varthur Gunjur Main Road",
+              "addressLocality": "Bengaluru",
+              "postalCode": "560087",
+              "addressRegion": "Karnataka",
+              "addressCountry": "IN"
+            }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8062530000",
+            "contactType": "Admissions & Helpline"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does NV Classes adapt to different learning paces?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Based on internal assessments, we create customized peer groups of students with similar learning needs and paces to ensure steady intellectual growth without pressure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the typical class size, and how do you ensure personalized attention?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We strictly maintain small batch sizes (20-25 students maximum per batch). This allows our expert faculty to engage in one-on-one doubt clearing and track every individual's conceptual clarity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What resources and study materials do you provide to help students excel in IIT-JEE and NEET exams?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide comprehensive concept modules, daily practice problem (DPP) sheets, weekly benchmark mock tests, past year question archives, and exclusive access to our Doubts Clinic & Study Hub."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Custom Animated Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Floating Top Bar / Announcement -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-contacts">
+                <a href="tel:08062530000"><i class="ri-phone-line"></i> Helpline: 080-625-30000</a>
+                <span class="divider">|</span>
+                <a href="tel:+919731127585"><i class="ri-smartphone-line"></i> Mobile: +91 97311 27585</a>
+                <span class="divider">|</span>
+                <a href="mailto:contactus@neevclasses.com"><i class="ri-mail-send-line"></i> contactus@neevclasses.com</a>
+            </div>
+            <div class="top-branches">
+                <span class="branch-badge"><i class="ri-map-pin-2-fill"></i> Haralur Branch</span>
+                <span class="branch-badge pulse"><i class="ri-map-pin-add-fill"></i> New in Varthur</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><span>NV</span></div>
+                <div class="logo-text">
+                    <span class="brand-name">NV Classes</span>
+                    <span class="brand-tagline">IIT-JEE • NEET • FOUNDATION</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#results" class="nav-link">Results & Trust</a>
+                <a href="#courses" class="nav-link">Our Courses</a>
+                <a href="#why-us" class="nav-link">Why Parents Choose Us</a>
+                <a href="#testimonials" class="nav-link">Testimonials & Faculty</a>
+                <a href="#contact" class="nav-link">Contact & Admissions</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-secondary nav-cta" onclick="openModal('admission')">Apply for Test</button>
+                <button class="btn btn-primary nav-cta" onclick="openModal('counselling')">Book Free Counselling</button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="trust-pill">
+                    <span class="dot"></span>
+                    <span class="trust-text">Trusted by 5,000+ Bangalore Parents since 2009</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Concept-Focused <span class="highlight">IIT-JEE & NEET</span> Coaching in Bangalore
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Empowering students from Classes 9–12 with uncompromised personal attention, small batch sizes, and India's finest competitive exam faculty. Your dream is our passion.
+                </p>
+
+                <div class="hero-usp-bar">
+                    <div class="usp-item">
+                        <i class="ri-user-star-line"></i>
+                        <span>Small Batches (Max 25)</span>
+                    </div>
+                    <div class="usp-item">
+                        <i class="ri-award-line"></i>
+                        <span>Top 5000 AIR Track Record</span>
+                    </div>
+                    <div class="usp-item">
+                        <i class="ri-team-line"></i>
+                        <span>Experienced IIT/NIT Mentors</span>
+                    </div>
+                </div>
+
+                <div class="hero-ctas">
+                    <button class="btn btn-primary btn-lg" onclick="openModal('counselling')">
+                        Book Free Counselling <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="openModal('admission')">
+                        Apply for Admission Test
+                    </button>
+                </div>
+
+                <div class="stats-ribbon">
+                    <div class="stat-box">
+                        <span class="stat-num">50%</span>
+                        <span class="stat-label">Students join Tier-1 Colleges</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-label">Years of Academic Excellence</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">KCET / BITS / VIT Top Selection</span>
+                    </div>
+                </div>
+
+                <div class="location-chips">
+                    <span class="chip-title">Campus Locations:</span>
+                    <span class="chip"><i class="ri-building-4-line"></i> Haralur (TCIS Landmark)</span>
+                    <span class="chip"><i class="ri-building-2-line"></i> Varthur (Cornerstone Utopia)</span>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="media-card">
+                    <div class="media-glow"></div>
+                    <img src="./images/hero-topper.png" alt="NV Classes Topper Student Success" class="topper-img">
+                    
+                    <div class="floating-badge top-right">
+                        <div class="badge-icon"><i class="ri-trophy-fill"></i></div>
+                        <div class="badge-info">
+                            <span class="badge-title">AIR Under 5,000</span>
+                            <span class="badge-desc">JEE Advanced & Mains</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge bottom-left">
+                        <div class="badge-icon green"><i class="ri-heart-pulse-fill"></i></div>
+                        <div class="badge-info">
+                            <span class="badge-title">Top Medical Ranks</span>
+                            <span class="badge-desc">NEET UG Excellence</span>
+                        </div>
+                    </div>
+
+                    <div class="parent-quote-badge">
+                        <div class="quote-stars">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p class="quote-text">"Personal attention made a huge difference for my kids. Best decision we made."</p>
+                        <span class="quote-author">- Rajesh K., Parent of Neel & Manan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: RESULTS + TRUST SECTION -->
+    <section class="results-section" id="results">
+        <div class="container results-container">
+            <div class="section-header text-center">
+                <span class="section-badge">Proven Track Record</span>
+                <h2 class="section-title">Consistent Achievements That Earn Parents' Trust</h2>
+                <p class="section-desc">We measure our success purely by the dreams our students fulfill. Here is a glimpse into our legacy of excellence.</p>
+            </div>
+
+            <!-- Exam Logos & Badges Banner -->
+            <div class="exam-badges-bar">
+                <span class="exam-tag">Target Exams:</span>
+                <div class="exam-logo">IIT-JEE Advanced</div>
+                <div class="exam-logo">JEE Mains</div>
+                <div class="exam-logo">NEET UG</div>
+                <div class="exam-logo">BITSAT</div>
+                <div class="exam-logo">IISER & NISER</div>
+                <div class="exam-logo">KCET & Board Toppers</div>
+            </div>
+
+            <!-- Result Highlights Grid -->
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-medal-fill"></i></div>
+                    <div class="result-data">50%</div>
+                    <h3 class="result-heading">Tier-1 College Selections</h3>
+                    <p class="result-detail">Half of our graduating batch joins prestigious institutions like IITs, NITs, BITS, IISER, and NISER every single year.</p>
+                </div>
+
+                <div class="result-card highlight-card">
+                    <div class="result-icon"><i class="ri-trophy-line"></i></div>
+                    <div class="result-data">100%</div>
+                    <h3 class="result-heading">Top Branch Allotments</h3>
+                    <p class="result-detail">Absolute flawless conversion rate in securing premium branches across Top KCET colleges, VIT, and MIT.</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-parent-line"></i></div>
+                    <div class="result-data">99.4%</div>
+                    <h3 class="result-heading">Parent Satisfaction</h3>
+                    <p class="result-detail">Unmatched parent retention and referrals from grade 9 all the way through grade 12 competitive graduation.</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-school-line"></i></div>
+                    <div class="result-data">State Toppers</div>
+                    <h3 class="result-heading">Across CBSE, ICSE & PU</h3>
+                    <p class="result-detail">Our strong conceptual foundation translates seamlessly into board exam dominance and pristine academic records.</p>
+                </div>
+            </div>
+
+            <!-- Featured Toppers Showcase -->
+            <div class="topper-pills-container">
+                <div class="topper-pill">
+                    <div class="topper-avatar"><i class="ri-user-smile-fill"></i></div>
+                    <div class="topper-meta">
+                        <span class="topper-name">Minal Bhojasia</span>
+                        <span class="topper-rank">AIR Under 5k • JEE Advanced</span>
+                    </div>
+                </div>
+                <div class="topper-pill">
+                    <div class="topper-avatar"><i class="ri-user-smile-fill"></i></div>
+                    <div class="topper-meta">
+                        <span class="topper-name">Pranav M R</span>
+                        <span class="topper-rank">Pristine Score • Consistent Topper</span>
+                    </div>
+                </div>
+                <div class="topper-pill">
+                    <div class="topper-avatar"><i class="ri-user-smile-fill"></i></div>
+                    <div class="topper-meta">
+                        <span class="topper-name">Parth Kulkarni</span>
+                        <span class="topper-rank">Integrated Course Excellence</span>
+                    </div>
+                </div>
+                <div class="topper-pill">
+                    <div class="topper-avatar"><i class="ri-user-smile-fill"></i></div>
+                    <div class="topper-meta">
+                        <span class="topper-name">Shankar S.</span>
+                        <span class="topper-rank">Competitive & UPSC Foundational Elite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: COURSES SECTION -->
+    <section class="courses-section" id="courses">
+        <div class="container courses-container">
+            <div class="section-header text-center">
+                <span class="section-badge">Rigorous & Structured Programs</span>
+                <h2 class="section-title">Courses Tailored For Every Academic Milestone</h2>
+                <p class="section-desc">From establishing early math and science curiosity in Class 9 to intensive IIT-JEE and NEET cracking in Class 12.</p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course Card 1: IIT-JEE -->
+                <div class="course-card premium-card">
+                    <div class="course-badge">Flagship Program</div>
+                    <div class="course-header">
+                        <h3 class="course-title">IIT-JEE Coaching</h3>
+                        <p class="course-target">For Classes 11 & 12 • JEE Mains & Advanced</p>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-summary">Gears students up with solid conceptual mastery to confidently conquer engineering entrance exams including JEE Advanced, JEE Mains, BITSAT & top state CETs.</p>
+                        <div class="subject-tags">
+                            <span class="tag"><i class="ri-flashlight-line"></i> Physics</span>
+                            <span class="tag"><i class="ri-test-tube-line"></i> Chemistry</span>
+                            <span class="tag"><i class="ri-functions-line"></i> Mathematics</span>
+                        </div>
+                        <ul class="course-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> In-depth problem solving & doubt clinics</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Weekly test series with national benchmarking</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Personalized performance monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-primary w-100" onclick="openModal('counselling', 'IIT-JEE')">Apply for IIT-JEE Program</button>
+                    </div>
+                </div>
+
+                <!-- Course Card 2: NEET -->
+                <div class="course-card">
+                    <div class="course-badge blue">High Demand</div>
+                    <div class="course-header">
+                        <h3 class="course-title">NEET Medical Coaching</h3>
+                        <p class="course-target">For Classes 11 & 12 • NEET UG & Board Exams</p>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-summary">Builds supreme precision and conceptual retention to score elite ranks in NEET UG while maintaining top board exam scores with unwavering confidence.</p>
+                        <div class="subject-tags">
+                            <span class="tag"><i class="ri-flashlight-line"></i> Physics</span>
+                            <span class="tag"><i class="ri-test-tube-line"></i> Chemistry</span>
+                            <span class="tag"><i class="ri-heart-pulse-line"></i> Biology</span>
+                        </div>
+                        <ul class="course-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> NCERT line-by-line deep dissection</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> High-frequency mock test simulations</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Dedicated botany & zoology experts</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-outline w-100" onclick="openModal('counselling', 'NEET')">Apply for NEET Program</button>
+                    </div>
+                </div>
+
+                <!-- Course Card 3: Foundation (Kshitij & Jigyasa) -->
+                <div class="course-card">
+                    <div class="course-badge green">Early Advantage</div>
+                    <div class="course-header">
+                        <h3 class="course-title">Foundation (Classes 9 & 10)</h3>
+                        <p class="course-target">Jigyasa (Class 9) & Kshitij (Class 10)</p>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-summary">Ignites the quest for scientific curiosity beyond textbooks. Lays an unbreakable foundation for future JEE/NEET prep while targeting 95%+ in board exams.</p>
+                        <div class="subject-tags">
+                            <span class="tag"><i class="ri-calculator-line"></i> 10th PCM</span>
+                            <span class="tag"><i class="ri-leaf-line"></i> 9th/10th Biology</span>
+                            <span class="tag"><i class="ri-compass-3-line"></i> Olympiads</span>
+                        </div>
+                        <ul class="course-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> Strong math & analytical skill building</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Stress-free interactive conceptual sessions</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Early exposure to competitive test formats</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-outline w-100" onclick="openModal('counselling', 'Foundation')">Explore Foundation</button>
+                    </div>
+                </div>
+
+                <!-- Course Card 4: Pure Science & Research -->
+                <div class="course-card">
+                    <div class="course-badge purple">Research Elite</div>
+                    <div class="course-header">
+                        <h3 class="course-title">Pure Science Programs</h3>
+                        <p class="course-target">For Classes 11 & 12 • IISER, NISER & Olympiads</p>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-summary">Inspiring young analytical minds to become world-class scientists and researchers by helping them crack premiere research institutes like IISER and NISER.</p>
+                        <div class="subject-tags">
+                            <span class="tag"><i class="ri-flashlight-line"></i> Physics</span>
+                            <span class="tag"><i class="ri-test-tube-line"></i> Chemistry</span>
+                            <span class="tag"><i class="ri-functions-line"></i> Math</span>
+                            <span class="tag"><i class="ri-heart-pulse-line"></i> Bio</span>
+                        </div>
+                        <ul class="course-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> Advanced theoretical concept building</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> IISER & NISER aptitude test specialized training</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Direct mentorship under elite scholars</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-outline w-100" onclick="openModal('counselling', 'Pure Science')">Explore Pure Science</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Hub Banner -->
+            <div class="study-hub-banner">
+                <div class="hub-info">
+                    <div class="hub-icon"><i class="ri-community-line"></i></div>
+                    <div class="hub-text">
+                        <h4>Exclusive NV Study Hub & Doubts Clinic</h4>
+                        <p>Our students get round-the-clock access to dedicated doubt solving booths and quiet academic library zones to study without distractions.</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="openModal('counselling', 'Study Hub Inquiry')">Visit Our Campus <i class="ri-arrow-right-line"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WHY PARENTS CHOOSE NV CLASSES -->
+    <section class="why-us-section" id="why-us">
+        <div class="container why-container">
+            <div class="section-header text-center">
+                <span class="section-badge">The NV Advantage</span>
+                <h2 class="section-title">Why Discerning Parents Trust NV Classes</h2>
+                <p class="section-desc">We replace impersonal mass-market coaching with genuine care, academic intimacy, and uncompromising teaching standards.</p>
+            </div>
+
+            <div class="why-layout">
+                <!-- 4 Clean Icon Cards -->
+                <div class="why-cards">
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="ri-group-line"></i></div>
+                        <h3 class="why-card-title">Strict Small Batches</h3>
+                        <p class="why-card-desc">With maximum 20-25 students per class, no child ever gets lost in a crowded room. We ensure interactive dialogue and complete focus.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="ri-user-heart-line"></i></div>
+                        <h3 class="why-card-title">Personalized Attention</h3>
+                        <p class="why-card-desc">Our mentors understand each student's unique academic strengths and weaknesses, offering tailored doubt clearance and emotional guidance.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="ri-user-star-line"></i></div>
+                        <h3 class="why-card-title">Experienced Faculty</h3>
+                        <p class="why-card-desc">Taught by seasoned IITians, NITians, and subject specialists who possess deep knowledge and a contagious passion for teaching.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-card-icon"><i class="ri-lightbulb-line"></i></div>
+                        <h3 class="why-card-title">Concept-Based Learning</h3>
+                        <p class="why-card-desc">We eliminate rote memorization. We teach the 'why' behind formulas, fostering an intuitive love for science and mathematics.</p>
+                    </div>
+                </div>
+
+                <!-- Classroom / Campus Imagery Showcase -->
+                <div class="why-campus-showcase">
+                    <div class="campus-card">
+                        <img src="./images/classroom.png" alt="NV Classes Modern Campus and Classroom" class="campus-img">
+                        <div class="campus-overlay">
+                            <div class="overlay-text">
+                                <h4>State-of-the-art Haralur & Varthur Classrooms</h4>
+                                <p>Ergonomically designed for long study sessions with audio-visual smart learning tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: TESTIMONIALS + FACULTY -->
+    <section class="testimonials-faculty-section" id="testimonials">
+        <div class="container tf-container">
+            <div class="section-header text-center">
+                <span class="section-badge">Real Stories & Master Mentors</span>
+                <h2 class="section-title">Hear From Our Community & Meet The Pillars of NV</h2>
+                <p class="section-desc">The strongest proof of our excellence lies in the gratitude of our parents and the dedication of our educators.</p>
+            </div>
+
+            <!-- Testimonials Tabs (Parent Trust vs Toppers Speak) -->
+            <div class="testimonial-section">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="switchTab('parents')"><i class="ri-parent-fill"></i> Parent Testimonials</button>
+                    <button class="tab-btn" onclick="switchTab('students')"><i class="ri-graduation-cap-fill"></i> Toppers Speak</button>
+                </div>
+
+                <!-- Parents Tab Content -->
+                <div class="tab-content active" id="parents-tab">
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card video-card">
+                            <div class="video-preview" onclick="playVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+                                <div class="play-btn"><i class="ri-play-fill"></i></div>
+                                <div class="video-overlay">
+                                    <span class="video-tag">Parent Video Review</span>
+                                </div>
+                            </div>
+                            <div class="testi-body">
+                                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <p class="testi-text">"Both my sons have studied in Neev Classes since 9th standard. Big thanks to Nimish Sir, Rakhi Ma'am, and Amit Sir for playing an instrumental role in shaping their Maths and Science interests. Small batch size and personal interaction made all the difference!"</p>
+                                <div class="testi-author">
+                                    <div class="author-avatar"><i class="ri-user-3-fill"></i></div>
+                                    <div class="author-info">
+                                        <h4>Kalpesh Dave</h4>
+                                        <span>Parent of Deep & Karan (4 Continuous Years)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testi-body">
+                                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <p class="testi-text">"My son joined in grade 9. Teachers like Amit sir, Divyanshu sir, and Rakhi ma'am are very hard to find as they are passionate in teaching. They not only taught subjects but prepared him on how to face life. Nimish sir is a wonderful hardworking teacher who gives individual attention to every single child."</p>
+                                <div class="testi-author">
+                                    <div class="author-avatar"><i class="ri-user-heart-fill"></i></div>
+                                    <div class="author-info">
+                                        <h4>Chitra Subbu</h4>
+                                        <span>Parent of Shankar Subramaniyan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testi-body">
+                                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <p class="testi-text">"I found NV Classes to be the absolute best institute for my children. It's an incredible team led by Nimish sir. What I value most is the personalized attention given to each student. I highly recommend NV to anyone aspiring to crack engineering entrance exams."</p>
+                                <div class="testi-author">
+                                    <div class="author-avatar"><i class="ri-user-3-fill"></i></div>
+                                    <div class="author-info">
+                                        <h4>Rajesh Kabra</h4>
+                                        <span>Parent of Neel & Manan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Students Tab Content -->
+                <div class="tab-content" id="students-tab">
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testi-body">
+                                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <p class="testi-text">"I just wanted to say huge thanks to NV for helping me get under 5k rank in JEE Mains and Advanced. The teachers are extremely dedicated and ensure our concepts are crystal clear. What I really loved is that the teachers give personal attention to everyone."</p>
+                                <div class="testi-author">
+                                    <div class="author-avatar student"><i class="ri-user-smile-fill"></i></div>
+                                    <div class="author-info">
+                                        <h4>Minal Bhojasia</h4>
+                                        <span>JEE Advanced Topper (AIR < 5,000)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testi-body">
+                                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <p class="testi-text">"I had a phenomenal experience in the last two years. The teaching is top-notch and teachers make classes highly interactive. Regular weekly tests helped me gauge my preparation accurately. Highly recommend NV for JEE prep!"</p>
+                                <div class="testi-author">
+                                    <div class="author-avatar student"><i class="ri-user-smile-fill"></i></div>
+                                    <div class="author-info">
+                                        <h4>Pranav M R</h4>
+                                        <span>IIT-JEE Aspirant</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testi-body">
+                                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <p class="testi-text">"I joined NV in 11th as part of the integrated course and let me tell you, it is one of the best decisions my parents and I made. My teachers have been incredibly supportive throughout the rigorous two years of preparation."</p>
+                                <div class="testi-author">
+                                    <div class="author-avatar student"><i class="ri-user-smile-fill"></i></div>
+                                    <div class="author-info">
+                                        <h4>Parth Kulkarni</h4>
+                                        <span>Integrated Course Student</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expert Faculty Section -->
+            <div class="faculty-section mt-5">
+                <div class="section-subheader text-center">
+                    <h3 class="sub-heading">Meet Our Distinguished Faculty Mentors</h3>
+                    <p class="sub-desc">Our educators come from premier institutions and carry over decades of combined experience in cracking India's toughest competitive exams.</p>
+                </div>
+
+                <div class="faculty-grid">
+                    <!-- Faculty 1 -->
+                    <div class="faculty-card">
+                        <div class="faculty-img-wrapper">
+                            <img src="./images/faculty-1.png" alt="Nimish Vikas Founder CEO NV Classes" class="faculty-img">
+                            <div class="faculty-badge">Founder & CEO</div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4 class="faculty-name">Nimish Vikas</h4>
+                            <p class="faculty-role">Lead Strategy & Physics Mentor</p>
+                            <p class="faculty-edu"><i class="ri-graduation-cap-line"></i> Expert Educator & Innovator</p>
+                            <p class="faculty-bio">Guiding thousands of successful JEE and NEET aspirants with unwavering dedication and conceptual clarity since 2009.</p>
+                        </div>
+                    </div>
+
+                    <!-- Faculty 2 -->
+                    <div class="faculty-card">
+                        <div class="faculty-img-wrapper">
+                            <div class="faculty-avatar-placeholder orange"><i class="ri-user-star-fill"></i></div>
+                            <div class="faculty-badge">Academics Director</div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4 class="faculty-name">Rakhi Bhatia</h4>
+                            <p class="faculty-role">Academics Director & Mentor</p>
+                            <p class="faculty-edu"><i class="ri-graduation-cap-line"></i> Senior Academic Specialist</p>
+                            <p class="faculty-bio">Specializes in curriculum structure, student psychology, and designing high-efficiency study modules for board & competitive exams.</p>
+                        </div>
+                    </div>
+
+                    <!-- Faculty 3 -->
+                    <div class="faculty-card">
+                        <div class="faculty-img-wrapper">
+                            <div class="faculty-avatar-placeholder blue"><i class="ri-flask-fill"></i></div>
+                            <div class="faculty-badge">HOD Chemistry</div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4 class="faculty-name">Divyanshu Tripathi</h4>
+                            <p class="faculty-role">Head of Chemistry Department</p>
+                            <p class="faculty-edu"><i class="ri-graduation-cap-line"></i> B.Tech, FGIET</p>
+                            <p class="faculty-bio">Renowned for making organic and physical chemistry intuitive through real-life analogies and rigorous problem-solving techniques.</p>
+                        </div>
+                    </div>
+
+                    <!-- Faculty 4 -->
+                    <div class="faculty-card">
+                        <div class="faculty-img-wrapper">
+                            <div class="faculty-avatar-placeholder dark"><i class="ri-functions-line"></i></div>
+                            <div class="faculty-badge">HOD Mathematics</div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4 class="faculty-name">Amit Sharma</h4>
+                            <p class="faculty-role">Head of Mathematics Department</p>
+                            <p class="faculty-edu"><i class="ri-graduation-cap-line"></i> B.Tech, NIT Trichy</p>
+                            <p class="faculty-bio">An NIT Trichy alumnus with a legendary track record of mentoring top 1000 AIR holders with advanced mathematical intuition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CONVERSION SECTION (Form + FAQ + Reassurance) -->
+    <section class="conversion-section" id="contact">
+        <div class="container conversion-container">
+            <div class="conversion-grid">
+                <!-- Left Column: FAQ & Reassurance -->
+                <div class="conversion-left">
+                    <span class="section-badge">Got Questions?</span>
+                    <h2 class="conversion-title">Frequently Asked Questions</h2>
+                    <p class="conversion-subtitle">Everything parents and students need to know before joining the NV family.</p>
+
+                    <div class="faq-accordion" id="faq-accordion">
+                        <div class="faq-item active">
+                            <div class="faq-header" onclick="toggleFaq(this)">
+                                <h3>How does NV Classes adapt to different learning paces?</h3>
+                                <i class="ri-arrow-down-s-line faq-icon"></i>
+                            </div>
+                            <div class="faq-body" style="max-height: 200px;">
+                                <p>Based on our internal diagnostic assessments, we create customized peer groups of students with similar learning needs and paces. This ensures fast learners remain challenged while foundational learners receive the patience and support required to master concepts without feeling overwhelmed.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" onclick="toggleFaq(this)">
+                                <h3>What is the typical class size, and how do you ensure personalized attention?</h3>
+                                <i class="ri-arrow-down-s-line faq-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>We strictly cap our batch sizes at 20 to 25 students maximum. This intimate ratio enables our faculty to know every student personally, track daily performance, and conduct targeted one-on-one doubt clearing sessions.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" onclick="toggleFaq(this)">
+                                <h3>What resources and study materials do you provide?</h3>
+                                <i class="ri-arrow-down-s-line faq-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>We provide exhaustive concept modules, daily practice problem (DPP) sheets, weekly All-India test series, detailed video solutions, and exclusive access to our on-campus Study Hub & Doubts Clinic for distraction-free preparation.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" onclick="toggleFaq(this)">
+                                <h3>How do you track and communicate our child's progress with parents?</h3>
+                                <i class="ri-arrow-down-s-line faq-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>We conduct regular Parent-Teacher Meetings (PTMs) and send transparent weekly performance reports via WhatsApp and Email. You will always be informed about test scores, attendance, and specific focus areas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reassurance-box mt-4">
+                        <div class="reassure-icon"><i class="ri-shield-check-fill"></i></div>
+                        <div class="reassure-content">
+                            <h4>Uncompromising Academic Integrity</h4>
+                            <p>We do not make false promises. We commit to unwavering hard work, elite faculty mentorship, and creating a supportive ecosystem where your child can thrive academically and personally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Short Lead Form -->
+                <div class="conversion-right">
+                    <div class="lead-form-box">
+                        <div class="form-header">
+                            <h3>Start Your Child's Journey</h3>
+                            <p>Book a Free Counselling Session or Register for our Admission Test today.</p>
+                        </div>
+
+                        <form id="admission-form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="fullName"><i class="ri-user-line"></i> Parent or Student Name *</label>
+                                <input type="text" id="fullName" required placeholder="Enter full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneNumber"><i class="ri-phone-line"></i> WhatsApp Phone Number *</label>
+                                <input type="tel" id="phoneNumber" required placeholder="+91 XXXXX XXXXX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailAddr"><i class="ri-mail-line"></i> Email Address *</label>
+                                <input type="email" id="emailAddr" required placeholder="name@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="courseSelect"><i class="ri-book-open-line"></i> Select Program of Interest *</label>
+                                <select id="courseSelect" required>
+                                    <option value="" disabled selected>Choose a program...</option>
+                                    <option value="IIT-JEE (Class 11/12)">IIT-JEE (Class 11 & 12)</option>
+                                    <option value="NEET Medical (Class 11/12)">NEET Medical (Class 11 & 12)</option>
+                                    <option value="Pure Science / IISER">Pure Science / IISER (Class 11/12)</option>
+                                    <option value="Kshitij (Class 10 Foundation)">Kshitij (Class 10 Foundation)</option>
+                                    <option value="Jigyasa (Class 9 Foundation)">Jigyasa (Class 9 Foundation)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inquiryType"><i class="ri-question-answer-line"></i> I am looking to: *</label>
+                                <select id="inquiryType" required>
+                                    <option value="Book Free Counselling">Book Free Counselling</option>
+                                    <option value="Apply for Admission Test">Apply for Admission Test</option>
+                                    <option value="Campus Visit Inquiry">Schedule Campus Visit</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userMessage"><i class="ri-chat-1-line"></i> Message / Specific Questions (Optional)</label>
+                                <textarea id="userMessage" rows="3" placeholder="Tell us about your child's current school, class, or specific goals..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit w-100" id="submitBtn">
+                                Submit Request <i class="ri-send-plane-fill"></i>
+                            </button>
+
+                            <p class="form-disclaimer"><i class="ri-lock-line"></i> We value your privacy. Your information is 100% secure.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"><span>NV</span></div>
+                        <div class="logo-text">
+                            <span class="brand-name">NV Classes</span>
+                            <span class="brand-tagline">IIT-JEE • NEET • FOUNDATION</span>
+                        </div>
+                    </div>
+                    <p class="footer-bio">Providing high standards of educational excellence since 2009. We believe that success passes through building sound concepts and developing a genuine love for the subject.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="ri-whatsapp-fill"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#results">Results & Achievements</a></li>
+                        <li><a href="#courses">Our Courses</a></li>
+                        <li><a href="#why-us">Why Choose NV</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact & Admissions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#courses">IIT-JEE (Advanced & Mains)</a></li>
+                        <li><a href="#courses">NEET Medical</a></li>
+                        <li><a href="#courses">Pure Science (IISER/NISER)</a></li>
+                        <li><a href="#courses">Kshitij (Class 10)</a></li>
+                        <li><a href="#courses">Jigyasa (Class 9)</a></li>
+                        <li><a href="#courses">Study Hub & Doubts Clinic</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Our Campus Locations</h4>
+                    <div class="location-item">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <div>
+                            <strong>Haralur HQ:</strong> 2nd Floor, SNN Raj Etternia Commercial Building, Silver County Road, Haralur - 560068 (Landmark: TCIS)
+                        </div>
+                    </div>
+                    <div class="location-item mt-2">
+                        <i class="ri-map-pin-add-fill"></i>
+                        <div>
+                            <strong>Varthur Branch:</strong> Brigade Cornerstone Utopia SH 35, Varthur Gunjur Main Road, Bengaluru 560087
+                        </div>
+                    </div>
+                    <div class="location-item mt-2">
+                        <i class="ri-phone-fill"></i>
+                        <div>
+                            <strong>Helpline:</strong> 080-625-30000 | +91 97311 27585
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2026 Neev Vidyapeeth Pvt Ltd (NV Classes). All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="divider">•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919731127585?text=Hello%20NV%20Classes,%20I%20would%20like%20to%20inquire%20about%20your%20coaching%20programs." class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="ri-whatsapp-fill"></i>
+        <span class="whatsapp-text">Chat with Experts</span>
+    </a>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="mobile-sticky-cta">
+        <a href="tel:08062530000" class="btn-mobile-call"><i class="ri-phone-fill"></i> Call Now</a>
+        <a href="https://wa.me/919731127585" class="btn-mobile-wa" target="_blank"><i class="ri-whatsapp-fill"></i> WhatsApp</a>
+        <button class="btn-mobile-book" onclick="openModal('counselling')">Book Test</button>
+    </div>
+
+    <!-- Generic Modal for Counselling & Test Application -->
+    <div class="modal-backdrop" id="cta-modal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h3 id="modal-title">Book Free Counselling</h3>
+                <p id="modal-desc">Speak directly with our academic directors to chart out the perfect success roadmap for your child.</p>
+            </div>
+            <div class="modal-body">
+                <form id="modal-form" onsubmit="handleModalSubmit(event)">
+                    <div class="form-group">
+                        <label for="modalName">Full Name *</label>
+                        <input type="text" id="modalName" required placeholder="Enter student or parent name">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalPhone">Phone Number *</label>
+                        <input type="tel" id="modalPhone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalCourse">Select Program *</label>
+                        <select id="modalCourse" required>
+                            <option value="IIT-JEE">IIT-JEE (Mains & Advanced)</option>
+                            <option value="NEET">NEET Medical</option>
+                            <option value="Pure Science">Pure Science (IISER)</option>
+                            <option value="Foundation">Class 9/10 Foundation</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Confirm Booking <i class="ri-check-line"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast Notification -->
+    <div class="toast-notification" id="success-toast">
+        <div class="toast-icon"><i class="ri-checkbox-circle-fill"></i></div>
+        <div class="toast-message">
+            <h4>Application Submitted Successfully!</h4>
+            <p>Our academic counselor will get in touch with you within 2 business hours.</p>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="./app.js"></script>
+</body>
+</html>
