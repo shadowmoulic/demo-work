@@ -57,7 +57,7 @@ class SrijanDB {
 
         if (this.isSupabaseActive()) {
             try {
-                const { error } = await supabaseClient.from('submissions').insert([entry]);
+                const { error } = await supabaseClient.from('srijan_submissions').insert([entry]);
                 if (error) console.warn('Supabase Insert Warning (Table might not exist yet):', error);
             } catch (err) {
                 console.error('Supabase Exception:', err);
@@ -74,7 +74,7 @@ class SrijanDB {
     static async getSubmissions() {
         if (this.isSupabaseActive()) {
             try {
-                const { data, error } = await supabaseClient.from('submissions').select('*').order('id', { ascending: false });
+                const { data, error } = await supabaseClient.from('srijan_submissions').select('*').order('id', { ascending: false });
                 if (!error && data && data.length > 0) return data;
             } catch (err) {
                 console.warn('Supabase Select Warning:', err);
@@ -86,7 +86,7 @@ class SrijanDB {
     static async updateSubmissionStatus(id, newStatus) {
         if (this.isSupabaseActive()) {
             try {
-                await supabaseClient.from('submissions').update({ status: newStatus }).eq('id', id);
+                await supabaseClient.from('srijan_submissions').update({ status: newStatus }).eq('id', id);
             } catch (err) {
                 console.warn('Supabase Update Warning:', err);
             }
@@ -107,7 +107,7 @@ class SrijanDB {
 
         if (this.isSupabaseActive()) {
             try {
-                const { error } = await supabaseClient.from('reviewers').insert([entry]);
+                const { error } = await supabaseClient.from('srijan_reviewers').insert([entry]);
                 if (error) console.warn('Supabase Reviewer Warning:', error);
             } catch (err) {
                 console.error('Supabase Exception:', err);
@@ -123,7 +123,7 @@ class SrijanDB {
     static async getReviewers() {
         if (this.isSupabaseActive()) {
             try {
-                const { data, error } = await supabaseClient.from('reviewers').select('*').order('id', { ascending: false });
+                const { data, error } = await supabaseClient.from('srijan_reviewers').select('*').order('id', { ascending: false });
                 if (!error && data && data.length > 0) return data;
             } catch (err) {
                 console.warn('Supabase Select Warning:', err);
@@ -135,7 +135,7 @@ class SrijanDB {
     static async updateReviewerStatus(id, newStatus) {
         if (this.isSupabaseActive()) {
             try {
-                await supabaseClient.from('reviewers').update({ status: newStatus }).eq('id', id);
+                await supabaseClient.from('srijan_reviewers').update({ status: newStatus }).eq('id', id);
             } catch (err) {
                 console.warn('Supabase Update Warning:', err);
             }
@@ -156,7 +156,7 @@ class SrijanDB {
 
         if (this.isSupabaseActive()) {
             try {
-                const { error } = await supabaseClient.from('contacts').insert([entry]);
+                const { error } = await supabaseClient.from('srijan_contacts').insert([entry]);
                 if (error) console.warn('Supabase Contact Warning:', error);
             } catch (err) {
                 console.error('Supabase Exception:', err);
@@ -172,7 +172,7 @@ class SrijanDB {
     static async getContacts() {
         if (this.isSupabaseActive()) {
             try {
-                const { data, error } = await supabaseClient.from('contacts').select('*').order('id', { ascending: false });
+                const { data, error } = await supabaseClient.from('srijan_contacts').select('*').order('id', { ascending: false });
                 if (!error && data && data.length > 0) return data;
             } catch (err) {
                 console.warn('Supabase Select Warning:', err);
@@ -184,7 +184,7 @@ class SrijanDB {
     static async updateContactStatus(id, newStatus) {
         if (this.isSupabaseActive()) {
             try {
-                await supabaseClient.from('contacts').update({ status: newStatus }).eq('id', id);
+                await supabaseClient.from('srijan_contacts').update({ status: newStatus }).eq('id', id);
             } catch (err) {
                 console.warn('Supabase Update Warning:', err);
             }
