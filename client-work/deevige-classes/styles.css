@@ -1545,9 +1545,11 @@ button {
    FOOTER SECTION
    ========================================================================== */
 .footer {
-    background: var(--clr-navy-900);
+    background: linear-gradient(180deg, var(--clr-navy-900), #070b14);
     color: var(--clr-gray-300);
     padding-top: 5rem;
+    border-top: 4px solid var(--clr-brand-yellow);
+    position: relative;
 }
 
 .footer-container {
@@ -1982,9 +1984,13 @@ button {
     }
     
     .director-container,
-    .about-container,
-    .footer-container {
+    .about-container {
         grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
     
@@ -2035,6 +2041,31 @@ button {
 }
 
 @media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-col.brand-col,
+    .footer-col.contact-col {
+        grid-column: span 2;
+    }
+
+    .toast-notification {
+        top: -150px;
+        bottom: auto !important;
+        left: 1rem;
+        right: 1rem;
+        width: calc(100% - 2rem);
+        box-sizing: border-box;
+        transition: top 0.5s cubic-bezier(0.68, -0.55, 0.26, 1.55);
+    }
+
+    .toast-notification.show {
+        top: 1.5rem;
+        bottom: auto !important;
+    }
+
     .announcement-bar {
         display: none;
     }
