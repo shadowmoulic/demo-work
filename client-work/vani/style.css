@@ -380,8 +380,9 @@ textarea {
 /* Hero Section */
 .hero {
   padding: 60px 0 90px 0;
-  background: radial-gradient(circle at top right, rgba(254, 226, 226, 0.5), transparent 60%),
-    radial-gradient(circle at bottom left, rgba(241, 245, 249, 0.8), transparent 60%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 252, 0.95)), url('/client-work/vani/guy-studying.jpg');
+  background-size: cover;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
@@ -602,10 +603,6 @@ select.form-input {
   clear: both;
 }
 
-.results .container {
-  display: block;
-  width: 100%;
-}
 
 .section-header {
   text-align: center;
@@ -625,14 +622,22 @@ select.form-input {
 }
 
 .results-stats-wrapper {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
   width: 100%;
-  background: linear-gradient(135deg, var(--primary-red), var(--primary-dark-red));
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.85), rgba(153, 27, 27, 0.9)), url('/client-work/vani/studying.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   padding: 64px 0;
   margin: 64px 0 80px 0;
   box-shadow: 0 10px 30px rgba(185, 28, 28, 0.2);
 }
 
 .results-stats-bar {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
@@ -1266,7 +1271,10 @@ select.form-input {
 /* Final CTA Section */
 .cta-section {
   padding: 90px 0;
-  background: linear-gradient(135deg, var(--primary-dark-red) 0%, var(--primary-red) 100%);
+  background: linear-gradient(135deg, rgba(153, 27, 27, 0.88), rgba(185, 28, 28, 0.92)), url('/client-work/vani/guy-studying.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   color: white;
   position: relative;
   overflow: hidden;
