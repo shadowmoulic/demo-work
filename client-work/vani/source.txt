@@ -1,0 +1,1990 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <title>VANI INSTITUTE | BEST GATE, ESE Coaching Institute In India.</title>
+        <meta name="description" content="VANI INSTITUTE who introduced GATE &amp; ESE Coaching in India.Having our head office at Hyderabad and Branch offices at Bangalore,Pune,Chennai,Kochi,Kolkata.">
+        <meta name="keywords" content="gate institute in india,best gate institute in india, top gate coaching institute in india, top gate institute in india, gate coaching institute in india, top ten gate coaching institute in india, best gate preparation institute in india, no 1 gate institute in india, top 10 gate institute in india, gate best coaching institute in india, top institute for gate coaching in india, gate coaching in india,best gate coaching in india,best gate coaching centres in india, top gate coaching in india, top 10 gate coaching centers in india, best gate coaching in india for ece, best gate coaching in india for cse, best gate coaching in india for civil engineering, best gate coaching in india for mechanical, top gate coaching institutes in india, top 10 gate coaching in india, gate coaching centers in india, gate coaching centres in india, no.1 gate coaching centre in india, mining gate coaching in india, top 10 gate coaching institutes in india, gate coaching institutes in india, top ten gate coaching in india, best gate coaching centres in india for civil engineering, best gate coaching centres in south india, best gate coaching centres in india for mechanical, best gate and ies coaching in india, list of top gate coaching institutes in india,top 5 gate coaching in india, list of gate coaching institutes in india, best ies gate coaching in india, metallurgy gate coaching in india, top gate coaching institutes in india list,gate coaching, gate coaching online, gate coaching at Bangalore, gate coaching Bangalore, gate coaching in Hyderabad, gate coaching Hyderabad,gate coaching in Chennai,gate coaching centres in Hyderabad, gate coaching center,gate coaching centres, gate coaching in Kolkata, gate coaching in pune, gate coaching pune, gate coaching centre in Chennai, gate coaching centers in Bangalore, gate coaching in Jaipur, gate coaching in Mumbai, gate coaching for chemical engineering, gate coaching kochi, gate coaching fees, gate online coaching for mechanical engineering, gate coaching fee structure, gate coaching classes, gate coaching Bhubaneswar, gate coaching centres in kochi, gate coaching fees in Hyderabad, gate coaching centres near me, gate coaching centres in kerala, gate coaching vizag, gate coaching kerala, gate coaching fees in Bangalore, gate coaching Vijayawada, gate coaching classes in pune, gate coaching hyderabad best institute, gate exam coaching centre, gate coaching app, gate exam coaching, gate coaching mangalore, gate coaching 2018, gate coaching for cse, gate exam coaching centre in Coimbatore gate coaching fees in delhi,  gate coaching kukatpally, gate without coaching, gate coaching material, gate coaching books, gate coaching mumbai Maharashtra, gate 2018 coaching in Hyderabad, gate coaching jobs, gate coaching nashik Maharashtra, gate coaching academy, gate coaching in noida sector 18, gate coaching hyderabad fees, gate life science coaching, gate 2021 coaching, zeal gate coaching in indore, gate without coaching quora, gate coaching online ece, gate coaching academy in Hyderabad, gate coaching price, gate coaching scholarship test, gate coaching notes, gate coaching scholarship, gate coaching kollam, gate coaching Kannur, online gate coaching quora, gate coaching quora, gate coaching lectures,gate institute, gate institute of technology, gate institute, gate institute pune, gate coaching institute, gate institute in Hyderabad, gate institutes in Hyderabad, gate organising institute, gate coaching institute delhi, gate institute Ahmedabad, gate institute delhi, gate institute in delhi, gate institute Guwahati, gate institute Bangalore, gate institute in Bangalore, gatestone institute, gate institute in Chennai, gate institute in pune, gate institute, gate organising institute list, gate organising institute 2021, gate institute near me, vani gate institute Chennai, gate institute login, gate training institute,   institute student login, gate conducting institute gate organising institute year wise, gate training institute in Kolkata, gate institute fees, gate institute in Bhubaneswar, gate forum institute, gate 2021 institute, gate institute of technology and management sciences, gate institute of technology, gate institute in Mumbai, gate masters institute Hyderabad, vani institute gate study material, gate institute dilsukhnagar, gate coach institute, gate institute fees structure, edutop gate institute, gate best institute, gate time institute, gate institute reviews, vani gate institute Bangalore, gate institute London, gate 2021 institute,  gate british institute, gate exam institute, gate institute Hyderabad, gate organizing institute 2017, gate organizing institute 2021, gate organizing institute 2021, online gate exams, gate online examination, online exams for gate, online gate aptitude test, gate online exams practice, online gate exam form, online gate exams free, online gate exam registration, gate online exam practice for ece, gate online test 2021, online gate 2021 test series, online gate test series 2021 free, free online mock gate exams, vani gate online exam registration, gate online exam instructions, gate online examination form, online gate exam form 2021, online gate exam form 2021, online gate test series 2022, free gate online test series, gate online test series free, gate online test   series free for ece, gate online test series vani, gate online test series free for mechanical, gate online, test series, vani gate online test series free for civil, gate online test series free for cse, gate online test,  series 2021, vani online test series login, gate 2021 online test series, vani gate online test series 2021, vani gate online test series, vani gate online test series login, gate online test series mechanical, gate online test series free for chemical engineering, gate online test series for chemistry, gate instructors   online test series, gate online test series for chemical engineering, iit madras gate online test series, gate forum online test series 2021, gate online test series for civil engineering, gate online test series for ee, gate online test series physics, test book gate online test series, gate online test series for mechanical engineering, gate online test series for civil, gate online test series for geology, gate online test series, gate online test series for eee, gate online test series free for ee, gate online test series vani 2021, gate online test series free for civil, vani gate online test series allen, vani gate online test series, gate 2021 online test series vani, gate test house online test series, gate online test series login, gate online test series 2021 vani academy, vani gate online test series schedule, vani gate online test series registration, gate online test series vani institute, the gate coach online test series, gate online test series by the vani,   vani online test series student login, the vani online test series login, vani online test series 2021, vani online test series bhilai, vani online test series reviews, gate online test series 2021, free gate online test series for ce, gate online test series vani 2021." />
+
+            <meta name="google-site-verification" content="KAoBRjfnJ7Xm7pVVQ_iyPYDTKNxHnfIoQ4Doh-G5XgY" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-select.css">
+    
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/style.css?v=3">
+    
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45617998-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-45617998-1');
+</script>
+  
+</head>
+
+
+<body>
+
+
+        <!--====== PRELOADER PART START ======-->
+    
+
+
+    <!--====== PRELOADER PART START ======-->
+    
+    <!--====== HEADER PART START ======-->
+    
+    <header id="header-part">
+        <div class="header-top d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="header-contact">
+                            <ul style="    margin-top: 4px;">
+                                <li><i class="fa fa-envelope"></i><a href="#"><span class="__cf_email__" data-cfemail="01686f676e4177606f68686f727568757475642f626e6c">[email&#160;protected]</span></a></li>
+                                <li><a href="https://vaniinstitute.com/gate-exam-downloads">GATE</a> |<a href="https://vaniinstitute.com/ese-exam-downloads">ESE</a>  | <a href="https://vaniinstitute.com/gate-ese-psu">PSU</a></li>
+                            </ul>
+                        </div> <!-- header contact -->
+                    </div>
+                    <div class="col-md-6 centers-drop">
+                      <div class="topstrip-marquee">
+            <marquee scrollamount="12">
+            <div>
+                                <p><i class="fa fa-bell"></i> 
+                <a href="https://www.vaniinstitute.com/gate-ese-batches" style="color:white;">CLICK HERE For GATE & ESE 2027 /28 OFFLINE COACHING</a>
+            </p> 
+                            <p><i class="fa fa-bell"></i> 
+                <a href="WWW.VANIINSTITUTE.COM /ESE -RESULTS" style="color:white;">VANI Students Are TOP In ESE- 2025-Results</a>
+            </p> 
+                            <p><i class="fa fa-bell"></i> 
+                <a href="https://www.vaniinstitute.com/rankers-years" style="color:white;">VANI STUDENTS ARE TOP IN GATE- 2026-RESULTS</a>
+            </p> 
+                            <p><i class="fa fa-bell"></i> 
+                <a href="https://www.vaniinstitute.com/schedules" style="color:white;">GATE-27/28  OFFLINE BTACHES- APRIL -4th & 11th-2026  @ HYDERABAD .  BANGALORE . CHENNAI . </a>
+            </p> 
+                        </div>
+            
+            </marquee>
+
+                      </div>
+                 
+<div class="dropdown">
+  <button class="dropbtn">Centers <i class="fa fa-chevron-down"></i></button>
+  <div class="dropdown-content">
+  <a href="gate-coaching-in-hyderabad">Hyderabad</a>
+  <a href="gate-coaching-in-bangalore">Bangalore</a>
+  <a href="gate-coaching-in-pune">Pune</a>
+  <a href="gate-coaching-in-chennai">Chennai</a>
+  <a href="gate-coaching-in-kochi">Kochi</a>
+  <a href="gate-coaching-in-kolkata">Kolkata</a>
+  </div>
+</div>
+
+                    </div>
+
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header top -->
+        
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index" style=" margin-right: 150px;">
+                                <img src="images/logo.png" alt="Logo" style="width: 200px;">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                         
+                            <div class="icon-head display-indesk">
+                                  <div class="">
+                                    <a href="online_coaching_gate_ese">  <i class="fa fa-laptop"></i>
+                                        <p><b>Online Coaching</b></p></a>
+
+                                    </div>
+                                    <div class="">
+                                       <a href="postal-online"> <i class="fa fa-clone"></i>
+                                        <p><b>Postal/Class Room Enroll</b></p> </a>
+                                    </div>
+                                 <div class="">
+                                    <a href="https://www.gateonlinetestseries.com/">    <i class="fa fa-sticky-note"></i>
+                                        <p><b>Online Test Series</b></p></a>
+
+                                    </div>
+                                <div class="">
+                                    <a href="https://vaniinstitute.com/Pre_Placement_Training.php">    <i class="fa fa-university"></i>
+                                        <p><b>Placement Training</b></p></a>
+
+                                    </div>
+                                    <div class="">
+                                    <a href="https://www.livecoaching.in/">  <i class="fa fa-play"></i>
+                                        <p><b>Online Video Classes</b></p></a>
+
+                                    </div>
+                                </div>
+                          
+                        
+                                <div class="collapse navbar-collapse sub-menu-bar  " style="display:none !important;" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="active" href="index">Home</a>
+                                       
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="about">About Us</a>
+                                      
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#">Programs </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="weekend-batches">Weekend Batches</a></li>
+                                            <li><a href="regular-batches">Regular Batches</a></li>
+                                            <li><a href="day-batches">Day-batches</a></li>
+                                            <li><a href="online_coaching_gate_ese">Online Coaching</a></li>
+                                            <li><a href="gate-ese-short-term-batches">Crash Batches</a></li>
+                                            <li><a href="2-years-class">2 Years Classroom Program</a></li>
+                                            <li><a href="postal-online">Postal Coaching</a></li>
+                                            <li><a href="https://www.gateonlinetestseries.com/">Online Test Series</a></li>
+                                            <li><a href="postal-online">Online admission</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="gate-ese-batches">Batches</a>
+                                     
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="schedules">Schedules</a>
+                                      
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="rankers-years">Rankers</a>
+                                     
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="gallery">Gallery</a>
+                                      
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="recentjobs">Job Alert</a>
+                                     
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#">Contact Us</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="contact-hyderabad">Hyderabad</a></li>
+                                            <li><a href="contact-bangalore">Banglore</a></li>
+                                            <li><a href="contact-pune">Pune</a></li>
+                                            <li><a href="contact-chennai">Chennai</a></li>
+                                            <li><a href="contact-kochi">Kochi</a></li>
+                                            <li><a href="contact-kolkata">Kolkata</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </nav> <!-- nav -->
+                     
+                    </div>
+                </div> <!-- row -->
+                
+            </div> <!-- container -->
+        </div>
+        <div class="navigation double-nav ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                         
+                          
+                    
+                          
+                        
+                                <div class="collapse navbar-collapse sub-menu-bar " id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto mr-auto" style="  margin-top: -22px;">
+                                    <li class="nav-item">
+                                        <a class="active" href="index">Home</a>
+                                       
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="about">About Us</a>
+                                      
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#">Programs <i class="fa fa-chevron-down" style="    font-size: 12px;"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="weekend-batches">Weekend Batches</a></li>
+                                            <li><a href="regular-batches">Regular Batches</a></li>
+                                            <li><a href="day-batches">Day-batches</a></li>
+                                            <li><a href="online_coaching_gate_ese">Online COACHING</a></li>
+                                            <li><a href="gate-ese-short-term-batches">Crash Batches</a></li>
+                                            <li><a href="2-years-class">2 Years Classroom Program</a></li>
+                                            <li><a href="postal-online">Postal COACHING</a></li>
+                                            <li><a href="https://www.gateonlinetestseries.com/">Online Test Series</a></li>
+                                            <li><a href="postal-online">Online admission</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="gate-ese-batches">Batches</a>
+                                     
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="schedules">Schedules</a>
+                                      
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="rankers-years">Rankers</a>
+                                     
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="gallery">Gallery</a>
+                                      
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#">Downloads <i class="fa fa-chevron-down" style="    font-size: 12px;"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="gate-exam-downloads">GATE</a></li>
+                                            <li><a href="ese-exam-downloads">ESE</a></li>
+                                            <li><a href="gate-ese-psu">PSUs</a></li>
+                                         
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="recentjobs">Job Alert</a>
+                                     
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#">Contact Us <i class="fa fa-chevron-down" style="    font-size: 12px;"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="contact-hyderabad">Hyderabad</a></li>
+                                            <li><a href="contact-bangalore">Banglore</a></li>
+                                            <li><a href="contact-pune">Pune</a></li>
+                                            <li><a href="contact-chennai">Chennai</a></li>
+                                            <li><a href="contact-kochi">Kochi</a></li>
+                                            <li><a href="contact-kolkata">Kolkata</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item " style="margin-left:30px;">
+                                        <a href="#"><b style="    border-bottom: 3px solid #fff;
+    border-radius: 10px;">Centers</b> <i class="fa fa-chevron-down" style="font-size: 12px;"></i></a>
+                                        <ul class="sub-menu" style="min-width:160px;">
+                                            <li><a href="gate-coaching-in-hyderabad">Hyderabad</a></li>
+                                            <li><a href="gate-coaching-in-bangalore">Banglore</a></li>
+                                            <li><a href="gate-coaching-in-pune">Pune</a></li>
+                                            <li><a href="gate-coaching-in-chennai">Chennai</a></li>
+                                            <li><a href="gate-coaching-in-kochi">Kochi</a></li>
+                                            <li><a href="gate-coaching-in-kolkata">Kolkata</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </nav> <!-- nav -->
+                     
+                    </div>
+                </div> <!-- row -->
+                
+            </div> <!-- container -->
+        </div>
+   
+    </header>
+    
+    <!--====== HEADER PART ENDS ======-->
+   
+    <!--====== SEARCH BOX PART START ======-->
+    
+    <div class="search-box">
+        <div class="search-form">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Search by keyword">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div> <!-- search form -->
+    </div>
+ 
+    
+<button type="button" class="enroll-floation-button" data-toggle="modal" data-target="#exampleModal3">
+    Enquire Now
+</button>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" style="" role="document">
+        <div class="modal-content" style="border-radius: 30px;">
+
+            <div class="modal-body" style="">
+                <button type="button" class="close" data-dismiss="exampleModal3"   aria-label="Close">
+                    <span aria-hidden="true" style="color:#e31e24; ">&times;</span>
+                </button>
+                <div class="row">
+                   
+                    <div class="pop-bg-content">
+                        <div class="pop-main-heading">
+                            <h2>
+                                Enquire Now
+                            </h2>
+                        </div>
+                        <div class="pop-content">
+                                Subscribe to our News Channel to get More Updates From Our End.
+                        </div><br>
+                        <form style="display: grid;" action="send-enquiry.php" method="post" required>
+                            <select name="center" required class="mb-3">
+                                <option value="">Select Center</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Banglore">Banglore</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Kochi">Kochi</option>
+                                <option value="Kolkata">Kolkata</option>
+                            </select>
+                            <input type="text" placeholder="Name" name="name" minlength="5" maxlength="50" required>
+                            <input type="tel" minlength="10" maxlength="10" placeholder="Contact Number" name="phone" required>
+                            <input type="email" placeholder="Email" name="email" required>
+                            <center><div class="g-recaptcha" data-sitekey="6LdynGopAAAAAOfug_uHgd-HKNhz9iQ4XOt41q0v"></div></center><br />
+                            <input type="Submit" class="submit-button" name="enquiry_form" value="Submit">
+                            
+                            <!--<input type="hidden" name="form_unique_id" value="9c509e0b-4b05-11ee-a4b0-525400b78afc"/>-->
+                        </form>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+                        </div>
+</div>
+
+    
+    <!--====== SEARCH BOX PART ENDS ======-->
+ 
+    <!--====== SLIDER PART START ======-->
+
+    <section id="slider-part" class="slider-active home-banner">
+                <div class="single-slider bg_cover pt-150" style='background-image: url(blog/uploads/banners/image_tu9fhy3g4k1867wsj502edr.png)' data-overlay="4">
+
+        </div> <!-- single slider -->
+                <div class="single-slider bg_cover pt-150" style='background-image: url(blog/uploads/banners/image_0u3d67491fwthe8yjsrg5k2.png)' data-overlay="4">
+
+        </div> <!-- single slider -->
+                <div class="single-slider bg_cover pt-150" style='background-image: url(blog/uploads/banners/image_tj6gw2r3ks15u09yfehd874.png)' data-overlay="4">
+
+        </div> <!-- single slider -->
+                <div class="single-slider bg_cover pt-150" style='background-image: url(blog/uploads/banners/image_styu7k26j0f5rwd418h3eg9.png)' data-overlay="4">
+
+        </div> <!-- single slider -->
+                <div class="single-slider bg_cover pt-150" style='background-image: url(blog/uploads/banners/image_4hgu53jyw976fd0ksre182t.png)' data-overlay="4">
+
+        </div> <!-- single slider -->
+                <div class="single-slider bg_cover pt-150" style='background-image: url(blog/uploads/banners/image_34kgy5j12ut67de98fwshr0.png)' data-overlay="4">
+
+        </div> <!-- single slider -->
+                <div class="single-slider bg_cover pt-150" style='background-image: url(blog/uploads/banners/image_t1skhr6jyug23e5f8d0w479.png)' data-overlay="4">
+
+        </div> <!-- single slider -->
+            </section>
+
+    <!--====== SLIDER PART ENDS ======-->
+     <section id="category-part " class="display-desk">
+        <div class="container">
+            <div class="category pt-40 pb-80">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="category-text pt-40" style="    padding-top: 75px;">
+                            <h2>Courses we Offer </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
+                        <div class="row category-slide mt-40">
+                            <div class="col-lg-4">
+                                <a href="gate-exam-downloads.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>GATE</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="ese-exam-downloads.php">
+                                    <span class="single-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>ESE</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <a href="Pre_Placement_Training.php">
+                                    <span class="single-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>PLACEMENT TRAINING</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="gate-ese-psu.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>PSU's</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="KPSC-CIVIL-Rural_Drinking_Water_and_Sanitation.php">
+                                    <span class="single-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>KPSC</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="kptcl-ae-aee-electrical-batches-bangalore.php">
+                                    <span class="single-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>KPTCL</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="Tspsc-AEE-AE_Coaching-Civil-Electrical-Mechanical.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>TSPSC</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="Appsc-ae-aee-electrical-batches-hyd.php">
+                                    <span class="single-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>APPSC</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="https://www.vaniinstitute.com/gate-coaching-in-pune">
+                                    <span class="single-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>MPSC</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="TNPSC-AE_Coaching@Chennai.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>TNPSC</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                      <div class="col-lg-4">
+                               
+                            </div>
+                        </div> <!-- category slide -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- category -->
+        </div> <!-- container -->
+    </section>
+
+
+    <!--====== CATEGORY PART START ======-->
+
+    <section id="category-part " class="display-mob">
+        <div class="container">
+            <div class="category pt-40 pb-80">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="category-text pt-40" style="    padding-top: 75px;">
+                            <h2>We Offer </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
+                        <div class="row category-slide mt-40">
+                            <div class="col-lg-4">
+                                <a href="online_coaching_gate_ese.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Online Coaching</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="postal-online.php">
+                                    <span class="single-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Postal/Class Room Enroll</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="https://www.gateonlinetestseries.com/">
+                                    <span class="single-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Online Test Series</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="gate-exam-downloads.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>GATE</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="ese-exam-downloads.php">
+                                    <span class="single-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>ESE</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <a href="Pre_Placement_Training.php">
+                                    <span class="single-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>PLACEMENT TRAINING</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="gate-ese-psu.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>PSU's</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="KPSC-CIVIL-Rural_Drinking_Water_and_Sanitation.php">
+                                    <span class="single-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>KPSC</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="kptcl-ae-aee-electrical-batches-bangalore.php">
+                                    <span class="single-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>KPTCL</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="Tspsc-AEE-AE_Coaching-Civil-Electrical-Mechanical.php">
+                                    <span class="single-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>TSPSC</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <a href="https://www.vanipublications.in/">
+                                    <span class="single-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Vani Publications</span>
+                                        </span>
+                                    </span> <!-- single category -->
+                                </a>
+                            </div>
+                        </div> <!-- category slide -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- category -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CATEGORY PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about-part" class="pt-65">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title mt-50">
+                        <h5>About us</h5>
+                        <h2>Welcome to <span class="span-title">Vani Institute </span></h2>
+                    </div> <!-- section title -->
+                    <div class="about-cont">
+                        <p>Vani Institute is one of the leading coaching institute committed to provide premium quality education to the students who are willing to appear in any competitive exams since 1991. We prepare the students for GATE, ESE, PSU and various other exams. Headquartered in Hyderabad, we have branches in Bangalore, Pune, Chennai, Kochi, Kolkata.</p>
+                        <p>
+                            Our primary motto and aim is to strengthen the capabilities and proficiency of the students so that they can score well even in the highly competitive exams. Established by a team of enthusiastic toppers and specialists, the institute endeavors to make the dreams of students come true.
+                        </p>
+                        <a href="about.php" class="main-btn mt-55">Learn More</a>
+                    </div>
+                </div> <!-- about cont -->
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-event mt-50">
+                        <div class="event-title">
+                            <h3>Find Your <span class="span-title">Location</span></h3>
+                        </div> <!-- event title -->
+                        <ul>
+                            <li>
+                                <div class="single-event">
+
+                                    <a href="https://vaniinstitute.com/gate-coaching-in-hyderabad.php">
+                                        <h4>Hyderabad, Telangana.</h4>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+
+                                    <a href="https://vaniinstitute.com/gate-coaching-in-bangalore.php">
+                                        <h4>Banglore, Karnataka.</h4>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+
+                                    <a href="https://vaniinstitute.com/gate-coaching-in-pune.php">
+                                        <h4>Pune, Maharasthra.</h4>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+
+                                    <a href="https://vaniinstitute.com/gate-coaching-in-chennai.php">
+                                        <h4>Chennai, Tamilnadu.</h4>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+
+                                    <a href="https://vaniinstitute.com/gate-coaching-in-kochi.php">
+                                        <h4>Kochi, Kerala.</h4>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+
+                                    <a href="https://vaniinstitute.com/gate-coaching-in-kolkata.php">
+                                        <h4>Kolkata, West Bengal.</h4>
+                                    </a>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div> <!-- about event -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="about-bg">
+            <img src="images/about/bg-1.png" alt="About">
+        </div>
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== APPLY PART START ======-->
+
+    <section id="apply-aprt" class="pb-120">
+        <div class="container">
+            <div class="apply">
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <div class="apply-cont apply-color-1">
+                            <h3>ONLINE COACHING FOR GATE & ESE</h3>
+                            <p style="font-size:12px;">Online Coaching Classes are useful for a person who is working or having other important responsibilities which stop him from taking a regular course. Get the education you want from anywhere in the world, on your own schedule.The advantage of online education includes:</p>
+                            <a href="online_coaching_gate_ese" class="main-btn">View More</a>
+                        </div> <!-- apply cont -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="apply-cont apply-color-2">
+                            <h3>GATE & ESE ONLINE TEST SERIES</h3>
+                            <p style="font-size:12px;">GATE & ESE 2024 Online Preparation hosted by Vani Institute is the first of its kind online platform in India to prepare the students for competitive exams such as GATE. This platform has been developed to not just understand the concepts involved but also its relevant application to the questions asked</p>
+                            <a href="https://www.gateonlinetestseries.com/" class="main-btn">GATE/ESE Online Test Series</a>
+                        </div> <!-- apply cont -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== APPLY PART ENDS ======-->
+
+    <!--====== COURSE PART START ======-->
+
+    <section id="course-part" class="pt-115 pb-120 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-45">
+                        <h5>Our Programs</h5>
+                        <h2>Featured <span class="span-title">Programs </span></h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row course-slide mt-30">
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/batch.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="weekend-batches.php">
+                                <h4>Weekend Batches</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/regular-batch.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="regular-batches.php">
+                                <h4>Regular Batches</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/day.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="day-batches.php">
+                                <h4>Day Batches</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/online3.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="online_coaching_gate_ese.php">
+                                <h4>Online Coaching</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/crash.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="gate-ese-short-term-batches.php">
+                                <h4>Crash Batches</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/2year.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="2-years-class.php">
+                                <h4>2 Year Classroom Program</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/postel.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="postal-online.php">
+                                <h4>Postal Coaching</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/online.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="https://www.gateonlinetestseries.com/">
+                                <h4>Online Test Series</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/programs/online-1.png" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Free</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>(20 Reviews)</span>
+                            <a href="postal-online.php">
+                                <h4>Online Admissions</h4>
+                            </a>
+                            <div class="course-teacher">
+                                <div class="thum">
+                                    <a href="#"><img src="images/programs/logo.png" alt="teacher"></a>
+                                </div>
+                                <div class="name">
+                                    <a href="#">
+                                        <h6>Vani Institute</h6>
+                                    </a>
+                                </div>
+                                <div class="admin">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-user"></i><span>100</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- single course -->
+                </div>
+            </div> <!-- course slide -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== COURSE PART ENDS ======-->
+
+    <!--====== VIDEO FEATURE PART START ======-->
+
+    <section id="video-feature" class="bg_cover pt-60 pb-110" style="background-image: url(images/bg-1.jpg)">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-last order-lg-first">
+                    <div class="video text-lg-left text-center pt-50">
+                        <a class="Video-popup" href="https://www.youtube.com/watch?v=-MbYPd9_P4Y"><i class="fa fa-play"></i></a>
+                    </div> <!-- row -->
+                </div>
+                <div class="col-lg-5 offset-lg-1 order-first order-lg-last">
+                    <div class="feature pt-50">
+                        <div class="feature-title">
+                            <h3>Notifications</h3>
+                        </div>
+                        <marquee direction="up" style="height: 300px;" onmouseover="this.stop();" onmouseout="this.start();">
+                            <ul>
+                                                                <li>
+                                    <div class="single-feature">
+                                        <div class="icon">
+                                            <img src="images/all-icon/f-1.png" alt="icon">
+                                        </div>
+                                                                                    <div>
+                                        <a href="//vaniinstitute.com/Pre_Placement_Training.php"  target="_blank">
+                                        <div class="cont">
+
+                                            <p>PRE PLACEMENT TRAINING CLICK HERE</p>
+                                        </div>
+                                        </a>
+                                    </div> <!-- single feature -->
+                                                                    </li>
+                                                               <li>
+                                    <div class="single-feature">
+                                        <div class="icon">
+                                            <img src="images/all-icon/f-1.png" alt="icon">
+                                        </div>
+                                                                                    <div>
+                                        <a href="//vaniinstitute.com/KPSC-CIVIL-Rural_Drinking_Water_and_Sanitation.php"  target="_blank">
+                                        <div class="cont">
+
+                                            <p>KPSC-RURAL DRINKING WATER & SANITATION CIVIL</p>
+                                        </div>
+                                        </a>
+                                    </div> <!-- single feature -->
+                                                                    </li>
+                                                               <li>
+                                    <div class="single-feature">
+                                        <div class="icon">
+                                            <img src="images/all-icon/f-1.png" alt="icon">
+                                        </div>
+                                                                                    <div>
+                                        <a href="//vaniinstitute.com/Tspsc-AEE-AE_Coaching-Civil-Electrical-Mechanical.php"  target="_blank">
+                                        <div class="cont">
+
+                                            <p>TSPSC-AEE-2022 NOTIFICATION FOR CIVIL, MECHANICAL, EEE </p>
+                                        </div>
+                                        </a>
+                                    </div> <!-- single feature -->
+                                                                    </li>
+                                                               <li>
+                                    <div class="single-feature">
+                                        <div class="icon">
+                                            <img src="images/all-icon/f-1.png" alt="icon">
+                                        </div>
+                                                                                    <div>
+                                        <a href="//www.vaniinstitute.com/gate-ese-batches"  target="_blank">
+                                        <div class="cont">
+
+                                            <p>GATE & ESE 2025/26 NEW OFFLINE BATCHES</p>
+                                        </div>
+                                        </a>
+                                    </div> <!-- single feature -->
+                                                                    </li>
+                                                               <li>
+                                    <div class="single-feature">
+                                        <div class="icon">
+                                            <img src="images/all-icon/f-1.png" alt="icon">
+                                        </div>
+                                                                                    <div>
+                                        <a href="//www.vaniinstitute.com/kptcl-ae-aee-electrical-batches-bangalore.php"  target="_blank">
+                                        <div class="cont">
+
+                                            <p>KPTCL NEW OFFLINE BATCHES @ BANGALORE</p>
+                                        </div>
+                                        </a>
+                                    </div> <!-- single feature -->
+                                                                    </li>
+                                                               <li>
+                                    <div class="single-feature">
+                                        <div class="icon">
+                                            <img src="images/all-icon/f-1.png" alt="icon">
+                                        </div>
+                                                                                    <div>
+                                        <a href="//www.vaniinstitute.com/online_coaching_gate_ese"  target="_blank">
+                                        <div class="cont">
+
+                                            <p>CONTACT FOR GATE & ESE 2025 / 26 ONLINE LIVE CLASSES</p>
+                                        </div>
+                                        </a>
+                                    </div> <!-- single feature -->
+                                                                    </li>
+                                                           </ul>
+                        </marquee>
+                    </div> <!-- feature -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="feature-bg"></div> <!-- feature bg -->
+    </section>
+    <!--====== FAQ PART START ======-->
+    <section class="pt-90 pb-120 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-40">
+                        <h5>Vani Institute</h5>
+                        <h2>Photo <span class="span-title">Gallery</span></h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row gallery">
+                                  <div class="col-md-4 col-xs-6 thumb">
+                    <a href="blog/uploads/homegallery/image_utkg4762fh5s9jyew8r3d10.jpg">
+                        <figure><img class="img-fluid img-thumbnail" src="blog/uploads/homegallery/image_utkg4762fh5s9jyew8r3d10.jpg" alt="Gallery Image"></figure>
+                    </a>
+                </div>
+
+                
+
+                <div class="col-md-4 col-xs-6 thumb">
+                    <a href="blog/uploads/homegallery/image_wj260t5gyfr34useh8k7d91.jpg">
+                        <figure><img class="img-fluid img-thumbnail" src="blog/uploads/homegallery/image_wj260t5gyfr34useh8k7d91.jpg" alt="Gallery Image"></figure>
+                    </a>
+                </div>
+
+                
+
+                <div class="col-md-4 col-xs-6 thumb">
+                    <a href="blog/uploads/homegallery/image_7930ehruyj2s65fw4k8gtd1.jpg">
+                        <figure><img class="img-fluid img-thumbnail" src="blog/uploads/homegallery/image_7930ehruyj2s65fw4k8gtd1.jpg" alt="Gallery Image"></figure>
+                    </a>
+                </div>
+
+                
+
+                <div class="col-md-4 col-xs-6 thumb">
+                    <a href="blog/uploads/homegallery/image_23urft468g1ejs9wkyhd705.jpg">
+                        <figure><img class="img-fluid img-thumbnail" src="blog/uploads/homegallery/image_23urft468g1ejs9wkyhd705.jpg" alt="Gallery Image"></figure>
+                    </a>
+                </div>
+
+                
+
+                <div class="col-md-4 col-xs-6 thumb">
+                    <a href="blog/uploads/homegallery/image_06dtj28wg9f5y14h7ksru3e.jpg">
+                        <figure><img class="img-fluid img-thumbnail" src="blog/uploads/homegallery/image_06dtj28wg9f5y14h7ksru3e.jpg" alt="Gallery Image"></figure>
+                    </a>
+                </div>
+
+                
+
+                <div class="col-md-4 col-xs-6 thumb">
+                    <a href="blog/uploads/homegallery/image_9e7tus3w5g62rkf40jyd81h.jpg">
+                        <figure><img class="img-fluid img-thumbnail" src="blog/uploads/homegallery/image_9e7tus3w5g62rkf40jyd81h.jpg" alt="Gallery Image"></figure>
+                    </a>
+                </div>
+
+                
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--====== FAQ PART ENDS ======-->
+    <!--====== VIDEO FEATURE PART ENDS ======-->
+    <section id="testimonial" class="bg_cover" style="background-image: url(https://t4.ftcdn.net/jpg/01/72/03/93/360_F_172039339_1JCXIdJ2UBsWCZmg1Uo0IwN1NjdZZpfR.jpg); padding-top:50px; padding-bottom:50px;">
+        <div class="container">
+
+
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="marquee-title">
+                        <h2>Information</h2>
+                    </div>
+                    <div class="card-marquee">
+                        <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+                                    <div><a href="//vaniinstitute.com/MAHAGENCO-2022_AE_JE_CLASSROOM_COACHING@PUNE.php"  target="_blank"><p>MAHAGENCO-2022_AE_JE_CLASSROOM_COACHING@PUNE</p></a></div>
+                <div><a href="//vaniinstitute.com/Engineering_Services_Exam_2023_Preparation_Strategy.php"  target="_blank"><p>ENGINEERING SERVICES – ARE YOU READY FOR 2023 EXAM .. ??</p></a></div>
+                <div><a href="//vaniinstitute.com/Preparation_Strategy_How_to_Prepare_GATE-2023.php"  target="_blank"><p>PREPARATION STRATEGY/ HOW TO PREPARE FOR GATE-2025</p></a></div>
+                <div><a href="//vaniinstitute.com/KPSC-CIVIL-Rural_Drinking_Water_and_Sanitation.php"  target="_blank"><p>KPSC-CIVIL-RURAL DRINKING WATER & SANITATION</p></a></div>
+                <div><a href="//vaniinstitute.com/Tspsc-AEE-AE_Coaching-Civil-Electrical-Mechanical.php"  target="_blank"><p>TSPSC-AEE 2022 NEW BATCHES FOR CIVIL, MECHANICAL, EEE</p></a></div>
+                <div><a href="//vaniinstitute.com/Appsc-ae-aee-electrical-batches-hyd.php"  target="_blank"><p>APPSC AE AND AEE NEW BATCHES @ HYDERABAD</p></a></div>
+                <div><a href="//www.vaniinstitute.com/online_coaching_gate_ese"  target="_blank"><p>GATE & ESE -2025/26ONLINE LIVE CLASSES</p></a></div>
+                <div><a href="//www.vaniinstitute.com/gate-ese-batches"  target="_blank"><p>GATE & ESE 2025/26 OFFLINE CLASSES</p></a></div>
+                <div><a href="//www.gateonlinetestseries.com"  target="_blank"><p>KPTCL-2022- EEE- ONLINE TEST SCHEDULE</p></a></div>
+        
+                        </marquee>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="marquee-title">
+                        <h2>Usefull Links</h2>
+                    </div>
+                    <div class="card-marquee">
+                        <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+                                <a href="https://vaniinstitute.com/Engineering_Services_Exam_2023_Preparation_Strategy.php"  target="_blank"><p>ENGINEERING SERVICES – ARE YOU READY FOR 2023 EXAM .. ??</p></a>
+        <a href="https://vaniinstitute.com/Preparation_Strategy_How_to_Prepare_GATE-2023.php"  target="_blank"><p>PREPARATION STRATEGY/ HOW TO PREPARE FOR GATE-2023</p></a>
+        <a href="https://www.vaniinstitute.com/live-online-classes-for-gate-ese.php"  target="_blank"><p>ONLINE LIVE CLASSES FOR GATE & ESE</p></a>
+        <a href="www.livecoaching.in"  target="_blank"><p>PRE RECORDED DIGITAL CLASSES FOR GATE & ESE</p></a>
+        <a href="https://www.vaniinstitute.com/postal-online/"  target="_blank"><p>ONLINE ADMISSIONS</p></a>
+    
+                        </marquee>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="marquee-title">
+                        <h2>Latest News</h2>
+                    </div>
+                    <div class="card-marquee">
+                         <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+                           <p>VANI STUDENTS ARE TOP IN ESE-2022 RESULTS</p>
+        <p>VANI STUDENTS ARE TOP IN GATE-2023 RESULTS</p>
+    
+</marquee>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div> <!-- testimonial slide -->
+        </div> <!-- container -->
+    </section>
+
+
+    <!--====== TEACHERS PART START ======-->
+
+    <!--====== TEACHERS PART ENDS ======-->
+
+
+
+    <!--====== TEASTIMONIAL PART START ======-->
+
+    <!--====== TEASTIMONIAL PART ENDS ======-->
+
+     <!--====== NEWS PART START ======-->
+    
+    <section id="news-part" class="pt-115 pb-110">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-50">
+                        <h5>Latest Blogs</h5>
+                        <h2>From the Blogs</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-6">
+                                           <div class="single-news mt-30">
+                        <div class="news-thum pb-25">
+                            <img src="/blog/uploads/posts/image_w5d69jusy3g8fhk012er47t.jpg" alt="5 Ways AI is Transforming Data Matching and Entity Resolution" style="width: 700; height: 372;">                        </div>
+                        <div class="news-cont">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-calendar"></i>07 Nov 2025</a></li>
+                                <li><a href="#"> <span>By</span> Admin</a></li>
+                            </ul>
+                            <a href="blog/post.php?url=https%3A%2F%2Fixsight.com%2F"><h3>5 Ways AI is Transforming Data Matching and Entity Resolution</h3></a>
+                            <p>5 Ways AI is Transforming Data Matching and Entity Resolution
+
+IXsight AI - Data Management Solutions
+
+&nbsp;
+
+Introduction
+
+In today&rsquo;s data-driven world, organizations collect information from countless sources &mdash; CRMs, billing systems, social platforms, and regulatory ...</p>
+                        </div>
+                    </div> <!-- single news -->
+                                    </div>
+                <div class="col-lg-6">
+                                        <div class="single-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="blog/uploads/posts/image_65102j943wsgfdht8y7ruke.jpg" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-calendar"></i>20 Mar 2023</a></li>
+                                                                <li><a href="#"> <span>By</span> Admin</a></li>
+                                    </ul>
+                                    <a href="blog/post.php?url=https%3A%2F%2Fwww.vaniinstitute.com%2Frankers-years"><h3>VANI STUDENTS ARE TOP IN GATE 2023 RESULTS...</h3></a>
+                                    <p>Keeping the tradition of excellence in performance, VANI STUDENTS have once again created history ...</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- single news -->
+                   
+                                       <div class="single-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="blog/uploads/posts/image_4kw7df5g0uh2869s1yr3tje.jpg" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-calendar"></i>15 Feb 2024</a></li>
+                                                                <li><a href="#"> <span>By</span> Admin</a></li>
+                                    </ul>
+                                    <a href="blog/post.php?url=https%3A%2F%2Fvaniinstitute.com%2FEngineering_Services_Exam_2023_Preparation_Strategy.php"><h3>ESE Coaching Engineering Services – Are You Ready for 2025 exam .. ??</h3></a>
+                                    <p>Engineering Services &ndash; Are You Ready for 2025 exam .. ??
+
+&nbsp;
+
+The Union Public ...</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- single news -->
+                   
+                                       <div class="single-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="blog/uploads/posts/image_3dy2508ft4rgu671j9hkesw.jpeg" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-calendar"></i>05 Nov 2025</a></li>
+                                                                <li><a href="#"> <span>By</span> Admin</a></li>
+                                    </ul>
+                                    <a href="blog/post.php?url=https%3A%2F%2Fvaniinstitute.com%2FPreparation_Strategy_How_to_Prepare_GATE-2023.php"><h3>Preparation Strategy / How to Prepare For GATE-2027</h3></a>
+                                    <p>GATE 2025
+
+Graduate Aptitude Test in Engineering (GATE) Notification Released!&nbsp; This test ...</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- single news -->
+                   
+                                   </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <a href="https://www.vaniinstitute.com/blog/index.php" class="main-btn mt-55" style="    margin-left: auto;
+    margin-right: auto;
+    display: table;">View all Blogs</a>
+    </section>
+    
+    <!--====== NEWS PART ENDS ======-->
+
+    <section id="testimonial" class="bg_cover pt-115 pb-115" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-40">
+                        <h5>Testimonials</h5>
+                        <h2>Toppers <span class="span-title">Talk</span></h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row testimonial-slide mt-40">
+                <div class="col-lg-6">
+                    <div class="single-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/n-1.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p> Vani is one of the best coaching institute for Gate Preparation. it provides the best study material and test series all in one. Vani not only provide test series but also have many features like mock test, section test, topic wise test , video guidance for its users. All you need to do is attempt all tests and Practice.</p>
+                            <h6> MACHERLA PRANITH KUMAR</h6>
+                            <span>1 ST RANK-GATE-22-IN </span>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/n-2.jpeg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p> I had enrolled in the Vani institute online Classes Program and have been successful in clearing the gate exam with a rank of AIR 2. I was able to evaluate my performance after attend every subject. It allowed me to understand my weak areas.</p>
+                            <h6> AMIT KUMAR RAI</h6>
+                            <span>2 ND RANK-GATE-22-CE </span>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/n-4.jpeg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p> The Vani test series is really helpful. Questions are of gate standard. Unlike many other test series in the market which deliberate put tough questions to score students. Clear gate questions focused on very basic topics that require greater intro sections from the gate point of view.</p>
+                            <h6> PARVINDER SINGH DHONKAL</h6>
+                            <span>3 RD RANK-GATE-22-ME </span>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/n-3.jpeg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p> I Have joined Classroom Program at Vani Institute in 2020, I would like to thank all the Vani faculties specially vykunta rao sir for GA, Nagarjuna reddy sir for Maths, Eshwar rao sir, Aditya sir. Whatever I have achieved today is just because of VANI INSTITUTE.</p>
+                            <h6> SOUMYAJIT KUNDU</h6>
+                            <span>3 RD RANK-GATE-22-CH </span>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-1.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p> The guidance provided here is very much helpful and the faculties are also very good. The best thing about this place is that anytime we can clear the doubts with Faculty. The classes are very interactive and expand our knowledge. Whole total I am very much happy and recommend others to join for the classes....</p>
+                            <h6> AAKASH DHILL</h6>
+                            <span>1ST RANK-EE </span>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-2.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p>I feel that over the duration of the course I gained a lot of knowledge and practical strategies that will be beneficial to me, and those I deal with personally and professionally. The course exceeded my expectations significantly, Thanks to VANI INSTITUTE…. </p>
+                            <h6>GANESH KUMAR ADIGAUR</h6>
+                            <span>1st RANK-PI</span>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p> Very much valuable. The course is designed in a manner that learning is not limited. I am gaining lot of knowledge through the course. The test series is really good as it help the students to think out-of-the box and answer. I am very happy with VANI Faculty as I am gaining a lot of insight.. </p>
+                            <h6> JAY CHAVDA</h6>
+                            <span>2 nd RANK-ME</span>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+            </div> <!-- testimonial slide -->
+        </div> <!-- container -->
+    </section>
+
+  
+
+    <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-40">
+                        <h5>Vani Institute</h5>
+                        <h2>Vani <span class="span-title">Publications</span></h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row patnar-slide">
+                <div class="col-lg-12">
+                    <div class="single-patnar text-center mt-40">
+                        <img src="images/patnar-logo/p-1.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="single-patnar text-center mt-40">
+                        <img src="images/patnar-logo/p-2.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="single-patnar text-center mt-40">
+                        <img src="images/patnar-logo/p-3.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="single-patnar text-center mt-40">
+                        <img src="images/patnar-logo/p-4.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="single-patnar text-center mt-40">
+                        <img src="images/patnar-logo/p-2.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="single-patnar text-center mt-40">
+                        <img src="images/patnar-logo/p-3.png" alt="Logo">
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 1000px!important; top: 25px;  height: 500px;" role="document">
+            <div class="modal-content" style="border-radius: 20px;">
+
+                <div class="modal-body" style="    height: 500px;
+    border: 5px solid #da251c;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;">
+                    <button type="button" class="close" data-dismiss="modal" style=" opacity:1;   position: absolute;
+    right: 16px;" aria-label="Close">
+                        <span aria-hidden="true" style="color:#fff; ">&times;</span>
+                    </button>
+                    <div class="vani-image">
+                                                <img src="blog/uploads/banner/image_4kgt3ds0f76u18yrew5h29j.png" class="popup-img" style="    object-fit: unset;
+    height: 500px;
+    width: 100%;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--====== PATNAR LOGO PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+    <footer id="footer-part">
+        <div class="footer-top pt-40 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about mt-40">
+                            <div class="logo">
+                                <a href="#"><img src="images/logo.png" style="width:180px;" alt="Logo"></a>
+                            </div>
+                            <p>Vani Institute is one of the leading coaching institute committed to provide premium quality education to the students who are willing to appear in any competitive exams since 1991.</p>
+                            <ul class="mt-20">
+                                <li><a href="https://www.facebook.com/vaniinstituteofficial/"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/vaniinstitute"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.youtube.com/user/GateCoachingIndia"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://instagram.com/vaniinstitute_official"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Useful Links</h6>
+                            </div>
+                            <ul>
+                                <li><a href="index.php"><i class="fa fa-angle-right"></i>Home</a></li>
+                                <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="gate-ese-batches.php"><i class="fa fa-angle-right"></i>Batches</a></li>
+                                <li><a href="schedules.php"><i class="fa fa-angle-right"></i>Schedules</a></li>
+                                <li><a href="rankers-years.php"><i class="fa fa-angle-right"></i>Rankers</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="gallery.php"><i class="fa fa-angle-right"></i>Gallery</a></li>
+                                <li><a href="recentjobs.php"><i class="fa fa-angle-right"></i>Job Alert</a></li>
+                                <li><a href="https://www.vanipublications.in/"><i class="fa fa-angle-right"></i>Vani Publications</a></li>
+                                <li><a href="https://www.gateonlinetestseries.com/"><i class="fa fa-angle-right"></i>Online Test Series</a></li>
+                                
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-link support mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Centers</h6>
+                            </div>
+                            <ul>
+
+                                <li><a href="gate-coaching-in-hyderabad.php"><i class="fa fa-angle-right"></i>Hyderabad</a></li>
+                                <li><a href="gate-coaching-in-bangalore.php"><i class="fa fa-angle-right"></i>Bangalore</a></li>
+                                <li><a href="gate-coaching-in-pune.php"><i class="fa fa-angle-right"></i>Pune</a></li>
+                                <li><a href="gate-coaching-in-kochi.php"><i class="fa fa-angle-right"></i>Kochi</a></li>
+                                <li><a href="gate-coaching-in-chennai.php"><i class="fa fa-angle-right"></i>Chennai</a></li>
+                                <li><a href="gate-coaching-in-kolkata.php"><i class="fa fa-angle-right"></i>Kolkata</a></li>
+                            
+ 
+                            </ul>
+                        </div> <!-- support -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-address mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Contact Us</h6>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>(H.O) Methodist Complex, 2nd floor, Opp: Chermas, Abids, Hyderabad, Telangana, India - 500001.</p>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5bcbbb3ba95a3b4bbbcbcbba6a1bca1a0a1b0fbb6bab8">[email&#160;protected]</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- footer address -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer top -->
+        
+        <div class="footer-copyright pb-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="copyright text-md-left text-center pt-15">
+                            <p>&copy; 
+Copyright © 1991 - 2024, All rights reserved by Vani Institute  </p>
+                        </div>
+                    </div>
+                    
+                                        <div class="col-md-6">
+                        <div class="copyright  text-center pt-15">
+                            <p> Developed By <a href="https://techsters.in/ " target="_blank" style="color: #ffffff;"> Techsters</a>  </p>
+                        </div>
+                    </div>
+                    
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+   
+    <!--====== BACK TO TP PART START ======-->
+    
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    
+    <!--====== BACK TO TP PART ENDS ======-->
+   
+    
+    
+    
+    
+    
+    
+    
+    <!--====== jquery js ======-->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="js/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="js/jquery.nice-select.min.js"></script>
+    
+    <!--====== Nice Number js ======-->
+    <script src="js/jquery.nice-number.min.js"></script>
+    
+    <!--====== Count Down js ======-->
+    <script src="js/jquery.countdown.min.js"></script>
+    
+    <!--====== Validator js ======-->
+    <script src="js/validator.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="js/ajax-contact.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="js/main.js"></script>
+    
+    <!--====== Map js ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
+    <script src="js/map-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <script>
+       $(document).ready(function(){
+            $('#exampleModal1').modal('show');
+        }); 
+    </script>
+      <script>
+
+var ClosePopUp = false;
+
+$('#exampleModal2').on('hidden.bs.modal', function (e) {
+      ClosePopUp = true;
+    });
+
+
+    $(window).scroll(function(){
+            if ($(this).scrollTop() >= 3000 && ClosePopUp == false) {
+                $("#exampleModal2").modal('show');
+            }else {
+ $("#exampleModal2").modal('hide');
+}
+    });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"3843843265ec4a8ea07bc5f8ab792158","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
