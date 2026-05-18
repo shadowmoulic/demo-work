@@ -193,6 +193,12 @@ body.cursor-hover .cursor-ring {
     border-radius: var(--radius-lg);
 }
 
+.btn-sm {
+    padding: 0.6rem 1.15rem;
+    font-size: 0.95rem;
+    border-radius: var(--radius-sm);
+}
+
 .btn-primary {
     background-color: var(--primary);
     color: #FFFFFF;
@@ -334,6 +340,7 @@ body.cursor-hover .cursor-ring {
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    position: relative;
 }
 
 .logo {
@@ -425,19 +432,25 @@ body.cursor-hover .cursor-ring {
 
 @media (max-width: 1024px) {
     .nav-menu {
-        position: fixed;
-        top: 115px;
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: white;
         flex-direction: column;
         padding: 2rem;
-        box-shadow: var(--shadow-lg);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: clip-path 0.4s ease-in-out;
+        box-shadow: 0 10px 25px -5px rgba(13, 27, 62, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        border-top: 1px solid var(--border-color);
+        gap: 1.25rem;
     }
     .nav-menu.open {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
     .nav-cta { display: none; }
     .mobile-toggle { display: block; }
