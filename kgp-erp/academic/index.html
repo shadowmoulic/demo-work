@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Module - ERP KGP</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-graduation-cap" style="font-size: 32px; color: #a397ff;"></i>
+                <h2>IITKGP ERP</h2>
+                <button class="close-btn" id="closeSidebar" aria-label="Close sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="../index.html" class="menu-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- Full Academic Menu inside Accordion (Open by default) -->
+                <div class="accordion-wrapper open" id="academicAccordion">
+                    <div class="menu-item accordion-header active">
+                        <div style="display:flex; align-items:center; gap:15px;">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>Academic</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down caret"></i>
+                    </div>
+                    
+                    <div class="accordion-content">
+                        <div class="submenu-category">Registration & Academics</div>
+                        <a href="#" class="submenu-item">Subjects & Curricula</a>
+                        <a href="#" class="submenu-item">UG Registration & Flow</a>
+                        <a href="#" class="submenu-item">PG Modules</a>
+                        <a href="#" class="submenu-item">Final Graduation Processing</a>
+
+                        <div class="submenu-category">Time Table & Exams</div>
+                        <a href="./index.html" class="submenu-item active" style="color: #fff; background: rgba(255,255,255,0.08); border-left: 3px solid #a397ff; padding-left: 45px;">Examination TimeTable</a>
+                        <a href="./index.html" class="submenu-item">Time Table (Classes)</a>
+                        <a href="#" class="submenu-item">Results Review</a>
+
+                        <div class="submenu-category">Financials & Awards</div>
+                        <a href="#" class="submenu-item">Fees Payment & Status</a>
+                        <a href="#" class="submenu-item">Scholarship</a>
+                        <a href="#" class="submenu-item">Mediclaim</a>
+                        <a href="#" class="submenu-item">Award and Prize (UG)</a>
+
+                        <div class="submenu-category">Student Life</div>
+                        <a href="#" class="submenu-item">Students & Leave</a>
+                        <a href="#" class="submenu-item">Library Services</a>
+                        <a href="#" class="submenu-item">Feedback</a>
+                        <a href="#" class="submenu-item">Student Rep Nomination</a>
+                    </div>
+                </div>
+
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <span>Accounts</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-hotel"></i>
+                    <span>Guest House</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>CDC</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Area -->
+        <main class="main-area">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div style="display: flex; align-items: center;">
+                    <button class="menu-btn" id="openSidebar" aria-label="Open sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search menus, files, students..." id="academicSearch">
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="icon-btn" aria-label="Messages">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="icon-btn" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge" style="background:var(--brand-primary); color:#fff;">5</span>
+                    </button>
+
+                    <!-- Fully working Profile Dropdown -->
+                    <div class="profile-menu" id="profileMenu">
+                        <div class="profile-btn" id="profileBtn">
+                            <img src="https://ui-avatars.com/api/?name=Sayak+Moulic&background=291973&color=fff&bold=true" alt="Sayak">
+                            <span>Sayak Moulic</span>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                        </div>
+                        
+                        <div class="dropdown-content glass-panel">
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-regular fa-user"></i> My Profile
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-gear"></i> Settings
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-key"></i> Passphrase Retrieval
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-users-gear"></i> Switch Login
+                            </a>
+                            <a href="#" class="dropdown-item" style="color: var(--accent-pink);">
+                                <i class="fa-solid fa-arrow-right-from-bracket" style="color: var(--accent-pink);"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <div class="hero-banner">
+                    <div class="hero-text">
+                        <h1>Time Tables & Exams 📅</h1>
+                        <p>Manage your academic schedule and view examination details.</p>
+                    </div>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Schedule Card -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-calendar-check"></i></span>
+                                My Time Table (Student)
+                            </h3>
+                        </div>
+                        <div class="link-list">
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-clock"></i> Subject List With TimeTable Slots
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-calendar-day"></i> Central TimeTable AUTUMN
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-calendar-day"></i> Central TimeTable SPRING
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-sun"></i> Summer Quarter Time Table
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-building"></i> TimeTable (Department Wise)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Exams Card -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-pen-to-square"></i></span>
+                                Examination Portal
+                            </h3>
+                        </div>
+                        <div class="link-list">
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-pink)"></i> Very Important Exam Instructions
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-list-check"></i> Complete Examination Instructions
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-calendar-days"></i> Central Examination TimeTable
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-building-columns"></i> Departmental Examination Timetable
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-graduation-cap"></i> Results Review (UG)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Copyright &copy; ERP System, IIT Kharagpur. Helpline - 032222-81019/81018/81017</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Profile Dropdown Logic
+        const profileMenu = document.getElementById('profileMenu');
+        const profileBtn = document.getElementById('profileBtn');
+
+        profileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            profileMenu.classList.toggle('open');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!profileMenu.contains(e.target)) {
+                profileMenu.classList.remove('open');
+            }
+        });
+
+        // Accordion Logic
+        const accordion = document.getElementById('academicAccordion');
+        const accordionHeader = accordion.querySelector('.accordion-header');
+
+        accordionHeader.addEventListener('click', () => {
+            accordion.classList.toggle('open');
+            if (accordion.classList.contains('open')) {
+                accordionHeader.classList.add('active');
+            } else {
+                accordionHeader.classList.remove('active');
+            }
+        });
+
+        // Mobile Sidebar Logic
+        const sidebar = document.querySelector('.sidebar');
+        const openSidebar = document.getElementById('openSidebar');
+        const closeSidebar = document.getElementById('closeSidebar');
+
+        if (openSidebar && closeSidebar) {
+            openSidebar.addEventListener('click', () => {
+                sidebar.classList.add('active');
+            });
+            closeSidebar.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
