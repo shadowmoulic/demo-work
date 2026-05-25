@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Welcome Sayak Moulic to ERP, IIT Kharagpur</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="jquery/jquery-2.1.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding-bottom: 70px;
+        }
+    </style>
+    <script>
+        $(function () {
+            var request = $.ajax({
+                url: "getUnreadMailCount.htm",
+                type: "POST",
+                cache: false,
+                dataType: "text",
+                success: function (data) {
+                    $("#unread_mail_cnt").html(data);
+                }
+            });
+
+            //                var request1 = $.ajax({
+            //                    url: "getPendingJobCount.htm",
+            //                    type: "POST",
+            //                    cache: false,
+            //                    dataType: "text",
+            //                    success: function (data) {
+            //                        $("#pending_job_cnt").html(data);
+            //                    }
+            //                });
+
+            //                var request1 = $.ajax({
+            //                    url: "getPendingNotificationCount.htm",
+            //                    type: "POST",
+            //                    cache: false,
+            //                    dataType: "text",
+            //                    success: function (data) {
+            //                        $("#pending_notification_cnt").html(data);
+            //                    }
+            //                });
+
+            //                var request2 = $.ajax({
+            //                    url: "getMessages.htm",
+            //                    type: "POST",
+            //                    cache: false,
+            //                    dataType: "json",
+            //                    success: function (json) {
+            //                        $.each(json, function (index, item) {
+            //                            var go_str = '';
+            //                            var user_action_module_id = item.user_action_module_id;
+            //                            if ((user_action_module_id !== undefined) || (item.event_code !== undefined && user_action_module_id !== '')) {
+            //                                go_str = ' <a href="#" onclick=\'forwardToShowmenu("' + user_action_module_id + '", "' + item.user_action_menu_id + '", "' + item.link + '", "")\'>Go';
+            //                            }
+            //                            $('#message_pannel').append('<p>' + item.message + go_str);
+            //
+            //                        });
+            //                    }
+            //                });
+
+            var request3 = $.ajax({
+
+                url: "https://erp.iitkgp.ac.in/Academic/getExamOption.htm",
+                //                    url: "http://localhost:8084/Academic/getExamOption.htm",
+                type: "POST",
+                data: "ssoToken=305A99CD8185A9E8DA2A47229DB1C463.node7318B16C9893402CDEC43F05E7C833EE9.node7HCGEF9X0JEK2KBWYF54BRIXYF0SWQ7XEJ0GCBS0CHB5IGANTORLTYK4LQWA5WD8W",
+                cache: false,
+                success: function (json) {
+                    //                        alert('json.status...'+json.status);
+                    if (json.status === "ON") {
+                        document.getElementById('exam_opt_1').checked = true;
+                        //                            $('#optionDiv').hide();
+                        $('#msg').html('Test Option given as ONLINE');
+                    } else if (json.status === "OFF") {
+                        document.getElementById('exam_opt_2').checked = true;
+                        //                            $('#optionDiv').hide();
+                        $('#msg').html('Test Option given as OFFLINE');
+                    } else if (json.status === "") {
+                        //                            $('#optionDiv').hide();
+                        $('#msg').html('Test Option has not been given yet.');
+                    } else {
+                        //                                alert('--');
+                        $('#optionDiv').hide();
+                        $('#msg').html(json.status);
+                    }
+                }
+            });
+
+
+        });
+
+
+        function forwardToShowmenu(p_module_id, p_menu_id, p_link, p_delegated_by) {
+            var f = document.createElement("form");
+            f.setAttribute('method', "post");
+            f.setAttribute('action', "showmenu.htm");
+
+            var module_id = document.createElement("input"); //input element, text
+            module_id.setAttribute('type', "text");
+            module_id.setAttribute('name', "module_id");
+            module_id.setAttribute('value', p_module_id);
+            f.appendChild(module_id);
+
+            var menu_id = document.createElement("input"); //input element, text
+            menu_id.setAttribute('type', "text");
+            menu_id.setAttribute('name', "menu_id");
+            menu_id.setAttribute('value', p_menu_id);
+            f.appendChild(menu_id);
+
+            var link = document.createElement("input"); //input element, text
+            link.setAttribute('type', "text");
+            link.setAttribute('name', "link");
+            link.setAttribute('value', p_link);
+            f.appendChild(link);
+
+            if (delegated_by !== '') {
+                var delegated_by = document.createElement("input"); //input element, text
+                delegated_by.setAttribute('type', "text");
+                delegated_by.setAttribute('name', "delegated_by");
+                delegated_by.setAttribute('value', p_delegated_by);
+                f.appendChild(delegated_by);
+            }
+            document.getElementsByTagName('body')[0].appendChild(f);
+            f.submit();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="headerDIV">
+
+
+
+
+
+
+
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+            <title>Welcome Sayak Moulic to ERP, IIT Kharagpur</title>
+            <script>
+                $(function () {
+
+
+                    var request = $.ajax({
+                        url: "getModules.htm",
+                        type: "POST",
+                        cache: false
+                    });
+                    request.done(function (json) {
+                        var inhtml = "";
+
+                        json.sort(function (a, b) {
+                            return (a.display_order - b.display_order);
+                        });
+
+                        $.each(json, function (index, item) {
+                            if (index === 9) {
+                                inhtml += "<li class='dropdown'> " +
+                                    "<a aria-expanded='true' href='#' class='dropdown-toggle' data-toggle='dropdown'><i class='fa fa-bars fa-lg fa-border'></i> More <b class='caret'></b></a> " +
+                                    "<ul class='dropdown-menu'>";
+                            }
+                            inhtml += "<li><a href='menulist.htm?module_id=" + item.module_id + "'><i class='fa " + item.fa_icon + " fa-lg'></i> <strong>" + item.module_short_desc + "</strong></a></li>";
+                        });
+                        if (json.length > 7) {
+                            inhtml += "</ul></li>";
+                        }
+                        $("#moduleUL").html(inhtml);
+                    });
+                });
+
+                function showSwitch() {
+                    var request = $.ajax({
+                        url: "getSwitchableUsers.htm",
+                        type: "POST",
+                        cache: false
+                    });
+                    request.done(function (json) {
+                        $('#switchModalLabel').html('List of account available for switching');
+                        var cnt = 0;
+                        $('#switchModalBody').html("");
+                        if (json.length > 0) {
+                            $.each(json, function (index, item) {
+                                $('#switchModalBody').append("<div class='row'>");
+                                $('#switchModalBody').append("<div class='well well-sm col-lg-4' style='margin-bottom: 0px;'><a href='#' onclick='switchUser(\"" + item.switch_code + "\")'>" + item.switch_code + "</a></div><div class='well well-sm col-lg-8' style='margin-bottom: 0px;'>" + item.switch_name + "</div>");
+                                $('#switchModalBody').append("</div>");
+                            });
+                        }
+                        else {
+                            $('#switchModalBody').append("<div class='row'>");
+                            $('#switchModalBody').append("<div class='well well-sm' style='margin-bottom: 0px;'>No account available for switching</div>");
+                            $('#switchModalBody').append("</div>");
+                        }
+
+                        $('#switchModalFooter').html('<button type="button" class="btn btn-primary" ');
+                        $('#switchModal').modal('show');
+                    });
+                }
+
+                function switchUser(switch_code) {
+                    var f = document.createElement("form");
+                    f.setAttribute('method', "post");
+                    f.setAttribute('action', "switchacc.htm");
+
+                    var switch_code_el = document.createElement("input"); //input element, text
+                    switch_code_el.setAttribute('type', "text");
+                    switch_code_el.setAttribute('name', "switch_code");
+                    switch_code_el.setAttribute('value', switch_code);
+                    f.appendChild(switch_code_el);
+
+                    document.getElementsByTagName('body')[0].appendChild(f);
+                    f.submit();
+                }
+
+                var xmlHttp;
+                function GetXmlHttpObject() {
+                    var xmlHttp = null;
+                    try {
+                        // Firefox, Opera 8.0+, Safari
+                        xmlHttp = new XMLHttpRequest();
+                    }
+                    catch (e) {
+                        // Internet Explorer
+                        try {
+                            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                        }
+                        catch (e) {
+                            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                    }
+                    return xmlHttp;
+                }
+
+                function autoRunHoldSession() {
+                    setTimeout("autoRunCallHoldSession()", 27 * 60 * 1000);
+                }
+                function autoRunCallHoldSession() {
+                    holdSessionAjax();
+                    setTimeout("autoRunCallHoldSession()", 27 * 60 * 1000);
+                }
+                function holdSessionAjax() {
+                    xmlHttp = GetXmlHttpObject();
+                    if (xmlHttp == null) {
+                        alert("Your browser does not support AJAX! Please install latest version of browsing software.");
+                        return;
+                    }
+                    //var url="./holdSession.jsp?rand_id="+Math.round(Math.random()*100000);
+                    var url = "./holdSession.htm?rand_id=" + Math.round(Math.random() * 1000000000000000);
+                    xmlHttp.onreadystatechange = holdSession;
+                    xmlHttp.open("GET", url, true);
+                    xmlHttp.send(null);
+                    //alert("here11");
+                    //setTimeout(getPendingCAS(ca_user_code),100000);
+                    return true;
+                }
+                function holdSession() {
+                    var temp_html = "";
+                    if (xmlHttp.readyState == 4) {
+                        temp_html = xmlHttp.responseText;
+                        //alert(temp_html);
+                    }
+                }
+                function showComplaintSelection() {
+                    $('#complaintSelectionModal').modal('show');
+                    //                $('#complaintSelectionModal').modal({
+                    //                    backdrop: 'static',
+                    //                    keyboard: false
+                    //                });
+                }
+                function redirectComplaint(val) {
+                    var url = "showext.htm?link=other_complaint";
+                    if (val === "ERP") {
+                        url = "complaint.htm";
+                    } else if (val === "GRIEVANCE") {
+                        url = "grievance.htm";
+                    }
+                    window.location.href = url;
+                }
+                function redirectToPendingJobs() {
+                    //                var url = "pendingJobsView.htm";
+                    var url = "showext.htm?link=pendingJobsView";
+                    window.location.href = url;
+                }
+                /*
+                $(function(){
+                    $.ajax({
+                        type: "POST",
+                        url: 'getOtherInstComplaintList.htm',
+                        cache: false,
+    //                    data:{"complaint_id":complaint_id},
+                        datatype: 'json',
+                        success: function (data) {
+    //                        alert(JSON.stringify(data));
+    
+                            if(data.length>0){
+    //                            alert(data.length);
+                                $("#other_com").empty();
+                                var html_txt = '';
+                                $.each(data, function (key, val) {
+                                    html_txt+='<div class="col-sm-4">'+
+                                                '<div class="form-group">'+
+                                                    '<button type="button" class="btn btn-primary btn-sm" onclick="redirectComplaint()">'+val.desc+'</button>'+
+                                                '</div>'+
+                                            '</div>';
+                                });
+    //                            $("#other_com").html(html_txt);
+                            }                                              
+                        }
+                    });
+                });*/
+            </script>
+
+            <style>
+                .glyphicon {
+                    margin-right: 10px;
+                }
+
+                .panel-body {
+                    padding: 0px;
+                }
+
+                .panel-body table tr td {
+                    padding-left: 15px
+                }
+
+                .panel-body .table {
+                    margin-bottom: 0px;
+                }
+
+                .navbar {
+                    margin-bottom: 0px;
+                }
+            </style>
+
+            <script src="js/session_timeout.js"></script>
+
+            <script>
+                $(document).ready(function () {
+                    SessionManager.init({
+                        timeoutSeconds: 1800,
+                        keepAliveUrl: 'https://erp.iitkgp.ac.in/IIT_ERP3/keepAlive.htm',
+                        logoutUrl: 'https://erp.iitkgp.ac.in/IIT_ERP3/logout.htm'
+                    });
+                });
+            </script>
+
+        </head>
+        <!--<body onload="autoRunHoldSession()">-->
+
+        <body>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="navbar navbar-inverse">
+
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-inverse-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"><label>ERP System, IITKGP</label></a>
+                        </div>
+                        <div class="navbar-collapse collapse navbar-inverse-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="home.htm"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                                <li>
+                                    <a href="#" onclick="showComplaintSelection()">
+                                        <i class="fa fa-pencil-square-o fa-lg"></i> Complaints / Requests
+                                        <span class="badge" style="background-color: lightgray; color: white">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="" onclick="redirectComplaint('GRIEVANCE')"><i
+                                            class="text-warning fa fa-comments fa-lg"></i> Grievance </a>
+                                </li>
+                                <li><a href="forgotpassphrase.htm"><i class="fa fa-key fa-lg"></i> Retrieve
+                                        Passphrase</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="#" class="" onclick="redirectToPendingJobs();">
+                                        <span class="badge"
+                                            style="background-color: orangered; color: white">&nbsp;0&nbsp;</span>
+                                        &nbsp;Pending Jobs </a>
+                                </li>
+                                <li><a href="#"><label>Welcome Sayak Moulic (25PH10007)</label></a></li>
+                                <li><a href="#" onclick="showSwitch()"><i class="fa fa-exchange fa-lg"></i> Switch
+                                        Login</a></li>
+                                <li><a href="logout.htm"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-responsive-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand hidden-lg hidden-md" href="#"><label>Modules</label></a>
+                        </div>
+                        <div style="height: 1px;" aria-expanded="false"
+                            class="navbar-collapse navbar-responsive-collapse collapse">
+                            <ul id="moduleUL" class="nav navbar-nav" style="margin-top: 5px; margin-bottom: 5px;">
+                                <li><a href="#"><i class="fa fa-spinner fa-spin"></i> Loading modules, please wait.</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right" style="margin-top: 5px; margin-bottom: 5px;">
+                                <li>
+                                    <form class="navbar-form navbar-left" method="post" action="searchmenu.htm">
+                                        <input class="form-control col-lg-8" placeholder="Search Menu" name="s_string"
+                                            type="text">
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="switchModal" tabindex="-1" role="dialog" aria-labelledby="switchModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="switchModalLabel"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="switchModalBody" class="container-fluid"></div>
+                        </div>
+                        <div class="modal-footer" id="switchModalFooter"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="mandatoryModal" tabindex="-1" role="dialog"
+                aria-labelledby="mandatoryModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="mandatoryModalLabel"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="mandatoryModalBody" class="container-fluid"></div>
+                        </div>
+                        <div class="modal-footer" id="mandatoryModalFooter"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="complaintSelectionModal">
+                <div class="modal-dialog" style="width: 50%">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h3 class="modal-title" id="">Complaint / Request Type Selection</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class=""><i class="fa fa-check-circle"></i> Complaints / Requests to
+                                        Administrative Sections</h4>
+                                    <hr style="padding: 0px; margin-top: 0px; margin-bottom: 5px;" />
+                                </div>
+                                <div class="col-sm-12" id="other_com">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary btn-sm"
+                                                onclick="redirectComplaint('')">Administrative Complaints /
+                                                Requests</button>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                                <!--                            <div class="col-sm-12">
+                                <h4 class=""><i class="fa fa-check-circle"></i> Grievance Section</h4>
+                                <hr style="padding: 0px; margin-top: 0px; margin-bottom: 5px;" />
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-warning btn-sm" onclick="redirectComplaint('GRIEVANCE')">Lodge Grievance</button>
+                                    </div>                                    
+                                </div>
+                                <br />
+                            </div>-->
+                                <div class="col-sm-12">
+                                    <h4 class=""><i class="fa fa-check-circle"></i> Complaints / Requests to ERP Section
+                                    </h4>
+                                    <span class="text-danger small"> In case of data related issues, please contact
+                                        respective sections. For technical difficulties in ERP, please lodge a complaint
+                                        here.</span>
+                                    <hr style="padding: 0px; margin-top: 0px; margin-bottom: 5px;" />
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-info btn-sm"
+                                                onclick="redirectComplaint('ERP')">ERP Complaints / Requests <span
+                                                    class="badge"
+                                                    style="background-color: lightgray; color: white">0</span></button>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                            </div>
+                            <!--                        <button type="button" class="btn btn-primary" onclick="redirectComplaint('ERP')">ERP Related Complaints / Requests</button>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-primary" onclick="redirectComplaint('OTH')">Other Institute Related Complaints / Requests</button>-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Session Timeout Warning Modal -->
+            <div id="sessionModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content" style="border-radius:10px; overflow:hidden;">
+
+                        <!-- Header -->
+                        <div class="modal-header text-center"
+                            style="background:#f0ad4e; color:white; border-bottom:none;">
+                            <h4 class="modal-title" style="margin:0;">
+                                ⚠ Session Expiring Alert
+                            </h4>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body text-center">
+                            <p style="font-size:16px; margin-bottom:10px;">
+                                Your session will expire in
+                            </p>
+
+                            <h2 id="countdown" style="color:#d9534f; font-weight:bold;">
+                                00:00
+                            </h2>
+
+                            <p style="margin-top:10px; color:#777;">
+                                Please click 'Continue' to stay logged in
+                            </p>
+                        </div>
+
+                        <hr style="margin: 0px; padding: 0px;" />
+                        <!-- Footer -->
+                        <div class="modal-footer text-center" style="border-top:none;">
+                            <center>
+                                <button class="btn btn-success" onclick="SessionManager.extend()">
+                                    Continue
+                                </button>
+                            </center>
+
+                            <!--                <button class="btn btn-danger" onclick="logoutUser()">
+                                  Logout
+                                </button>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--         Session Timeout Warning Modal 
+        <div id="sessionModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="border-radius:10px; overflow:hidden;">
+
+               Header 
+              <div class="modal-header text-center" 
+                   style="background:#f0ad4e; color:white; border-bottom:none;">
+                <h4 class="modal-title" style="margin:0;">
+                  ⚠ Session Expiring Alert
+                </h4>
+              </div>
+
+               Body 
+              <div class="modal-body text-center">
+                <p style="font-size:16px; margin-bottom:10px;">
+                  Your session will expire in
+                </p>
+
+                <h2 id="countdown" style="color:#d9534f; font-weight:bold;">
+                  00:00
+                </h2>
+
+                <p style="margin-top:10px; color:#777;">
+                  Please continue to stay logged in
+                </p>
+              </div>
+              
+              <hr style="margin: 0px; padding: 0px;" />
+               Footer               
+              <div class="modal-footer text-center" style="border-top:none;">
+                  <center>
+                    <button class="btn btn-success" onclick="extendSession()">
+                      Continue
+                    </button>
+                  </center>
+
+                <button class="btn btn-danger" onclick="logoutUser()">
+                  Logout
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>-->
+        </body>
+
+        </html>
+    </div>
+    <div class="container-fluid" style="min-height: 550px">
+        <div class="row" style="padding-top: 20px">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Notifications</h3>
+                    </div>
+                    <div class="panel-body" style="margin: 10px;">
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=email';" style="cursor: pointer"><i
+                                    class='fa fa-lg fa-envelope'></i></a>
+                            &nbsp;&nbsp;<label id="unread_mail_cnt"></label> unread mail(s)
+                        </div>
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=notifications';"
+                                style="cursor: pointer"><i class='fa fa-lg fa-cogs'></i></a>
+                            &nbsp;&nbsp;<label id="pending_notification_cnt"></label> Notification(s)
+                        </div>
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=pendingjob';"
+                                style="cursor: pointer"><i class='fa fa-lg fa-cogs'></i></a>
+                            &nbsp;&nbsp;<label id="pending_job_cnt"></label> pending job(s)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">ERP e-Office</h3>
+                    </div>
+                    <div id="message_pannel" class="panel-body" style="margin: 10px;">
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=efilecat';" style="cursor: pointer"><i
+                                    class='fa fa-lg fa-cogs'></i>
+                                &nbsp;&nbsp;<label id="pending_job_cnt"></label> Dept. e-File Category List </a>
+                        </div>
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=efile';" style="cursor: pointer"><i
+                                    class='fa fa-lg fa-cogs'></i>
+                                &nbsp;&nbsp;<label id="pending_job_cnt"></label> Dept e-File Store </a>
+                        </div>
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=edoc';" style="cursor: pointer"><i
+                                    class='fa fa-lg fa-envelope'></i>
+                                &nbsp;&nbsp;<label id="unread_mail_cnt"></label> Pending/Sent e-Files</a>
+                        </div>
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=despatch';" style="cursor: pointer"><i
+                                    class='fa fa-lg fa-envelope'></i>
+                                &nbsp;&nbsp;<label id="unread_mail_cnt"></label> Departmental Despatch/Receipt(Physical
+                                File/Item) </a>
+                        </div>
+                        <div class="well well-sm col-md-4" style="margin: 0px">
+                            <a onclick="window.location.href = 'showext.htm?link=pendingdespatch';"
+                                style="cursor: pointer"><i class='fa fa-lg fa-envelope'></i>
+                                &nbsp;&nbsp;<label id="unread_mail_cnt"></label> Pending Physical File/Item</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">ERP e-Office</h3>
+                        </div>
+                        <div id="message_pannel" class="panel-body" style="margin: 10px;">
+                            <div class="well well-sm col-md-6" style="margin: 0px">
+                                <a onclick="window.location.href = 'showext.htm?link=efile';" style="cursor: pointer"><i class='fa fa-lg fa-cogs'></i></a>
+                                &nbsp;&nbsp;<label id="pending_job_cnt"></label> e - File Management
+                            </div>
+                            <div class="well well-sm col-md-6" style="margin: 0px">
+                                <a onclick="window.location.href = 'showext.htm?link=edoc';" style="cursor: pointer"><i class='fa fa-lg fa-envelope'></i></a>
+                                &nbsp;&nbsp;<label id="unread_mail_cnt"></label> e - Note Sheet
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Messages and Alerts</h3>
+                    </div>
+                    <div id="message_pannel" class="panel-body" style="margin: 10px;">
+                    </div>
+                </div>
+            </div>
+            <!--div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Calendar</h3>
+                        </div>
+                        <div class="panel-body" style="margin: 10px;">
+                            Coming Soon
+                        </div>
+                    </div>
+                </div-->
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Other Actions</h3>
+                    </div>
+                    <div id="action_pannel" class="panel-body" style="margin: 10px;">
+                        <div class="well well-sm col-md-3" style="margin: 0px">
+                            <a href="wifipass.htm"><i class='fa fa-lg fa-globe'></i>
+                                &nbsp;&nbsp;Set Campus Network Password
+                            </a>
+                        </div>
+                        <div class="well well-sm col-md-3" style="margin: 0px">
+                            <a href="showext.htm?link=noticeboard"><i class='fa fa-lg fa-th-list'></i>
+                                &nbsp;&nbsp;View Apna (Internal) IIT KGP Notices
+                            </a>
+                        </div>
+                        <div class="well well-sm col-md-3" style="margin: 0px">
+                            <a target="_blank" href="https://sarth.iitkgp.ac.in/">Counselling Centre Services</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="footerDIV">
+
+
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>ERP System - IIT Kharagpur</title>
+        </head>
+
+        <body>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="navbar navbar-inverse">
+                        <div class="navbar-collapse collapse navbar-inverse-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><label>Copyright © ERP System, IIT Kharagpur. Helpline -
+                                            032222-81019/81018/81017</label></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <!--table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+                                    <tr>
+                                        <td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=erp.iitkgp.ac.in&amp;size=XS&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><br />
+                                            <a href="http://www.symantec.com/verisign/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a>
+                                        </td>
+                                    </tr>
+                                </table-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </body>
+
+        </html>
+    </div>
+</body>
+
+</html>

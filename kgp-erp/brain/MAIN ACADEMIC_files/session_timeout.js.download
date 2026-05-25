@@ -1,0 +1,337 @@
+/* global document, window, localStorage, performance, console */
+
+var SessionManager = (function () {
+
+    /* ================= CONFIG ================= */
+    var config = {
+        timeoutSeconds: window.sessionTimeoutSeconds || 1800,
+        warningOffset: 10 * 60 * 1000,
+        safetyBuffer: 5 * 1000,
+        keepAliveUrl: window.keepAliveUrl || '/keepAlive.htm',
+        logoutUrl: window.logoutUrl || '/logout.htm'
+    };
+
+    var sessionTimeout = config.timeoutSeconds * 1000;
+    var countdownDuration = (config.warningOffset - config.safetyBuffer) / 1000;
+
+    /* ================= STATE ================= */
+    var warningTimer, logoutTimer, countdownInterval;
+    var warningShown = false;
+    var timeLeft = countdownDuration;
+    var lastBroadcast = 0;
+    var lastKnownServerAccess = 0;
+
+    // Title Blink Parameters
+    var originalTitle = document.title;
+    var blinkInterval = null;
+    var blinkState = false;
+
+    /* ================= TAB'S TITLE BLINK FUNCTION ================= */
+    function startTitleBlink() {
+
+        if (blinkInterval)
+            return;
+
+        originalTitle = document.title;
+
+        blinkInterval = setInterval(function () {
+            document.title = blinkState
+                    ? "🔴 ERP Session Expiring Soon"
+                    : originalTitle;
+
+            blinkState = !blinkState;
+        }, 1000);
+    }
+
+    function stopTitleBlink() {
+
+        if (blinkInterval) {
+            clearInterval(blinkInterval);
+            blinkInterval = null;
+        }
+
+        document.title = originalTitle;
+    }
+
+    /* ================= BROADCAST ================= */
+    function broadcast(action) {
+        const now = Date.now();
+        if (now - lastBroadcast < 300)
+            return;
+
+        lastBroadcast = now;
+        localStorage.setItem('session-event', JSON.stringify({
+            action: action,
+            time: now
+        }));
+    }
+
+    /* ================= EXPIRY ================= */
+    function updateExpiry() {
+        localStorage.setItem('session-expiry', Date.now() + sessionTimeout);
+    }
+
+    function syncFromStorage() {
+        const expiry = localStorage.getItem('session-expiry');
+        if (!expiry)
+            return;
+
+        const remaining = expiry - Date.now();
+
+        clearTimeout(warningTimer);
+        clearTimeout(logoutTimer);
+
+        if (remaining <= 0) {
+            logout();
+            return;
+        }
+
+        if (remaining <= config.warningOffset) {
+            showWarning(true);
+        } else {
+            hideModal();
+            warningTimer = setTimeout(showWarning, remaining - config.warningOffset);
+            logoutTimer = setTimeout(logout, remaining - config.safetyBuffer);
+        }
+    }
+
+    /* ================= RESET ================= */
+    function reset(isSync) {
+
+        hideModal();                // 🔥 ALWAYS clear modal
+        stopCountdown();
+
+        updateExpiry();
+        syncFromStorage();
+
+        if (!isSync)
+            broadcast('RESET_SESSION');
+    }
+
+    /* ================= MODAL ================= */
+    function showWarning(isSync) {
+
+        if (warningShown)
+            return;
+
+        warningShown = true;
+        timeLeft = countdownDuration;
+
+        startTitleBlink();   // 🔥 START BLINK
+
+        if ($('#sessionModal').length) {
+
+            $('#sessionModal').off('hide.bs.modal');
+
+            $('#sessionModal').on('hide.bs.modal', function (e) {
+                if (warningShown) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            $('#sessionModal').modal({
+                backdrop: 'static',
+                keyboard: false,
+                show: true
+            });
+        }
+
+        startCountdown();
+
+        if (!isSync)
+            broadcast('SHOW_WARNING');
+    }
+
+    function hideModal() {
+        if ($('#sessionModal').length) {
+            $('#sessionModal').modal('hide');
+        }
+        warningShown = false;
+        stopCountdown();
+
+        stopTitleBlink();   // 🔥 STOP BLINK
+    }
+
+    /* ================= COUNTDOWN ================= */
+    function startCountdown() {
+
+        stopCountdown();
+
+        countdownInterval = setInterval(function () {
+            timeLeft--;
+            updateDisplay();
+
+            if (timeLeft <= 0) {
+                stopCountdown();
+                logout();
+            }
+        }, 1000);
+    }
+
+    function stopCountdown() {
+        if (countdownInterval) {
+            clearInterval(countdownInterval);
+            countdownInterval = null;
+        }
+    }
+
+    /* ================= DISPLAY WARNING FOR 1 MIN. ================= */
+    /*
+     function updateDisplay() {
+     var minutes = Math.floor(timeLeft / 60);
+     var seconds = timeLeft % 60;
+     
+     var formatted =
+     (minutes < 10 ? "0" + minutes : minutes) + ":" +
+     (seconds < 10 ? "0" + seconds : seconds);
+     
+     document.getElementById("countdown").innerText = formatted;
+     
+     // Optional color change
+     var el = document.getElementById("countdown");
+     if (timeLeft <= 10) {
+     el.style.color = "#d9534f"; // red
+     } else if (timeLeft <= 30) {
+     el.style.color = "#f0ad4e"; // orange
+     } else {
+     el.style.color = "#5cb85c"; // green
+     }
+     }*/
+
+
+    /* ================= DISPLAY WARNING FOR 10 MIN. ================= */
+    function updateDisplay() {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+
+        var formatted =
+                (minutes < 10 ? "0" + minutes : minutes) + ":" +
+                (seconds < 10 ? "0" + seconds : seconds);
+
+        var el = document.getElementById("countdown");
+        el.innerText = formatted;
+
+        // Color effect
+        if (timeLeft <= 60) {
+            el.style.color = "#d9534f"; // red
+        } else if (timeLeft <= 300) {
+            el.style.color = "#f0ad4e"; // orange
+        } else {
+            el.style.color = "#5cb85c"; // green
+        }
+    }
+
+    /* ================= ACTIONS ================= */
+    function extend() {
+        $.get(config.keepAliveUrl, function () {
+            hideModal();
+            reset();
+            broadcast('EXTEND_SESSION');
+        });
+    }
+
+    function logout() {
+        stopTitleBlink();   // 🔥 STOP BLINK
+        broadcast('LOGOUT');
+        localStorage.removeItem('session-expiry');
+        window.location.href = config.logoutUrl;
+    }
+
+    /* ================= STORAGE SYNC ================= */
+    window.addEventListener('storage', function (e) {
+
+        if (e.key === 'session-event' && e.newValue) {
+
+            var data = JSON.parse(e.newValue);
+
+            if (data.action === 'SHOW_WARNING') {
+                showWarning(true);
+            }
+
+            if (data.action === 'EXTEND_SESSION') {
+                hideModal();     // 🔥 FIX
+                reset(true);
+            }
+
+            if (data.action === 'RESET_SESSION') {
+                hideModal();     // 🔥 FIX
+                reset(true);
+            }
+
+            if (data.action === 'LOGOUT') {
+                logout();
+            }
+        }
+
+        if (e.key === 'session-expiry') {
+            syncFromStorage();
+        }
+    });
+
+    /* ================= VISIBILITY ================= */
+    document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) {
+            syncFromStorage();
+        }
+    });
+
+    /* ================= RELOAD SYNC ================= */
+    function detectReload() {
+
+        const nav = performance.getEntriesByType("navigation")[0];
+
+        if (nav && nav.type === "reload") {
+            updateExpiry();
+            broadcast('RESET_SESSION');
+        }
+    }
+
+    /* ================= COOKIE SYNC (SSO) ================= */
+    function getCookie(name) {
+        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? parseInt(match[2]) : 0;
+    }
+
+    function startCookiePolling() {
+
+        setInterval(function () {
+
+            var lastAccess = getCookie("LAST_ACCESS_TIME");
+
+            if (lastAccess > lastKnownServerAccess) {
+
+                lastKnownServerAccess = lastAccess;
+
+                console.log("SSO activity detected → syncing tabs");
+
+                reset();   // 🔥 ALWAYS reset (removed restriction)
+            }
+
+        }, 2000);
+    }
+
+    /* ================= INIT ================= */
+    function init(options) {
+
+        if (options) {
+            Object.assign(config, options);
+            sessionTimeout = config.timeoutSeconds * 1000;
+        }
+
+        detectReload();       // 🔥 reload sync
+        updateExpiry();
+        syncFromStorage();
+        broadcast('RESET_SESSION');
+
+        startCookiePolling(); // 🔥 SSO sync
+    }
+
+    /* ================= PUBLIC ================= */
+    return {
+        init: init,
+        extend: extend,
+        logout: logout
+    };
+
+})();
