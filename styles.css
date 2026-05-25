@@ -57,7 +57,7 @@ body {
     font-family: var(--font-head);
     font-size: 1.5rem;
     font-weight: 900;
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
 }
 
 .logo span {
@@ -111,7 +111,7 @@ h1 {
     font-family: var(--font-head);
     font-size: clamp(3rem, 8vw, 6rem);
     line-height: 0.9;
-    letter-spacing: -3px;
+    letter-spacing: -0.025em;
     margin-bottom: 2.5rem;
 }
 
@@ -155,7 +155,7 @@ h1 {
 .section-header h2 {
     font-family: var(--font-head);
     font-size: 3rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
     margin-bottom: 1rem;
 }
 
@@ -288,15 +288,58 @@ h1 {
     }
 }
 
-/* Mobile Heading Normalization */
+/* Mobile Heading Normalization & Layout Safety */
 @media (max-width: 768px) {
-    .text-4xl, 
-    .text-5xl, 
-    .text-6xl, 
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+    }
+
+    .text-4xl {
+        font-size: 1.75rem !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.01em !important;
+    }
+
+    .text-5xl {
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+        letter-spacing: -0.015em !important;
+    }
+
+    .text-6xl,
     .text-7xl,
     .text-8xl {
-        font-size: 3rem !important;
-        line-height: 1 !important;
-        letter-spacing: -0.05em !important;
+        font-size: 2.25rem !important;
+        line-height: 1.05 !important;
+        letter-spacing: -0.02em !important;
+    }
+}
+
+/* Global Overflow Security */
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Explicit layout reliability rules */
+.px-6 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+    .md\:px-10 {
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
     }
 }
