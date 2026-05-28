@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest House Availability - ERP KGP</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../components.js" defer></script>
+    <style>
+        .gh-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
+        .gh-badge {
+            background: var(--brand-primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .search-disclaimer {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--accent-red);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .gh-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Main Area -->
+        <main class="main-area">
+            <!-- Top Navigation -->
+            <div id="topnav-placeholder" data-placeholder="Search rooms, dining menu..."></div>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <div class="hero-banner" style="margin-bottom: 24px; padding: 20px;">
+                    <div class="hero-text">
+                        <div style="font-size:12px; color:var(--text-muted); font-weight:600; margin-bottom:8px; text-transform:uppercase;">
+                            You are in: <a href="index.html" style="color:var(--brand-primary); text-decoration:none;">Guest House</a> / Booking / Guest House Availability
+                        </div>
+                        <h1>Search Availability</h1>
+                    </div>
+                </div>
+
+                <div class="card glass-panel" style="max-width: 900px; margin: 0 auto;">
+                    <div class="gh-form">
+                        <div class="form-group">
+                            <label for="fromDate">From Date</label>
+                            <input type="date" id="fromDate" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="toDate">To Date</label>
+                            <input type="date" id="toDate" class="form-control">
+                        </div>
+                        <div class="form-group" style="justify-content: flex-end;">
+                            <button class="btn-primary" onclick="simulateSearch()"><i class="fa-solid fa-magnifying-glass" style="margin-right:8px;"></i> Search</button>
+                        </div>
+                    </div>
+
+                    <div class="search-disclaimer">
+                        The availability is displayed based on 00:00 to 11:59 hours for each date of the search interval.
+                    </div>
+
+                    <div class="gh-legend">
+                        <span class="gh-badge">VGH = Visveswaraya Guest House</span>
+                        <span class="gh-badge">TGH = Technology Guest House</span>
+                        <span class="gh-badge">NTGH = New Technology Guest House</span>
+                        <span class="gh-badge" style="background:var(--accent-green);">SLGH = Salt Lake Guest House (Kolkata)</span>
+                        <span class="gh-badge">Heritage = Heritage Guest House</span>
+                        <span class="gh-badge">NGD = New Technology Guest House Double Bed Room</span>
+                        <span class="gh-badge">NGS = New Technology Guest House Suite Room</span>
+                        <span class="gh-badge" style="background:var(--text-muted);">BQT Hall = Banquet Hall</span>
+                        <span class="gh-badge" style="background:var(--text-muted);">MR = Meeting Room</span>
+                        <span class="gh-badge" style="background:var(--text-muted);">C Hall = Community Hall</span>
+                        <span class="gh-badge" style="background:var(--text-muted);">Cl Room = Class Room</span>
+                    </div>
+
+                    <div class="table-responsive" style="margin-top: 24px; border: 1px solid var(--border-color); border-radius: 8px;">
+                        <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
+                            <thead>
+                                <tr style="background: var(--brand-bg); border-bottom: 1px solid var(--border-color);">
+                                    <th style="padding:12px; color:var(--text-main); font-weight:700; width: 30%;">Dates</th>
+                                    <th style="padding:12px; color:var(--text-main); font-weight:700;">Availability</th>
+                                </tr>
+                            </thead>
+                            <tbody id="resultsTable">
+                                <tr>
+                                    <td colspan="2" style="padding:24px; text-align:center; color:var(--text-muted);">
+                                        No matching records found
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div id="footer-placeholder"></div>
+        </main>
+    </div>
+
+    <script>
+        function simulateSearch() {
+            const from = document.getElementById('fromDate').value;
+            const to = document.getElementById('toDate').value;
+            const tbody = document.getElementById('resultsTable');
+
+            if (!from || !to) {
+                alert("Please select both From Date and To Date.");
+                return;
+            }
+
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="2" style="padding:40px; text-align:center; color:var(--text-muted);">
+                        <i class="fa-solid fa-circle-notch fa-spin" style="font-size:24px; color:var(--brand-primary); margin-bottom:12px;"></i><br>
+                        Checking availability across all guest houses...
+                    </td>
+                </tr>
+            `;
+
+            setTimeout(() => {
+                tbody.innerHTML = `
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:12px; font-weight:600;">${from} to ${to}</td>
+                        <td style="padding:12px;">
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <div style="display:flex; justify-content:space-between; max-width: 400px;">
+                                    <span>Technology Guest House (TGH)</span>
+                                    <span style="color:var(--accent-green); font-weight:700;">2 Rooms Available</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; max-width: 400px;">
+                                    <span>Visveswaraya Guest House (VGH)</span>
+                                    <span style="color:var(--accent-red); font-weight:700;">Waitlist (12)</span>
+                                </div>
+                                <button class="btn-primary" style="margin-top:8px; width:fit-content; padding: 6px 12px; font-size: 12px;" onclick="alert('Proceeding to booking...')">Book Selected</button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

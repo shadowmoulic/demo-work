@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation & Guest House - ERP KGP</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../components.js" defer></script>
+</head>
+<body>
+    <!-- Animated Background Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Main Area -->
+        <main class="main-area">
+            <!-- Top Navigation -->
+            <div id="topnav-placeholder" data-placeholder="Search rooms, dining menu..."></div>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <div class="hero-banner">
+                    <div class="hero-text">
+                        <h1>Accommodation & Guest House Portal</h1>
+                        <p>Manage your hostel (Hall of Residence) allotment and book Guest House accommodations.</p>
+                    </div>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Hall Allotment Card -->
+                    <div class="card glass-panel col-span-4">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-hotel"></i></span>
+                                Hostel Allotment
+                            </h3>
+                        </div>
+                        <div class="link-list">
+                            <div style="display:flex; flex-direction:column; gap:4px; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color);">
+                                <span style="font-size:11px; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Hall of Residence</span>
+                                <span style="font-size:14px; font-weight:700;">Lal Bahadur Shastri (LBS) Hall</span>
+                            </div>
+                            <div style="display:flex; flex-direction:column; gap:4px; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color);">
+                                <span style="font-size:11px; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Room Details</span>
+                                <span style="font-size:14px; font-weight:700;">Block B, Room B-204</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="font-weight:600; color:var(--text-muted)">Mess Dues Status</span>
+                                <span style="background:var(--accent-green-bg); color:var(--accent-green); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">NO DUES</span>
+                            </div>
+                            <button class="btn-primary" style="margin-top: 10px;"><i class="fa-solid fa-file-invoice" style="margin-right: 8px;"></i> Download Mess Card</button>
+                        </div>
+                    </div>
+
+                    <!-- Guest House Booking Link -->
+                    <div class="card glass-panel col-span-8">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-calendar-plus"></i></span>
+                                Guest House Booking Services
+                            </h3>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:16px;">
+                            <p style="color:var(--text-muted); font-size:14px;">Access the dedicated Guest House Availability and Booking portal to search for rooms, view waitlists, and make reservations across all campus and external guest houses.</p>
+                            <a href="guest-house.html" class="btn-primary" style="text-decoration:none; width:fit-content;"><i class="fa-solid fa-magnifying-glass" style="margin-right:8px;"></i> Search Guest House Availability</a>
+                        </div>
+                    </div>
+
+                    <!-- Mess Menu Card -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-utensils"></i></span>
+                                Today's Mess Menu (LBS Hall)
+                            </h3>
+                        </div>
+                        <div class="link-list" style="gap:8px;">
+                            <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 14px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="background:var(--brand-primary-bg); color:var(--brand-primary); font-weight:700; padding:4px 8px; border-radius:4px; font-size:11px;">BREAKFAST</span>
+                                <div>
+                                    <strong style="display:block; margin-bottom:2px;">Aloo Paratha & Curd</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">Timing: 07:30 AM - 09:00 AM</span>
+                                </div>
+                            </div>
+                            <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 14px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="background:var(--brand-primary-bg); color:var(--brand-primary); font-weight:700; padding:4px 8px; border-radius:4px; font-size:11px;">LUNCH</span>
+                                <div>
+                                    <strong style="display:block; margin-bottom:2px;">Rice, Dal Fry, Seasonal Veg, Egg Curry / Paneer</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">Timing: 12:00 PM - 02:00 PM</span>
+                                </div>
+                            </div>
+                            <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 14px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="background:var(--brand-primary-bg); color:var(--brand-primary); font-weight:700; padding:4px 8px; border-radius:4px; font-size:11px;">DINNER</span>
+                                <div>
+                                    <strong style="display:block; margin-bottom:2px;">Roti, Jeera Rice, Dal, Chicken Kasa / Malai Kofta</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">Timing: 07:30 PM - 09:30 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amenities and Complaints -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-circle-exclamation"></i></span>
+                                Hall Grievance & Maintenance
+                            </h3>
+                        </div>
+                        <div class="link-list">
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-wrench"></i> Lodge Carpentry / Electrical Complaint
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-wifi"></i> Report Hall Wi-Fi Connectivity Issue
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fa-solid fa-shield-halved"></i> Apply for Cycle Sticker / Gate Pass
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div id="footer-placeholder"></div>
+        </main>
+    </div>
+
+
+</body>
+</html>

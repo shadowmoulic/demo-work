@@ -1,12 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Module - ERP KGP</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../components.js" defer></script>
+    <style>
+        .academic-accordion-container {
+            grid-column: span 12;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .acad-acc-item {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .acad-acc-header {
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: rgba(59, 130, 246, 0.02);
+            font-weight: 600;
+            color: var(--text-main);
+            transition: var(--transition-fast);
+        }
+
+        .acad-acc-header:hover {
+            background: var(--brand-primary-bg);
+            color: var(--brand-primary);
+        }
+
+        .acad-acc-header i.caret {
+            transition: transform 0.3s ease;
+        }
+
+        .acad-acc-item.open .acad-acc-header i.caret {
+            transform: rotate(180deg);
+        }
+
+        .acad-acc-body {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 12px;
+            padding: 0;
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .acad-acc-item.open .acad-acc-body {
+            padding: 16px 20px;
+            max-height: 2000px;
+            /* arbitrary large value for transition */
+            opacity: 1;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .masonry-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: var(--brand-primary);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        .masonry-link:hover {
+            border-color: var(--brand-primary-light);
+            background: var(--brand-primary-bg);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .masonry-link i {
+            color: var(--brand-primary-light);
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
     <!-- Animated Background Blobs -->
     <div class="bg-blob blob-1"></div>
@@ -15,242 +105,448 @@
 
     <div class="dashboard">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <i class="fa-solid fa-graduation-cap" style="font-size: 32px; color: #a397ff;"></i>
-                <h2>IITKGP ERP</h2>
-                <button class="close-btn" id="closeSidebar" aria-label="Close sidebar">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            
-            <nav class="sidebar-menu">
-                <a href="../index.html" class="menu-item">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Dashboard</span>
-                </a>
-
-                <!-- Full Academic Menu inside Accordion (Open by default) -->
-                <div class="accordion-wrapper open" id="academicAccordion">
-                    <div class="menu-item accordion-header active">
-                        <div style="display:flex; align-items:center; gap:15px;">
-                            <i class="fa-solid fa-book-open"></i>
-                            <span>Academic</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-down caret"></i>
-                    </div>
-                    
-                    <div class="accordion-content">
-                        <div class="submenu-category">Registration & Academics</div>
-                        <a href="#" class="submenu-item">Subjects & Curricula</a>
-                        <a href="#" class="submenu-item">UG Registration & Flow</a>
-                        <a href="#" class="submenu-item">PG Modules</a>
-                        <a href="#" class="submenu-item">Final Graduation Processing</a>
-
-                        <div class="submenu-category">Time Table & Exams</div>
-                        <a href="./index.html" class="submenu-item active" style="color: #fff; background: rgba(255,255,255,0.08); border-left: 3px solid #a397ff; padding-left: 45px;">Examination TimeTable</a>
-                        <a href="./index.html" class="submenu-item">Time Table (Classes)</a>
-                        <a href="#" class="submenu-item">Results Review</a>
-
-                        <div class="submenu-category">Financials & Awards</div>
-                        <a href="#" class="submenu-item">Fees Payment & Status</a>
-                        <a href="#" class="submenu-item">Scholarship</a>
-                        <a href="#" class="submenu-item">Mediclaim</a>
-                        <a href="#" class="submenu-item">Award and Prize (UG)</a>
-
-                        <div class="submenu-category">Student Life</div>
-                        <a href="#" class="submenu-item">Students & Leave</a>
-                        <a href="#" class="submenu-item">Library Services</a>
-                        <a href="#" class="submenu-item">Feedback</a>
-                        <a href="#" class="submenu-item">Student Rep Nomination</a>
-                    </div>
-                </div>
-
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-file-invoice-dollar"></i>
-                    <span>Accounts</span>
-                </a>
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-hotel"></i>
-                    <span>Guest House</span>
-                </a>
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <span>CDC</span>
-                </a>
-            </nav>
-        </aside>
+        <div id="sidebar-placeholder"></div>
 
         <!-- Main Area -->
         <main class="main-area">
             <!-- Top Navigation -->
-            <header class="top-nav">
-                <div style="display: flex; align-items: center;">
-                    <button class="menu-btn" id="openSidebar" aria-label="Open sidebar">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                    <div class="search-box">
-                        <i class="fa-solid fa-search"></i>
-                        <input type="text" placeholder="Search menus, files, students..." id="academicSearch">
-                    </div>
-                </div>
-
-                <div class="nav-actions">
-                    <button class="icon-btn" aria-label="Messages">
-                        <i class="fa-regular fa-envelope"></i>
-                        <span class="badge">3</span>
-                    </button>
-                    <button class="icon-btn" aria-label="Notifications">
-                        <i class="fa-regular fa-bell"></i>
-                        <span class="badge" style="background:var(--brand-primary); color:#fff;">5</span>
-                    </button>
-
-                    <!-- Fully working Profile Dropdown -->
-                    <div class="profile-menu" id="profileMenu">
-                        <div class="profile-btn" id="profileBtn">
-                            <img src="https://ui-avatars.com/api/?name=Sayak+Moulic&background=291973&color=fff&bold=true" alt="Sayak">
-                            <span>Sayak Moulic</span>
-                            <i class="fa-solid fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
-                        </div>
-                        
-                        <div class="dropdown-content glass-panel">
-                            <a href="#" class="dropdown-item">
-                                <i class="fa-regular fa-user"></i> My Profile
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="fa-solid fa-gear"></i> Settings
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="fa-solid fa-key"></i> Passphrase Retrieval
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="fa-solid fa-users-gear"></i> Switch Login
-                            </a>
-                            <a href="#" class="dropdown-item" style="color: var(--accent-pink);">
-                                <i class="fa-solid fa-arrow-right-from-bracket" style="color: var(--accent-pink);"></i> Logout
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <div id="topnav-placeholder" data-placeholder="Search menus, files, students..."></div>
 
             <!-- Dashboard Content -->
             <div class="content-area">
                 <div class="hero-banner">
                     <div class="hero-text">
-                        <h1>Time Tables & Exams 📅</h1>
-                        <p>Manage your academic schedule and view examination details.</p>
+                        <h1>Academic Module</h1>
+                        <p>Track your grades, registered subjects, class time table, and examination schedules.</p>
                     </div>
                 </div>
 
                 <div class="bento-grid">
-                    <!-- Schedule Card -->
-                    <div class="card glass-panel col-span-6">
+
+                    <!-- Stats Card (CGPA Tracker) -->
+                    <div class="card glass-panel col-span-4">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <span class="card-icon"><i class="fa-solid fa-calendar-check"></i></span>
-                                My Time Table (Student)
+                                <span class="card-icon"><i class="fa-solid fa-chart-line"></i></span>
+                                Academic Performance
                             </h3>
                         </div>
-                        <div class="link-list">
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-clock"></i> Subject List With TimeTable Slots
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-calendar-day"></i> Central TimeTable AUTUMN
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-calendar-day"></i> Central TimeTable SPRING
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-sun"></i> Summer Quarter Time Table
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-building"></i> TimeTable (Department Wise)
-                            </a>
+                        <div class="stats-container" style="margin-bottom: 20px;">
+                            <div class="stat-box">
+                                <span class="stat-value">9.15</span>
+                                <span class="stat-label">CGPA</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">22</span>
+                                <span class="stat-label">Registered Credits</span>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table style="width:100%; border-collapse:collapse; text-align:left; font-size:12px;">
+                                <thead>
+                                    <tr style="border-bottom:1px solid var(--border-color); color:var(--text-muted)">
+                                        <th style="padding:8px 4px;">Semester</th>
+                                        <th style="padding:8px 4px;">SGPA</th>
+                                        <th style="padding:8px 4px;">Credits</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:8px 4px; font-weight:600;">Semester 1</td>
+                                        <td style="padding:8px 4px; color:var(--brand-primary); font-weight:700;">8.90
+                                        </td>
+                                        <td style="padding:8px 4px;">20</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:8px 4px; font-weight:600;">Semester 2</td>
+                                        <td style="padding:8px 4px; color:var(--brand-primary); font-weight:700;">9.20
+                                        </td>
+                                        <td style="padding:8px 4px;">22</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:8px 4px; font-weight:600;">Semester 3</td>
+                                        <td style="padding:8px 4px; color:var(--brand-primary); font-weight:700;">9.35
+                                        </td>
+                                        <td style="padding:8px 4px;">20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <!-- Exams Card -->
-                    <div class="card glass-panel col-span-6">
+                    <!-- Registered Subjects Card -->
+                    <div class="card glass-panel col-span-8">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <span class="card-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-                                Examination Portal
+                                <span class="card-icon"><i class="fa-solid fa-list-check"></i></span>
+                                Current Semester Registered Courses
                             </h3>
                         </div>
-                        <div class="link-list">
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-pink)"></i> Very Important Exam Instructions
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-list-check"></i> Complete Examination Instructions
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-calendar-days"></i> Central Examination TimeTable
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-building-columns"></i> Departmental Examination Timetable
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fa-solid fa-graduation-cap"></i> Results Review (UG)
-                            </a>
+                        <div class="table-responsive">
+                            <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
+                                <thead>
+                                    <tr style="border-bottom:1px solid var(--border-color); color:var(--text-muted)">
+                                        <th style="padding:10px 8px;">Code</th>
+                                        <th style="padding:10px 8px;">Course Title</th>
+                                        <th style="padding:10px 8px;">Credits</th>
+                                        <th style="padding:10px 8px;">Slot</th>
+                                        <th style="padding:10px 8px;">Faculty</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary);">
+                                            CS30001</td>
+                                        <td style="padding:10px 8px;">Computer Networks</td>
+                                        <td style="padding:10px 8px;">4</td>
+                                        <td style="padding:10px 8px; font-weight:600;">C</td>
+                                        <td style="padding:10px 8px;">Dr. Amit Kumar</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary);">
+                                            CS30003</td>
+                                        <td style="padding:10px 8px;">Database Management Systems</td>
+                                        <td style="padding:10px 8px;">4</td>
+                                        <td style="padding:10px 8px; font-weight:600;">F</td>
+                                        <td style="padding:10px 8px;">Dr. Priya Sen</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary);">
+                                            CS30005</td>
+                                        <td style="padding:10px 8px;">Compilers</td>
+                                        <td style="padding:10px 8px;">4</td>
+                                        <td style="padding:10px 8px; font-weight:600;">A</td>
+                                        <td style="padding:10px 8px;">Dr. Rajib Mall</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary);">
+                                            CS31001</td>
+                                        <td style="padding:10px 8px;">Network Lab</td>
+                                        <td style="padding:10px 8px;">2</td>
+                                        <td style="padding:10px 8px; font-weight:600;">X</td>
+                                        <td style="padding:10px 8px;">Dr. Amit Kumar</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary);">
+                                            CS31003</td>
+                                        <td style="padding:10px 8px;">DBMS Lab</td>
+                                        <td style="padding:10px 8px;">2</td>
+                                        <td style="padding:10px 8px; font-weight:600;">Y</td>
+                                        <td style="padding:10px 8px;">Dr. Priya Sen</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary);">
+                                            HS30001</td>
+                                        <td style="padding:10px 8px;">Economics</td>
+                                        <td style="padding:10px 8px;">3</td>
+                                        <td style="padding:10px 8px; font-weight:600;">H</td>
+                                        <td style="padding:10px 8px;">Dr. S. K. Roy</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary);">
+                                            EA30001</td>
+                                        <td style="padding:10px 8px;">Extra Academic Activity</td>
+                                        <td style="padding:10px 8px;">3</td>
+                                        <td style="padding:10px 8px; font-weight:600;">E</td>
+                                        <td style="padding:10px 8px;">Dr. S. Patra</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+
+                    <!-- Masonry Academic Services -->
+                    <div class="academic-accordion-container">
+
+                        <!-- Registration & Academics -->
+                        <div class="acad-acc-item open">
+                            <div class="acad-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                <span><i class="fa-solid fa-graduation-cap"
+                                        style="margin-right:8px; color:var(--text-muted)"></i> Registration &
+                                    Academics</span>
+                                <i class="fa-solid fa-chevron-down caret"></i>
+                            </div>
+                            <div class="acad-acc-body">
+                                <a href="https://iitkgp-erp.vercel.app/academic/academic-information/"
+                                    class="masonry-link"
+                                    style="border:1px solid var(--brand-primary); background:var(--brand-primary-bg);">
+                                    <strong>Your Academic Information</strong> <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="#" class="masonry-link">Subjects & Curricula <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">UG Registration & Flow <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">PG Modules <i class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Final Graduation Processing <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Upload GATE Score <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Medical Leave <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Interim Grade Card & Certificates <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Micro Credit Registration <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Time Table & Exams -->
+                        <div class="acad-acc-item">
+                            <div class="acad-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                <span><i class="fa-solid fa-calendar-days"
+                                        style="margin-right:8px; color:var(--text-muted)"></i> Time Table & Exams</span>
+                                <i class="fa-solid fa-chevron-down caret"></i>
+                            </div>
+                            <div class="acad-acc-body">
+                                <a href="#" class="masonry-link" id="linkCentralTimetable">Examination TimeTable <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Time Table (Classes) <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link" id="linkResultsReview">Results Review <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link" id="linkImportantInstructions">Important Instructions
+                                    <i class="fa-solid fa-circle-info"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Financials & Awards -->
+                        <div class="acad-acc-item">
+                            <div class="acad-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                <span><i class="fa-solid fa-money-check-dollar"
+                                        style="margin-right:8px; color:var(--text-muted)"></i> Financials &
+                                    Awards</span>
+                                <i class="fa-solid fa-chevron-down caret"></i>
+                            </div>
+                            <div class="acad-acc-body">
+                                <a href="#" class="masonry-link">Fees Payment & Status <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Scholarship <i class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Mediclaim <i class="fa-solid fa-circle-info"></i></a>
+                                <a href="#" class="masonry-link">Award and Prize (UG) <i
+                                        class="fa-solid fa-circle-info"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 
             <!-- Footer -->
-            <footer class="footer">
-                <p>Copyright &copy; ERP System, IIT Kharagpur. Helpline - 032222-81019/81018/81017</p>
-            </footer>
+            <div id="footer-placeholder"></div>
         </main>
     </div>
 
+    <!-- Modals -->
+    <!-- Important Instructions Modal -->
+    <div class="modal-overlay" id="modalImportantInstructions">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Important Examination Instructions</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Ensure strict compliance with the following guidelines during the End-Autumn Examinations:</p>
+                <ul>
+                    <li><strong>Entry Time</strong>: Candidates must report to the examination hall 20 minutes before
+                        the scheduled start time.</li>
+                    <li><strong>Admit Card & ID</strong>: Bring a physical copy of the ERP-generated Admit Card and
+                        official IIT KGP student identity card. No entry without both.</li>
+                    <li><strong>Prohibited Items</strong>: Smartwatches, mobile phones, programmable calculators,
+                        tablets, and any electronic devices are strictly prohibited.</li>
+                    <li><strong>Stationery</strong>: Candidates must bring their own pens, pencils, rulers, and
+                        non-programmable calculators. Lending of materials is not allowed.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Complete Instructions Modal -->
+    <div class="modal-overlay" id="modalCompleteInstructions">
+        <div class="modal-container" style="max-width: 700px;">
+            <div class="modal-header">
+                <h3>Complete Academic Examination Code of Conduct</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>This document details the complete academic conduct and disciplinary policy for examination periods:
+                </p>
+                <ol>
+                    <li><strong>Academic Malpractice</strong>: Any student found utilizing unauthorized scripts, writing
+                        on desks, or communicating with other candidates will be immediately deregistered from the
+                        course and referred to the Senate Standing Committee on Disciplinary Action.</li>
+                    <li><strong>Answer Script Guidelines</strong>: Fill in all header information on the main script and
+                        supplementary sheets accurately. Loose sheets must be tied securely.</li>
+                    <li><strong>Medical Absences</strong>: In case of acute medical emergencies, the student must report
+                        to BCR Technology Hospital and submit a medical certificate verified by the PMO within 48 hours
+                        to apply for a 'De-novo' exam request.</li>
+                    <li><strong>Grading & Moderation</strong>: Raw marks are moderated by the Departmental Academic
+                        Committee before grade allocation on the portal.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Central Exam Timetable Modal -->
+    <div class="modal-overlay" id="modalCentralTimetable">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Central Examination Timetable</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Autumn Semester End-Term Central Timetable for all undergraduate batches:</p>
+                <div class="table-responsive">
+                    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
+                        <thead>
+                            <tr style="border-bottom:1px solid var(--border-color); color:var(--text-muted)">
+                                <th style="padding:10px 8px;">Date</th>
+                                <th style="padding:10px 8px;">Session</th>
+                                <th style="padding:10px 8px;">Time</th>
+                                <th style="padding:10px 8px;">Batches</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid var(--border-color)">
+                                <td style="padding:10px 8px; font-weight:600;">Nov 23, 2026</td>
+                                <td style="padding:10px 8px;">FN (Forenoon)</td>
+                                <td style="padding:10px 8px;">09:00 AM - 12:00 PM</td>
+                                <td style="padding:10px 8px;">1st Year & 3rd Year UG</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid var(--border-color)">
+                                <td style="padding:10px 8px; font-weight:600;">Nov 23, 2026</td>
+                                <td style="padding:10px 8px;">AN (Afternoon)</td>
+                                <td style="padding:10px 8px;">02:00 PM - 05:00 PM</td>
+                                <td style="padding:10px 8px;">2nd Year & 4th Year UG</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid var(--border-color)">
+                                <td style="padding:10px 8px; font-weight:600;">Nov 24, 2026</td>
+                                <td style="padding:10px 8px;">FN (Forenoon)</td>
+                                <td style="padding:10px 8px;">09:00 AM - 12:00 PM</td>
+                                <td style="padding:10px 8px;">1st Year & 3rd Year UG</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid var(--border-color)">
+                                <td style="padding:10px 8px; font-weight:600;">Nov 24, 2026</td>
+                                <td style="padding:10px 8px;">AN (Afternoon)</td>
+                                <td style="padding:10px 8px;">02:00 PM - 05:00 PM</td>
+                                <td style="padding:10px 8px;">2nd Year & 4th Year UG</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dept Exam Timetable Modal -->
+    <div class="modal-overlay" id="modalDeptTimetable">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Departmental Examination Timetable (CSE)</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>End-Term slots and rooms for the Department of Computer Science & Engineering:</p>
+                <div class="table-responsive">
+                    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
+                        <thead>
+                            <tr style="border-bottom:1px solid var(--border-color); color:var(--text-muted)">
+                                <th style="padding:10px 8px;">Sub Code</th>
+                                <th style="padding:10px 8px;">Subject Name</th>
+                                <th style="padding:10px 8px;">Exam Date</th>
+                                <th style="padding:10px 8px;">Venue / Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid var(--border-color)">
+                                <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary)">CS30001</td>
+                                <td style="padding:10px 8px;">Computer Networks</td>
+                                <td style="padding:10px 8px;">Nov 23, 2026 (FN)</td>
+                                <td style="padding:10px 8px;">Nalanda Room 102 & 104</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid var(--border-color)">
+                                <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary)">CS30003</td>
+                                <td style="padding:10px 8px;">DBMS</td>
+                                <td style="padding:10px 8px;">Nov 25, 2026 (FN)</td>
+                                <td style="padding:10px 8px;">Nalanda Room 102 & 104</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid var(--border-color)">
+                                <td style="padding:10px 8px; font-weight:600; color:var(--brand-primary)">CS30005</td>
+                                <td style="padding:10px 8px;">Compilers</td>
+                                <td style="padding:10px 8px;">Nov 27, 2026 (FN)</td>
+                                <td style="padding:10px 8px;">Nalanda Room 201</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Review Modal -->
+    <div class="modal-overlay" id="modalResultsReview">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Request Results / Grade Review</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>If you believe there has been a discrepancy in your grade calculations, you can request a
+                    departmental recheck here. Fee of ₹500 applies per subject.</p>
+                <form
+                    onsubmit="event.preventDefault(); alert('Grade review request submitted successfully for processing.'); this.closest('.modal-overlay').classList.remove('open');">
+                    <div class="form-group">
+                        <label for="reviewSubject">Select Subject for Review</label>
+                        <select id="reviewSubject" class="form-control" required>
+                            <option value="cs30001">CS30001 - Computer Networks (Current Grade: A)</option>
+                            <option value="cs30003">CS30003 - Database Management Systems (Current Grade: Ex)</option>
+                            <option value="cs30005">CS30005 - Compilers (Current Grade: B)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewJustification">Justification / Reason for Review</label>
+                        <textarea id="reviewJustification" class="form-control" rows="4" style="resize:vertical;"
+                            placeholder="Please outline the grading sections/questions you wish to get rechecked..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Review Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Profile Dropdown Logic
-        const profileMenu = document.getElementById('profileMenu');
-        const profileBtn = document.getElementById('profileBtn');
+        // Modal toggling helper
+        function setupModal(triggerId, modalId) {
+            const trigger = document.getElementById(triggerId);
+            const modal = document.getElementById(modalId);
+            if (trigger && modal) {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.add('open');
+                });
 
-        profileBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            profileMenu.classList.toggle('open');
-        });
+                const closeBtn = modal.querySelector('.modal-close');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', () => {
+                        modal.classList.remove('open');
+                    });
+                }
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!profileMenu.contains(e.target)) {
-                profileMenu.classList.remove('open');
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('open');
+                    }
+                });
             }
-        });
-
-        // Accordion Logic
-        const accordion = document.getElementById('academicAccordion');
-        const accordionHeader = accordion.querySelector('.accordion-header');
-
-        accordionHeader.addEventListener('click', () => {
-            accordion.classList.toggle('open');
-            if (accordion.classList.contains('open')) {
-                accordionHeader.classList.add('active');
-            } else {
-                accordionHeader.classList.remove('active');
-            }
-        });
-
-        // Mobile Sidebar Logic
-        const sidebar = document.querySelector('.sidebar');
-        const openSidebar = document.getElementById('openSidebar');
-        const closeSidebar = document.getElementById('closeSidebar');
-
-        if (openSidebar && closeSidebar) {
-            openSidebar.addEventListener('click', () => {
-                sidebar.classList.add('active');
-            });
-            closeSidebar.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-            });
         }
+
+        setupModal('linkImportantInstructions', 'modalImportantInstructions');
+        setupModal('linkCompleteInstructions', 'modalCompleteInstructions');
+        setupModal('linkCentralTimetable', 'modalCentralTimetable');
+        setupModal('linkDeptTimetable', 'modalDeptTimetable');
+        setupModal('linkResultsReview', 'modalResultsReview');
     </script>
 </body>
+
 </html>

@@ -1,6 +1,4 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/academic", "destination": "/academic/index.html" }
-  ]
+  "trailingSlash": true
 }

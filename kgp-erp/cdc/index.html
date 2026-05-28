@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDC Portal - ERP KGP</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../components.js" defer></script>
+</head>
+<body>
+    <!-- Animated Background Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Main Area -->
+        <main class="main-area">
+            <!-- Top Navigation -->
+            <div id="topnav-placeholder" data-placeholder="Search CDC notices, companies..."></div>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <div class="hero-banner">
+                    <div class="hero-text">
+                        <h1>CDC Placement & Internship Portal</h1>
+                        <p>Career Development Centre, IIT Kharagpur. Manage applications, CVs, and schedules.</p>
+                    </div>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- CV Verification Card -->
+                    <div class="card glass-panel col-span-4">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-file-pdf"></i></span>
+                                CV & Profile Status
+                            </h3>
+                        </div>
+                        <div class="link-list">
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="font-weight:600; color:var(--text-muted)">Registration Status</span>
+                                <span style="background:var(--accent-green-bg); color:var(--accent-green); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">REGISTERED</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="font-weight:600; color:var(--text-muted)">Default CV (CV_v1.pdf)</span>
+                                <span style="background:var(--accent-green-bg); color:var(--accent-green); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">VERIFIED</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="font-weight:600; color:var(--text-muted)">Alternative CV (CV_v2.pdf)</span>
+                                <span style="background:rgba(245,158,11,0.05); color:rgb(245,158,11); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">PENDING RE-VERIFY</span>
+                            </div>
+                            <button class="btn-primary" style="margin-top: 10px;"><i class="fa-solid fa-upload" style="margin-right: 8px;"></i> Upload New CV</button>
+                        </div>
+                    </div>
+
+                    <!-- Statistics / Summary Card -->
+                    <div class="card glass-panel col-span-8">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-chart-line"></i></span>
+                                Job & Internship Applications
+                            </h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
+                                <thead>
+                                    <tr style="border-bottom:1px solid var(--border-color); color:var(--text-muted)">
+                                        <th style="padding:12px 8px;">Company</th>
+                                        <th style="padding:12px 8px;">Role</th>
+                                        <th style="padding:12px 8px;">Type</th>
+                                        <th style="padding:12px 8px;">CTC / Stipend</th>
+                                        <th style="padding:12px 8px;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:12px 8px; font-weight:600;">Google India</td>
+                                        <td style="padding:12px 8px;">Software Engineer</td>
+                                        <td style="padding:12px 8px;">FTE Placement</td>
+                                        <td style="padding:12px 8px;">35.5 LPA</td>
+                                        <td style="padding:12px 8px;"><span style="background:var(--brand-primary-bg); color:var(--brand-primary); padding:3px 6px; border-radius:4px; font-weight:600; font-size:11px;">APPLIED</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:12px 8px; font-weight:600;">Microsoft</td>
+                                        <td style="padding:12px 8px;">Data Scientist</td>
+                                        <td style="padding:12px 8px;">FTE Placement</td>
+                                        <td style="padding:12px 8px;">32.0 LPA</td>
+                                        <td style="padding:12px 8px;"><span style="background:var(--accent-green-bg); color:var(--accent-green); padding:3px 6px; border-radius:4px; font-weight:600; font-size:11px;">SHORTLISTED</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:12px 8px; font-weight:600;">Goldman Sachs</td>
+                                        <td style="padding:12px 8px;">Systems Analyst</td>
+                                        <td style="padding:12px 8px;">FTE Placement</td>
+                                        <td style="padding:12px 8px;">24.0 LPA</td>
+                                        <td style="padding:12px 8px;"><span style="background:rgba(239,68,68,0.05); color:var(--accent-red); padding:3px 6px; border-radius:4px; font-weight:600; font-size:11px;">NOT SHORTLISTED</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color)">
+                                        <td style="padding:12px 8px; font-weight:600;">Rubrik Inc.</td>
+                                        <td style="padding:12px 8px;">Product Engineer</td>
+                                        <td style="padding:12px 8px;">FTE Placement</td>
+                                        <td style="padding:12px 8px;">48.0 LPA</td>
+                                        <td style="padding:12px 8px;"><span style="background:rgba(245,158,11,0.05); color:rgb(245,158,11); padding:3px 6px; border-radius:4px; font-weight:600; font-size:11px;">TEST SCHEDULED</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Schedules Card -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-clock"></i></span>
+                                Upcoming Tests & Interviews
+                            </h3>
+                        </div>
+                        <div class="link-list">
+                            <a href="#" class="link-item">
+                                <div style="display:flex; flex-direction:column; gap:4px; width:100%;">
+                                    <div style="display:flex; justify-content:between; width:100%;">
+                                        <span style="font-weight:600;">Rubrik Online coding test</span>
+                                        <span style="margin-left:auto; color:var(--brand-primary); font-weight:600;">Today, 18:00</span>
+                                    </div>
+                                    <span style="font-size:11px; color:var(--text-muted)">Venue: Nalanda Complex / Online Portal</span>
+                                </div>
+                            </a>
+                            <a href="#" class="link-item">
+                                <div style="display:flex; flex-direction:column; gap:4px; width:100%;">
+                                    <div style="display:flex; justify-content:between; width:100%;">
+                                        <span style="font-weight:600;">Microsoft Data Science Interview</span>
+                                        <span style="margin-left:auto; color:var(--accent-green); font-weight:600;">28th May, 10:00</span>
+                                    </div>
+                                    <span style="font-size:11px; color:var(--text-muted)">Venue: Vikramshila CDC Rooms (Offline)</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CDC General Actions -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-circle-info"></i></span>
+                                Important Actions
+                            </h3>
+                        </div>
+                        <div class="action-grid">
+                            <a href="#" class="action-box" id="cdcReportGrievance">
+                                <i class="fa-solid fa-circle-question"></i>
+                                <span>Report Grievance</span>
+                            </a>
+                            <a href="#" class="action-box" id="cdcRulesGuidelines">
+                                <i class="fa-solid fa-file-shield"></i>
+                                <span>Rules & Guidelines</span>
+                            </a>
+                            <a href="#" class="action-box" id="cdcVerifyCgpa">
+                                <i class="fa-solid fa-user-check"></i>
+                                <span>Verify CGPA/Credits</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div id="footer-placeholder"></div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <!-- CDC Report Grievance Modal -->
+    <div class="modal-overlay" id="modalCdcReportGrievance">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Submit CDC Placement / Internship Grievance</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Submit placement-specific grievances regarding company profiles, test slots, or interview conflicts.</p>
+                <form onsubmit="event.preventDefault(); alert('CDC Grievance submitted successfully. Ticket ID: CDC-TKT-1082.'); this.closest('.modal-overlay').classList.remove('open');">
+                    <div class="form-group">
+                        <label for="cdcGrievanceCompany">Associated Company (Optional)</label>
+                        <input type="text" id="cdcGrievanceCompany" class="form-control" placeholder="e.g. Google India">
+                    </div>
+                    <div class="form-group">
+                        <label for="cdcGrievanceType">Issue Type</label>
+                        <select id="cdcGrievanceType" class="form-control" required>
+                            <option value="schedule">Schedule Conflict (Test/Interview overlapping)</option>
+                            <option value="jd">Job Description / CTC Mismatch</option>
+                            <option value="eligibility">Eligibility / Shortlist Discrepancy</option>
+                            <option value="other">Other Malpractices</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cdcGrievanceDesc">Provide Detailed Description</label>
+                        <textarea id="cdcGrievanceDesc" class="form-control" rows="4" style="resize:vertical;" placeholder="Explain the grievance..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Grievance</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- CDC Rules & Guidelines Modal -->
+    <div class="modal-overlay" id="modalCdcRulesGuidelines">
+        <div class="modal-container" style="max-width: 650px;">
+            <div class="modal-header">
+                <h3>CDC Placement Rules & Regulations</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>All registered students must strictly follow the CDC rules. Violations will lead to immediate debarment:</p>
+                <ul>
+                    <li><strong>One Student One Job Policy</strong>: Once you are selected by a company, you are immediately debarred from applying to any other placement processes. Exception: Dream/Core upgrade option.</li>
+                    <li><strong>Attendance Policy</strong>: 100% attendance is mandatory for pre-placement talks (PPT) and online/offline tests. Absenteeism without prior HMC/CDC permission will result in debarment.</li>
+                    <li><strong>Information Verification</strong>: Any discrepancy in CGPA, credits, or resumes submitted will result in immediate suspension from placements for the academic year.</li>
+                    <li><strong>Interview Etiquette</strong>: Candidates must report in official business attire. Non-attendance of a scheduled interview slot will attract immediate disciplinary action.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CDC Verify CGPA Modal -->
+    <div class="modal-overlay" id="modalCdcVerifyCgpa">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Placement Academic Verification Status</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" style="display:flex; flex-direction:column; gap:16px;">
+                <p>Below is your verified academic data uploaded to the CDC server from the central Academic database:</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color);">
+                    <span style="font-weight:600; color:var(--text-muted)">Verified CGPA</span>
+                    <span style="font-weight:800; color:var(--brand-primary);">9.15</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color);">
+                    <span style="font-weight:600; color:var(--text-muted)">Completed Credits</span>
+                    <span style="font-weight:800; color:var(--text-main);">84 / 84 Credits</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color);">
+                    <span style="font-weight:600; color:var(--text-muted)">Verification Status</span>
+                    <span style="background:var(--accent-green-bg); color:var(--accent-green); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">APPROVED & LOCKED</span>
+                </div>
+                <p style="font-size:12px; color:var(--text-muted);">Note: Academic data is updated once every semester. In case of grade changes, contact the Academic section directly.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal toggling helper
+        function setupModal(triggerId, modalId) {
+            const trigger = document.getElementById(triggerId);
+            const modal = document.getElementById(modalId);
+            if (trigger && modal) {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.add('open');
+                });
+                
+                const closeBtn = modal.querySelector('.modal-close');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', () => {
+                        modal.classList.remove('open');
+                    });
+                }
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('open');
+                    }
+                });
+            }
+        }
+
+        setupModal('cdcReportGrievance', 'modalCdcReportGrievance');
+        setupModal('cdcRulesGuidelines', 'modalCdcRulesGuidelines');
+        setupModal('cdcVerifyCgpa', 'modalCdcVerifyCgpa');
+    </script>
+</body>
+</html>

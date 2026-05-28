@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Academic Information - ERP KGP</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../../components.js" defer></script>
+    <style>
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 24px;
+            background: var(--panel-bg);
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--brand-primary-bg);
+            color: var(--brand-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .profile-info h2 {
+            margin: 0 0 4px 0;
+            color: var(--text-main);
+            font-size: 24px;
+        }
+        .profile-info .roll-no {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .profile-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+        .meta-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--brand-primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .meta-tag.success {
+            background: var(--accent-green-bg);
+            color: var(--accent-green);
+        }
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            padding: 24px;
+        }
+        .doc-card {
+            background: var(--brand-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+        .doc-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-primary);
+            box-shadow: var(--shadow-md);
+        }
+        .doc-card i {
+            font-size: 32px;
+            color: var(--brand-primary);
+            background: var(--brand-primary-bg);
+            padding: 16px;
+            border-radius: 50%;
+            transition: var(--transition-fast);
+        }
+        .doc-card:hover i {
+            background: var(--brand-primary);
+            color: white;
+        }
+        .doc-card span {
+            font-weight: 600;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Main Area -->
+        <main class="main-area">
+            <!-- Top Navigation -->
+            <div id="topnav-placeholder" data-placeholder="Search menus, files, students..."></div>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <div class="hero-banner" style="margin-bottom: 24px; padding: 20px;">
+                    <div class="hero-text">
+                        <div style="font-size:12px; color:var(--text-muted); font-weight:600; margin-bottom:8px; text-transform:uppercase;">
+                            You are in: <a href="../index.html" style="color:var(--brand-primary); text-decoration:none;">Academic</a> / Students / Your Academic Information
+                        </div>
+                        <h1>Your Academic Information</h1>
+                    </div>
+                </div>
+
+                <div class="card glass-panel" style="padding: 0; overflow: hidden;">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-avatar">SM</div>
+                        <div class="profile-info">
+                            <h2>Sayak Moulic</h2>
+                            <div class="roll-no">Roll No: 22CS30044</div>
+                            <div class="profile-meta">
+                                <span class="meta-tag"><i class="fa-solid fa-user-tie"></i> Advisor: Jyotirmoy Bhattacharya</span>
+                                <span class="meta-tag success"><i class="fa-solid fa-check-circle"></i> Gender Sensitisation: COMPLETED</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Document Grid -->
+                    <div class="doc-grid">
+                        <a class="doc-card" onclick="openDocModal('Photo', 'user-photo.jpg')">
+                            <i class="fa-solid fa-image"></i>
+                            <span>Photo</span>
+                        </a>
+                        <a class="doc-card" onclick="openDocModal('Biodata Profile', 'profile.pdf')">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Biodata Profile</span>
+                        </a>
+                        <a href="../performance/index.html" class="doc-card">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Performance Record</span>
+                        </a>
+                        <a class="doc-card" onclick="openDocModal('Registration Card', 'reg_card.pdf')">
+                            <i class="fa-solid fa-id-card"></i>
+                            <span>Registration Card</span>
+                        </a>
+                        <a class="doc-card" onclick="openDocModal('Personal Files', 'personal_file.pdf')">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>Personal File</span>
+                        </a>
+                        <a class="doc-card" onclick="openDocModal('Class Attendance', 'attendance.pdf')">
+                            <i class="fa-solid fa-clipboard-user"></i>
+                            <span>Class Attendance</span>
+                        </a>
+                        <a class="doc-card" onclick="openDocModal('Exam Attendance', 'exam_attendance.pdf')">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            <span>Exam Attendance</span>
+                        </a>
+                        <a class="doc-card" onclick="openDocModal('De-registration Info', 'dereg.pdf')">
+                            <i class="fa-solid fa-file-circle-xmark"></i>
+                            <span>De-Reg. Card</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div id="footer-placeholder"></div>
+        </main>
+    </div>
+
+    <!-- Document Viewer Modal -->
+    <div class="modal-overlay" id="modalDocViewer">
+        <div class="modal-container" style="max-width: 800px; height: 80vh;">
+            <div class="modal-header">
+                <h3 id="docTitle">Document Viewer</h3>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--brand-bg);">
+                <i class="fa-solid fa-file-pdf" style="font-size: 64px; color: var(--text-muted); margin-bottom: 16px;"></i>
+                <p style="font-size: 16px; font-weight: 600; color: var(--text-main);">Secure Document Vault</p>
+                <p style="color: var(--text-muted); font-size: 13px;" id="docFilename">Loading document...</p>
+                <div style="margin-top: 24px; padding: 12px; background: rgba(59,130,246,0.1); color: var(--brand-primary); border-radius: 8px; font-size: 13px; font-weight: 500;">
+                    <i class="fa-solid fa-lock" style="margin-right: 6px;"></i> This is a secure portal component. Actual PDF rendering would happen here via browser PDF plugin or iframe.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDocModal(title, filename) {
+            document.getElementById('docTitle').innerText = title;
+            document.getElementById('docFilename').innerText = "Simulated View: " + filename;
+            document.getElementById('modalDocViewer').classList.add('open');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts & Financials - ERP KGP</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../components.js" defer></script>
+</head>
+<body>
+    <!-- Animated Background Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- Main Area -->
+        <main class="main-area">
+            <!-- Top Navigation -->
+            <div id="topnav-placeholder" data-placeholder="Search invoices, scholarship..."></div>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <div class="hero-banner">
+                    <div class="hero-text">
+                        <h1>Accounts & Financial Portal</h1>
+                        <p>Track your semester fees, view scholarship details, and manage Mediclaim information.</p>
+                    </div>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Fee Payment Overview Card -->
+                    <div class="card glass-panel col-span-4">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+                                Fee Demand Summary
+                            </h3>
+                        </div>
+                        <div class="link-list">
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="font-weight:600; color:var(--text-muted)">Current Demand</span>
+                                <span style="font-weight:800; color:var(--text-main);">₹28,500</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="font-weight:600; color:var(--text-muted)">Payment Status</span>
+                                <span style="background:var(--accent-red-bg); color:var(--accent-red); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">UNPAID</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <span style="font-weight:600; color:var(--text-muted)">Due Date</span>
+                                <span style="color:var(--accent-red); font-weight:700; font-size:12px;">30th June 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Online Payment Form -->
+                    <div class="card glass-panel col-span-8">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-credit-card"></i></span>
+                                Quick Pay Semester Fees
+                            </h3>
+                        </div>
+                        <form class="profile-form-grid" onsubmit="event.preventDefault(); alert('Redirecting to Payment Gateway (SBI/PNB)...');">
+                            <div class="form-group">
+                                <label for="amount">Payment Amount (INR)</label>
+                                <input type="number" id="amount" class="form-control" value="28500" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="bankSelect">Select Bank / Gateway</label>
+                                <select id="bankSelect" class="form-control" required>
+                                    <option value="sbi">State Bank of India (Net Banking / Debit Card)</option>
+                                    <option value="pnb">Punjab National Bank (Net Banking)</option>
+                                    <option value="upi">UPI / QR Code Payment</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="rollNo">Confirm Roll Number</label>
+                                <input type="text" id="rollNo" class="form-control" value="22CS30044" readonly>
+                            </div>
+                            <div class="form-group" style="justify-content: flex-end; flex-direction: row; align-items: flex-end;">
+                                <button type="submit" class="btn-primary" style="width: 100%;"><i class="fa-solid fa-shield" style="margin-right: 8px;"></i> Pay Now</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Scholarship Card -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-award"></i></span>
+                                Scholarships & Endowments
+                            </h3>
+                        </div>
+                        <div class="link-list" style="gap:10px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <div>
+                                    <strong style="display:block;">Merit-cum-Means (MCM) Scholarship</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">Academic Session 2025-2026</span>
+                                </div>
+                                <span style="background:var(--accent-green-bg); color:var(--accent-green); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">APPROVED</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <div>
+                                    <strong style="display:block;">Bank Account Verification</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">SBI Kharagpur Campus A/c - *******3492</span>
+                                </div>
+                                <span style="background:var(--accent-green-bg); color:var(--accent-green); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">VERIFIED</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <div>
+                                    <strong style="display:block;">Endowment Award (Donor-based)</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">UG Top performer in CS</span>
+                                </div>
+                                <span style="background:rgba(245,158,11,0.05); color:rgb(245,158,11); padding:4px 8px; border-radius:4px; font-weight:700; font-size:11px;">IN PROCESS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mediclaim Card -->
+                    <div class="card glass-panel col-span-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon"><i class="fa-solid fa-house-medical"></i></span>
+                                Mediclaim & Health Insurance
+                            </h3>
+                        </div>
+                        <div class="link-list" style="gap:10px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <div>
+                                    <strong style="display:block;">Insurance Provider</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">National Insurance Company Ltd.</span>
+                                </div>
+                                <span style="font-weight:700; color:var(--text-main);">NIC-IITKGP-88392</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--brand-bg); border-radius:8px; border:1px solid var(--border-color); font-size:13px;">
+                                <div>
+                                    <strong style="display:block;">Annual Coverage Remaining</strong>
+                                    <span style="color:var(--text-muted); font-size:11px;">Updated May 2026</span>
+                                </div>
+                                <span style="font-weight:800; color:var(--accent-green);">₹1,20,000</span>
+                            </div>
+                            <a href="#" class="link-item" style="padding:10px 14px;">
+                                <i class="fa-solid fa-circle-down"></i> Download Mediclaim Card
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div id="footer-placeholder"></div>
+        </main>
+    </div>
+
+
+</body>
+</html>
