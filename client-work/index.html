@@ -929,9 +929,116 @@
                 margin-right: 0 !important;
             }
         }
+
+        /* ── Mobile Desktop-Hint Banner ─────────────────────────── */
+        #desktop-hint {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(120px);
+            z-index: 9999;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: #F8FAFC;
+            border: 1px solid rgba(124,58,237,0.35);
+            border-radius: 16px;
+            padding: 14px 18px 14px 16px;
+            max-width: calc(100vw - 32px);
+            width: 360px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(124,58,237,0.1);
+            transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease;
+            opacity: 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        #desktop-hint.hint-show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        .hint-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: rgba(124,58,237,0.18);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .hint-body {
+            flex: 1;
+        }
+        .hint-body strong {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #F1F5F9;
+            margin-bottom: 3px;
+            letter-spacing: -0.01em;
+        }
+        .hint-body p {
+            font-size: 11.5px;
+            color: #94A3B8;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .hint-dismiss {
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #94A3B8;
+            border-radius: 8px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: background 0.2s;
+            margin-top: -2px;
+        }
+        .hint-dismiss:hover {
+            background: rgba(255,255,255,0.14);
+            color: #F1F5F9;
+        }
+        @media (min-width: 901px) {
+            #desktop-hint { display: none !important; }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Mobile Desktop Hint Banner (only shown on mobile) -->
+    <div id="desktop-hint" role="status" aria-live="polite">
+        <div class="hint-icon">🖥️</div>
+        <div class="hint-body">
+            <strong>Best viewed on desktop</strong>
+            <p>These case studies are designed for wider screens. Open on your laptop for the full experience.</p>
+        </div>
+        <button class="hint-dismiss" onclick="dismissHint()" aria-label="Dismiss">✕</button>
+    </div>
+    <script>
+        (function(){
+            if (window.innerWidth <= 900 && !sessionStorage.getItem('hintDismissed')) {
+                var el = document.getElementById('desktop-hint');
+                if (el) {
+                    el.style.display = 'flex';
+                    setTimeout(function(){ el.classList.add('hint-show'); }, 300);
+                }
+            }
+        })();
+        function dismissHint() {
+            var el = document.getElementById('desktop-hint');
+            if (el) {
+                el.classList.remove('hint-show');
+                setTimeout(function(){ el.style.display = 'none'; }, 500);
+            }
+            sessionStorage.setItem('hintDismissed', '1');
+        }
+    </script>
 
     <!-- Ambient background glows -->
     <div class="blob-container">
