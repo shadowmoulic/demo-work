@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KGP Hustle House | Premium Client Redesigns, SEO & Video Editing</title>
+  <meta name="description" content="Explore before and after transformations of educational websites, portals, SEO, and video editing redesigned by KGP Hustle House. Premium high-performance MVPs built by IIT Kharagpur developers."/>
+  <meta name="keywords" content="KGP Hustle House, Hustle House, Web Redesign, Before After Web Design, SEO, Video Editing, IIT Kharagpur Developers, Coaching Institute Websites"/>
+  <link rel="canonical" href="https://hustle-house-work.vercel.app/client-work/"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://fav.farm/💼">
+    
+    <!-- SEO Meta Tags -->
+    
+    
+    
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide Icons via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-light: #F8FAFC;
+            --accent: #7C3AED;
+            --accent-glow: rgba(124, 58, 237, 0.12);
+            --secondary: #EC4899;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --text-dim: #94A3B8;
+            --border-light: rgba(15, 23, 42, 0.06);
+            --card-bg: #FFFFFF;
+            --card-hover-bg: #F8FAFC;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 50% -10%, rgba(124, 58, 237, 0.08) 0%, transparent 60%),
+                linear-gradient(rgba(124, 58, 237, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124, 58, 237, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+            cursor: none; /* Custom cursor fallback handled in JS */
+        }
+
+        /* Adjust native cursors for items */
+        a, button, input, select, textarea, [role="button"], .project-card {
+            cursor: none !important;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(124, 58, 237, 0.2);
+            border-radius: 99px;
+            border: 2px solid #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(124, 58, 237, 0.5);
+        }
+
+        /* Custom Cursor Ring & Dot */
+        #cursor-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            position: fixed;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transition: transform 0.2s;
+        }
+
+        #cursor-ring {
+            width: 32px;
+            height: 32px;
+            border: 1.5px solid var(--accent);
+            position: fixed;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+        }
+
+        #cursor-ring.hovered {
+            width: 52px;
+            height: 52px;
+            border-color: var(--brand-color, var(--accent));
+            background: rgba(124, 58, 237, 0.04);
+        }
+
+        #cursor-dot.hovered {
+            transform: translate(-50%, -50%) scale(1.5);
+            background: var(--brand-color, var(--accent));
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background-color: #25D366;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        @media (pointer: coarse) {
+            /* Disable custom cursor on touch devices */
+            #cursor-dot, #cursor-ring {
+                display: none !important;
+            }
+            body {
+                cursor: auto !important;
+            }
+            a, button, input, select, textarea, [role="button"], .project-card {
+                cursor: auto !important;
+            }
+        }
+
+        /* Ambient Blobs */
+        .blob-container {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.05;
+            filter: blur(100px);
+            animation: float 20s infinite ease-in-out;
+            will-change: transform;
+        }
+
+        .blob-1 {
+            top: -5%;
+            left: -5%;
+            animation-duration: 25s;
+        }
+
+        .blob-2 {
+            bottom: -10%;
+            right: -5%;
+            background: var(--secondary);
+            animation-duration: 30s;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            33% { transform: translate(80px, -60px) scale(1.1) rotate(120deg); }
+            66% { transform: translate(-60px, 80px) scale(0.9) rotate(240deg); }
+            100% { transform: translate(0, 0) scale(1) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-light);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(248, 250, 252, 0.8);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        .logo-badge {
+            font-size: 9px;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--accent);
+            background: rgba(124, 58, 237, 0.08);
+            border: 1px solid rgba(124, 58, 237, 0.15);
+            padding: 3px 8px;
+            border-radius: 99px;
+            letter-spacing: 1px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-back {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            padding: 8px 16px;
+            border-radius: 99px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .btn-back:hover {
+            color: var(--text-main);
+            border-color: rgba(124, 58, 237, 0.2);
+            background: #F1F5F9;
+            transform: translateX(-3px);
+        }
+
+        .btn-nav-wa {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #FFFFFF;
+            background: #25D366;
+            border: 1px solid #25D366;
+            padding: 8px 18px;
+            border-radius: 99px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-nav-wa:hover {
+            background: #20BA56;
+            border-color: #20BA56;
+            transform: translateY(-1.5px);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            padding: 5px 12px;
+            border-radius: 99px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .hero-tag i {
+            color: var(--secondary);
+            width: 12px;
+            height: 12px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.5;
+        }
+
+        /* Quick Stats Grid */
+        .stats-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 850px;
+            margin: 0 auto 40px;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        @media (max-width: 768px) {
+            .stats-strip {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 14px;
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .stat-item:not(:last-child) {
+            border-right: 1px solid rgba(15, 23, 42, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .stat-item:nth-child(2) {
+                border-right: none;
+            }
+        }
+
+        .stat-val {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--text-dim);
+        }
+
+        /* Toolbar / Search & Filter */
+        .toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 16px 20px 16px 48px;
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.08);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-dim);
+            pointer-events: none;
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Filter Pills */
+        .filter-container {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .filter-btn:hover {
+            color: var(--text-main);
+            background: #F1F5F9;
+            border-color: rgba(15, 23, 42, 0.15);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+        }
+
+        /* Section Headings */
+        .section-header-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            border-bottom: 1.5px solid var(--border-light);
+            padding-bottom: 12px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header-title i {
+            color: var(--accent);
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 1024px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* Project Card */
+        .project-card {
+            --brand-glow: rgba(124, 58, 237, 0.08);
+            --brand-color: var(--accent);
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--brand-color);
+            box-shadow: 0 16px 36px -8px var(--brand-glow);
+        }
+
+        /* Brand Showcase Area */
+        .card-preview-area {
+            height: 140px;
+            position: relative;
+            background-color: #FAFBFD;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .brand-gradient-bg {
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            filter: blur(25px);
+            transition: var(--transition-smooth);
+        }
+
+        .project-card:hover .brand-gradient-bg {
+            opacity: 0.12;
+            transform: scale(1.15);
+        }
+
+        .abstract-brand-graphic {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        .project-card:hover .abstract-brand-graphic {
+            transform: scale(1.05);
+        }
+
+        .brand-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            background: #FFFFFF;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--brand-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            position: relative;
+        }
+
+        .brand-icon-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            box-shadow: 0 0 12px var(--brand-color);
+            opacity: 0.15;
+        }
+
+        .brand-tech-badge {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            background: rgba(15, 23, 42, 0.03);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            color: var(--text-muted);
+            padding: 2px 7px;
+            border-radius: 99px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Card Body */
+        .card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .category-tag {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--brand-color);
+        }
+
+        .aura-score-badge {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            background: rgba(15, 23, 42, 0.02);
+            border: 1px solid var(--border-light);
+            padding: 3px 8px;
+            border-radius: 99px;
+            color: var(--accent);
+        }
+
+        .aura-score-badge i {
+            width: 10px;
+            height: 10px;
+        }
+
+        .project-title-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            transition: var(--transition-smooth);
+        }
+
+        .project-card:hover .project-title {
+            color: var(--brand-color);
+        }
+
+        .type-badge {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-muted);
+            background: #F1F5F9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            width: fit-content;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .specs-list {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .spec-pill {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--text-muted);
+        }
+
+        /* Before/After Section */
+        .before-after-divider {
+            height: 1px;
+            background: var(--border-light);
+            margin: 0 0 16px 0;
+        }
+
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn-ba {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 12px;
+            border-radius: var(--radius-md);
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .btn-ba-before {
+            background: #F1F5F9;
+            color: var(--text-muted);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+        }
+
+        .btn-ba-before:hover:not(.disabled) {
+            background: #E2E8F0;
+            color: var(--text-main);
+            transform: translateY(-1.5px);
+        }
+
+        .btn-ba-before.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .btn-ba-after {
+            background: var(--brand-color);
+            color: #FFFFFF;
+            border: 1px solid var(--brand-color);
+            box-shadow: 0 2px 10px var(--brand-glow);
+        }
+
+        .btn-ba-after:hover {
+            filter: brightness(1.05);
+            transform: translateY(-1.5px);
+            box-shadow: 0 4px 16px var(--brand-glow);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--border-light);
+            background: #FFFFFF;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .footer-grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+        }
+
+        .footer-col-about {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-logo {
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        .footer-about-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 320px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-about-text {
+                max-width: 100%;
+            }
+        }
+
+        .footer-col-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-main);
+            margin-bottom: 16px;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links-list li a {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links-list li a:hover {
+            color: var(--accent);
+            padding-left: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-links-list li a:hover {
+                padding-left: 0;
+            }
+        }
+
+        .footer-bottom-bar {
+            border-top: 1px solid var(--border-light);
+            padding-top: 24px;
+            text-align: center;
+        }
+
+        .footer-bottom-bar p {
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        /* Responsive Mobile Header Fixes */
+        .nav-wa-icon {
+            margin-right: 6px;
+        }
+
+        @media (max-width: 600px) {
+            .logo-badge {
+                display: none;
+            }
+            .nav-actions .btn-text {
+                display: none;
+            }
+            .btn-back {
+                padding: 8px 10px;
+            }
+            .btn-nav-wa {
+                padding: 8px 10px;
+            }
+            .nav-wa-icon {
+                margin-right: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient background glows -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <!-- Custom cursor elements -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">KGP Hustle<span>House</span></span>
+                <span class="logo-badge">Redesigns</span>
+            </a>
+            <div class="nav-actions">
+                <a href="../index.html" class="btn-back" title="Back to Agency">
+                    <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> <span class="btn-text">Back to Agency</span>
+                </a>
+                <a href="https://wa.me/919062031737?text=Hi%20Sayak%2C%20found%20you%20from%20your%20Client%20Redesigns%20page%20and%20wanted%20to%20inquire%20about%20custom%20web%20design%20or%20development%20help.%20Could%20you%20please%20help%20me%20with%20that%3F" target="_blank" rel="noopener noreferrer" class="btn-nav-wa" title="Talk on WhatsApp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-whatsapp nav-wa-icon" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    </svg> <span class="btn-text">Talk on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-tag">
+                IIT Kharagpur Engineering Approved
+            </div>
+            <h1>Cinematic <span>Web Transformations.</span></h1>
+            <p>
+                A high-performance repository showing the visual contrast and metrics improvements between legacy systems and our revamped, conversion-focused redesign concepts.
+            </p>
+
+            <!-- STATS STRIP -->
+            <div class="stats-strip">
+                <div class="stat-item">
+                    <span class="stat-val" id="count-total">13</span>
+                    <span class="stat-label">Total Builds</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">99.8%</span>
+                    <span class="stat-label">Aura Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">&lt; 0.8s</span>
+                    <span class="stat-label">Avg. Load Time</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">+17,310</span>
+                    <span class="stat-label">Aura Accumulated</span>
+                </div>
+            </div>
+
+            <!-- SEARCH / FILTER TOOLBAR -->
+            <div class="toolbar">
+                <div class="search-wrapper">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search client name, industry, tags, or features...">
+                </div>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="entrance">JEE / NEET Prep</button>
+                    <button class="filter-btn" data-filter="professional">Professional / GATE</button>
+                    <button class="filter-btn" data-filter="other">Specialized / ERP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN SHOWCASE GRID -->
+    <main class="container">
+        <!-- 1. Concept Redesigns Section -->
+        <div class="section-header-title">
+            <i data-lucide="git-compare" style="width: 22px; height: 22px;"></i>
+            Before / After Concept Redesigns
+        </div>
+        <div class="project-grid" id="redesign-grid">
+            <!-- Loaded dynamically -->
+        </div>
+
+        <!-- 2. Live Deployments Section -->
+        <div class="section-header-title" style="margin-top: 20px;">
+            <i data-lucide="globe" style="width: 22px; height: 22px;"></i>
+            Live Production Deployments
+        </div>
+        <div class="project-grid" id="live-grid">
+            <!-- Loaded dynamically -->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid-layout">
+                <div class="footer-col-about">
+                    <div class="footer-logo">
+                        KGP HUSTLE<span>HOUSE</span>
+                    </div>
+                    <p class="footer-about-text">Engineered by top developers from IIT Kharagpur. We build high-performance custom portals, AI voice agents, SEO, video editing, and scalable enterprise systems.</p>
+                </div>
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Our Network</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="https://kgphustlehouse.com" target="_blank" rel="noopener">kgphustlehouse.com</a></li>
+                        <li><a href="https://realtyvoice.online" target="_blank" rel="noopener">realtyvoice.online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Featured Builds</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="https://iitkgp-erp.vercel.app/" target="_blank" rel="noopener">IIT KGP ERP Redesign</a></li>
+                        <li><a href="./vani/index.html">Vani Institute</a></li>
+                        <li><a href="./saraswataacademy-com/index.html">Saraswata Academy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-links">
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="https://wa.me/919062031737?text=Hi%20Sayak%2C%20found%20you%20from%20your%20Client%20Redesigns%20page%20and%20wanted%20to%20inquire%20about%20custom%20web%20design%20or%20development%20help.%20Could%20you%20please%20help%20me%20with%20that%3F" target="_blank" rel="noopener">WhatsApp Consultation</a></li>
+                        <li><a href="https://www.linkedin.com/in/sayak-moulic-seo-web-dev-ai-automations/" target="_blank" rel="noopener">Founder LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 KGP Hustle House Inc. All rights reserved. Aura farming at max capacity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script>
+        // MAIN DATABASE
+        const redesigns = [
+            {
+                id: "bodhih-ttt",
+                name: "Bodhih TTT",
+                type: "normal coaching",
+                beforeUrl: "https://trainthetrainercertification.in/",
+                afterUrl: "./bodhih-ttt/index.html",
+                category: "professional",
+                categoryLabel: "Executive Certification",
+                auraScore: 1420,
+                desc: "Elite corporate facilitator training certification portal. Revamped with a high-end luxury aesthetic, structured validation grids, and optimized conversion pathways.",
+                brandColor: "#DC2626", // Red
+                brandGlow: "rgba(220, 38, 38, 0.12)",
+                letter: "B",
+                specs: ["Executive", "Luxury UI", "No-Framework", "Clean Forms"]
+            },
+            {
+                id: "deevige-classes",
+                name: "Deevige Classes",
+                type: "PUC | CET | NEET",
+                beforeUrl: "https://www.deevigeclasses.com/",
+                afterUrl: "./deevige-classes/index.html",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1150,
+                desc: "High-impact admissions portal for Bangalore's elite science coaching. Engineered with dynamic accordion modules, clean sticky layouts, and custom lead triggers.",
+                brandColor: "#D97706", // Amber
+                brandGlow: "rgba(217, 119, 6, 0.12)",
+                letter: "D",
+                specs: ["Bangalore", "NEET Prep", "FAQ Accordion", "Ultra-Fast"]
+            },
+            {
+                id: "excel",
+                name: "Excel Academics",
+                type: "NEET COACHING",
+                beforeUrl: "https://excelac.in/",
+                afterUrl: "./excel/index.html",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1280,
+                desc: "Premium, medical-focused prep landing page. Leverages student trust indicators, detailed curriculum grids, and clear call-to-action cards.",
+                brandColor: "#059669", // Emerald
+                brandGlow: "rgba(5, 150, 105, 0.12)",
+                letter: "E",
+                specs: ["NEET Coaching", "Emerald UI", "Interactive", "Clean code"]
+            },
+            {
+                id: "nv-classes",
+                name: "NV Classes",
+                type: "JEE & NEET",
+                beforeUrl: "https://nvclasses.com/",
+                afterUrl: "./nv-classes/index.html",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1220,
+                desc: "Stunning neon-themed engineering prep portal built for Gen-Z. Uses modern outline cards, animated counting states, and high-contrast styling.",
+                brandColor: "#4F46E5", // Indigo
+                brandGlow: "rgba(79, 70, 229, 0.12)",
+                letter: "N",
+                specs: ["IIT-JEE", "Neon Glow", "Responsive Menu", "Clean JS"]
+            },
+            {
+                id: "vani",
+                name: "Vani Institute",
+                type: "GATE COACHING",
+                beforeUrl: "http://www.vaniinstitute.com/",
+                afterUrl: "./vani/index.html",
+                category: "professional",
+                categoryLabel: "Professional / GATE",
+                auraScore: 1500,
+                desc: "Redesign of a historic engineering training giant operating since 1991. Outlines multiple branches, historic toppers, and exhaustive batch timetables.",
+                brandColor: "#EA580C", // Orange
+                brandGlow: "rgba(234, 88, 12, 0.12)",
+                letter: "V",
+                specs: ["GATE / ESE", "Historic Brand", "Multi-city", "Complex Grids"]
+            },
+            {
+                id: "iitianschool",
+                name: "IITian School",
+                type: "JEE COACHING IN BHUBHANESHWAR",
+                beforeUrl: "https://iitianschool.in/",
+                afterUrl: "../iitianschool/index.html",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1390,
+                desc: "Premium, integrated coaching ecosystem for JEE aspirants in Bhubaneswar. Combines interactive quiz modules, LMS features, and sleek video channels.",
+                brandColor: "#2563EB", // Blue
+                brandGlow: "rgba(37, 99, 235, 0.12)",
+                letter: "I",
+                specs: ["Bhubaneswar", "LMS Portal", "Video Channel", "IITian Hub"]
+            },
+            {
+                id: "master-realtor",
+                name: "Master Realtor",
+                type: "REAL ESTATE",
+                beforeUrl: "https://www.realestateindia.com/profile/master-realtors-in-chatterjeehat-howrah-985658/",
+                afterUrl: "../master-realtor/index.html",
+                category: "other",
+                categoryLabel: "Agency / Listing",
+                auraScore: 1250,
+                desc: "Clean real estate agency site revamped from a basic directory profile to a premium, high-converting property search and consultation portal.",
+                brandColor: "#8B5CF6", // Purple
+                brandGlow: "rgba(139, 92, 246, 0.12)",
+                letter: "M",
+                specs: ["Property Hub", "Buy/Rent/Sell", "Consultation", "Sleek UX"]
+            },
+            {
+                id: "srijan",
+                name: "Srijan",
+                type: "JOURNAL TYPE",
+                beforeUrl: "", // No legacy
+                afterUrl: "../srijan/index.html",
+                category: "other",
+                categoryLabel: "Academic / Editorial",
+                auraScore: 1300,
+                desc: "A gorgeous, high-typography digital journal site designed for academic and creative submissions. Features clean articles structures and editorial breathing space.",
+                brandColor: "#334155", // Slate
+                brandGlow: "rgba(51, 65, 85, 0.12)",
+                letter: "S",
+                specs: ["Academic Journal", "Typography-focused", "Clean Grid", "Editorial"]
+            },
+            {
+                id: "kgp-erp",
+                name: "IIT KGP ERP Redesign",
+                type: "ERP SYSTEM / ENTERPRISE",
+                beforeUrl: "https://erp.iitkgp.ac.in/",
+                afterUrl: "https://iitkgp-erp.vercel.app/",
+                category: "other",
+                categoryLabel: "Enterprise Systems",
+                auraScore: 1600,
+                desc: "Complete visual and UX overhaul of the legacy IIT Kharagpur Enterprise Resource Planning portal. Redesigns the student login, CDC career placement, accommodation modules, and grading dashboards.",
+                brandColor: "#0D9488", // Teal
+                brandGlow: "rgba(13, 148, 136, 0.12)",
+                letter: "K",
+                specs: ["IIT Kharagpur", "Enterprise ERP", "CDC Placement", "Student Portal"]
+            },
+            {
+                id: "saraswataacademy-com",
+                name: "Saraswata Academy",
+                type: "Boards & NEET/JEE",
+                beforeUrl: "https://saraswataacademy.com/",
+                afterUrl: "./saraswataacademy-com/index.html",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1450,
+                desc: "Premium school board & entrance prep landing page for Kolkata. Employs beautiful card designs, success stories sliders, and high-performance forms.",
+                brandColor: "#06B6D4", // Cyan
+                brandGlow: "rgba(6, 182, 212, 0.12)",
+                letter: "A",
+                specs: ["Kolkata Academy", "Cyan Theme", "Boards", "Glassmorphic"]
+            },
+            {
+                id: "prasadsacademy-com",
+                name: "Prasad's Academy",
+                type: "Academic & Boards",
+                beforeUrl: "https://prasadsacademy.com/",
+                afterUrl: "./prasadsacademy-com/index.html",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1380,
+                desc: "Elegant gold-accented coaching landing page detailing school curricula and competitive exam batches with clean typography and deep-shadow layout cards.",
+                brandColor: "#B45309", // Amber-700
+                brandGlow: "rgba(180, 83, 9, 0.12)",
+                letter: "P",
+                specs: ["Boards", "Gold Accent", "Mentorship", "Elegant UX"]
+            },
+            {
+                id: "prorise",
+                name: "Prorise Academy",
+                type: "Career Test Prep",
+                beforeUrl: "https://proriseacademy.com/",
+                afterUrl: "./prorise/index.html",
+                category: "professional",
+                categoryLabel: "Professional / GATE",
+                auraScore: 1180,
+                desc: "High-readability landing page for professional accounts qualifications (CA/CMA/CS). Implements vertical progression levels and syllabus forms.",
+                brandColor: "#10B981", // Emerald
+                brandGlow: "rgba(16, 185, 129, 0.12)",
+                letter: "R",
+                specs: ["CA / CS / CMA", "Syllabus Forms", "Clean structure", "Responsive"]
+            },
+            {
+                id: "onlinesamclasses",
+                name: "SAM Classes",
+                type: "JEE & NEET Prep",
+                beforeUrl: "https://onlinesamclasses.com/",
+                afterUrl: "./onlinesamclasses/index.html",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1190,
+                desc: "Premium virtual classroom and doubt clearance landing page for SAM Classes. Highly structured lists of mock test-series and live online lessons.",
+                brandColor: "#EC4899", // Pink
+                brandGlow: "rgba(236, 72, 153, 0.12)",
+                letter: "S",
+                specs: ["Online Prep", "Doubt Support", "Test Series", "Lightweight"]
+            }
+        ];
+
+        const liveDeployments = [
+            {
+                id: "toyadhi",
+                name: "Toyadhi",
+                type: "AGRITECH PLATFORM",
+                url: "https://toyadhi.com",
+                desc: "High-performance agritech platform engineered for agricultural scaling, responsive logistics management, and predictive planning.",
+                brandColor: "#059669",
+                brandGlow: "rgba(5, 150, 105, 0.12)",
+                letter: "T",
+                specs: ["Agritech", "Production Live", "Tailwind Grid", "Fast API"]
+            },
+            {
+                id: "abroadfit",
+                name: "AbroadFit",
+                type: "EDTECH / STUDY ABROAD",
+                url: "https://abroadfit.afbf.in",
+                desc: "Strategic counseling website helping Indian students find the right country fit and college matches for study abroad dreams.",
+                brandColor: "#2563EB",
+                brandGlow: "rgba(37, 99, 235, 0.12)",
+                letter: "A",
+                specs: ["Undergrad Fit", "Study Abroad", "Lead Engine", "Next.js"]
+            },
+            {
+                id: "inknarc",
+                name: "Inknarc",
+                type: "CREATIVE AGENCY PORTFOLIO",
+                url: "https://inknarc.vercel.app",
+                desc: "High-fidelity creative portfolio and brand showcase built for elite agencies, showcasing editorial layouts and storytelling features.",
+                brandColor: "#F43F5E",
+                brandGlow: "rgba(244, 63, 94, 0.12)",
+                letter: "I",
+                specs: ["Creative Portfolio", "Branding Agency", "Production Live", "Ultra CDN"]
+            },
+            {
+                id: "many-more",
+                name: "Your Project Next?",
+                type: "CUSTOM AUTOMATIONS & MVPS",
+                url: "https://wa.me/919062031737?text=Hi%20Sayak%2C%20found%20you%20from%20your%20Client%20Redesigns%20page%20and%20wanted%20to%20inquire%20about%20custom%20web%20design%20or%20development%20help.%20Could%20you%20please%20help%20me%20with%20that%3F",
+                desc: "Need a cinematic, high-performance portal or AI-driven automation for your brand? Let's connect on WhatsApp and engineer your custom build.",
+                brandColor: "#7C3AED",
+                brandGlow: "rgba(124, 58, 237, 0.12)",
+                letter: "⚡",
+                specs: ["AI Voice Agents", "WhatsApp Bots", "Custom CRMs", "High-Volume MVPs"]
+            }
+        ];
+
+        const redesignGrid = document.getElementById('redesign-grid');
+        const liveGrid = document.getElementById('live-grid');
+
+        function renderData(data, container, isLive = false) {
+            container.innerHTML = '';
+            
+            if(data.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 40px 0; color: var(--text-muted);">
+                        <i data-lucide="alert-circle" style="width: 32px; height: 32px; margin-bottom: 12px; color: var(--accent); display: inline-block;"></i>
+                        <h4 style="font-weight: 600;">No items match this search/filter</h4>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            data.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                card.style.setProperty('--brand-color', p.brandColor);
+                card.style.setProperty('--brand-glow', p.brandGlow);
+
+                let specsHtml = '';
+                p.specs.forEach(s => {
+                    specsHtml += `<span class="spec-pill">${s}</span>`;
+                });
+
+                let actionBlock = '';
+                if(isLive) {
+                    actionBlock = `
+                        <div class="before-after-divider"></div>
+                        <a href="${p.url}" target="_blank" class="btn-ba btn-ba-after" style="width: 100%;">
+                            Visit Production Site <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
+                        </a>
+                    `;
+                } else {
+                    const beforeDisabled = p.beforeUrl === "" ? "disabled" : "";
+                    const beforeText = p.beforeUrl === "" ? "Before: N/A" : "Before (Legacy) <i data-lucide='external-link' style='width: 11px; height: 11px;'></i>";
+                    actionBlock = `
+                        <div class="before-after-divider"></div>
+                        <div class="before-after-grid">
+                            <a href="${p.beforeUrl || '#'}" target="_blank" class="btn-ba btn-ba-before ${beforeDisabled}">
+                                ${beforeText}
+                            </a>
+                            <a href="${p.afterUrl}" target="_blank" class="btn-ba btn-ba-after">
+                                After (Revamped) <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i>
+                            </a>
+                        </div>
+                    `;
+                }
+
+                card.innerHTML = `
+                    <div class="card-preview-area">
+                        <div class="brand-gradient-bg" style="background: radial-gradient(circle, ${p.brandColor} 0%, transparent 70%);"></div>
+                        <div class="abstract-brand-graphic">
+                            <div class="brand-icon-wrapper">
+                                <span>${p.letter}</span>
+                            </div>
+                            <span class="brand-tech-badge">HH. REDESIGN</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta-row">
+                            <span class="category-tag">${p.categoryLabel || 'Production'}</span>
+                            ${p.auraScore ? `
+                            <span class="aura-score-badge">
+                                <i data-lucide="zap" style="fill: var(--accent);"></i> +${p.auraScore.toLocaleString()} AURA
+                            </span>
+                            ` : `<span class="aura-score-badge" style="color: #059669;"><i data-lucide="check-circle" style="color: #059669;"></i> Live</span>`}
+                        </div>
+                        <div class="project-title-row">
+                            <h3 class="project-title">${p.name}</h3>
+                            <span class="type-badge">${p.type}</span>
+                        </div>
+                        <p class="project-desc">${p.desc}</p>
+                        <div class="specs-list">
+                            ${specsHtml}
+                        </div>
+                        ${actionBlock}
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            lucide.createIcons();
+            setupCardGlows();
+            setupCursorTracking();
+        }
+
+        // Search & Filter System
+        const searchInput = document.getElementById('search-input');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        function filterSearchAll() {
+            const filteredRedesigns = redesigns.filter(p => {
+                const matchesFilter = currentFilter === 'all' || p.category === currentFilter;
+                const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      p.type.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      p.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      p.specs.some(s => s.toLowerCase().includes(searchQuery.toLowerCase()));
+                return matchesFilter && matchesSearch;
+            });
+
+            const filteredLive = liveDeployments.filter(p => {
+                const matchesFilter = currentFilter === 'all' || currentFilter === 'other'; // Live goes under other or all
+                const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      p.type.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      p.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      p.specs.some(s => s.toLowerCase().includes(searchQuery.toLowerCase()));
+                return matchesFilter && matchesSearch;
+            });
+
+            renderData(filteredRedesigns, redesignGrid, false);
+            renderData(filteredLive, liveGrid, true);
+            
+            document.getElementById('count-total').innerText = filteredRedesigns.length + filteredLive.length;
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            filterSearchAll();
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                filterSearchAll();
+            });
+        });
+
+        // Initialize Render
+        filterSearchAll();
+
+        // CARD GLOW EFFECT
+        function setupCardGlows() {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+        }
+
+        // CUSTOM CURSOR SMOOTH TRAILING physics
+        const dot = document.getElementById('cursor-dot');
+        const ring = document.getElementById('cursor-ring');
+        let mouseX = 0, mouseY = 0;
+        let ringX = 0, ringY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            dot.style.left = mouseX + 'px';
+            dot.style.top = mouseY + 'px';
+        });
+
+        function animateCursorRing() {
+            const ease = 0.16;
+            ringX += (mouseX - ringX) * ease;
+            ringY += (mouseY - ringY) * ease;
+
+            ring.style.left = ringX + 'px';
+            ring.style.top = ringY + 'px';
+
+            requestAnimationFrame(animateCursorRing);
+        }
+        requestAnimationFrame(animateCursorRing);
+
+        // CURSOR HOVER EFFECTS
+        function setupCursorTracking() {
+            document.querySelectorAll('a, button, input, select, textarea, .project-card, .filter-btn').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    const brandColor = el.closest('.project-card')?.style.getPropertyValue('--brand-color') || '';
+                    if (brandColor) {
+                        ring.style.setProperty('--brand-color', brandColor);
+                        dot.style.setProperty('--brand-color', brandColor);
+                    } else {
+                        ring.style.removeProperty('--brand-color');
+                        dot.style.removeProperty('--brand-color');
+                    }
+                    ring.classList.add('hovered');
+                    dot.classList.add('hovered');
+                });
+                el.addEventListener('mouseleave', () => {
+                    ring.classList.remove('hovered');
+                    dot.classList.remove('hovered');
+                    ring.style.removeProperty('--brand-color');
+                    dot.style.removeProperty('--brand-color');
+                });
+            });
+        }
+        // CURSOR TRACKING ON WHATSAPP FLOAT
+        document.querySelectorAll('.whatsapp-float').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                ring.classList.add('hovered');
+                dot.classList.add('hovered');
+            });
+            el.addEventListener('mouseleave', () => {
+                ring.classList.remove('hovered');
+                dot.classList.remove('hovered');
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919062031737?text=Hi%20Sayak%2C%20found%20you%20from%20your%20Client%20Redesigns%20page%20and%20wanted%20to%20inquire%20about%20custom%20web%20design%20or%20development%20help.%20Could%20you%20please%20help%20me%20with%20that%3F" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </a>
+</body>
+</html>

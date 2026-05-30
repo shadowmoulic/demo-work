@@ -22,32 +22,68 @@
 
   <!-- Client Work Projects -->
   <url>
+    <loc>https://hustle-house-work.vercel.app/client-work/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://hustle-house-work.vercel.app/client-work/bodhih-ttt/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hustle-house-work.vercel.app/client-work/deevige-classes/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hustle-house-work.vercel.app/client-work/excel/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/client-work/gateiit/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hustle-house-work.vercel.app/client-work/nv-classes/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/client-work/onlinesamclasses/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/client-work/prasadsacademy-com/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/client-work/prorise/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/client-work/saraswataacademy-com/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hustle-house-work.vercel.app/client-work/vani/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -202,6 +238,44 @@
   <url>
     <loc>https://hustle-house-work.vercel.app/POC/project-scooters</loc>
     <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ERP System Projects -->
+  <url>
+    <loc>https://hustle-house-work.vercel.app/kgp-erp/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/kgp-erp/dashboard/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/kgp-erp/cdc/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/kgp-erp/accounts/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/kgp-erp/accommodation/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hustle-house-work.vercel.app/kgp-erp/academic/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
