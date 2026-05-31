@@ -386,7 +386,7 @@
         /* Quick Stats Grid */
         .stats-strip {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
             max-width: 850px;
             margin: 0 auto 40px;
@@ -399,7 +399,7 @@
 
         @media (max-width: 768px) {
             .stats-strip {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 12px;
                 padding: 14px;
             }
@@ -414,12 +414,6 @@
 
         .stat-item:not(:last-child) {
             border-right: 1px solid rgba(15, 23, 42, 0.05);
-        }
-
-        @media (max-width: 768px) {
-            .stat-item:nth-child(2) {
-                border-right: none;
-            }
         }
 
         .stat-val {
@@ -1084,10 +1078,6 @@
             <!-- STATS STRIP -->
             <div class="stats-strip">
                 <div class="stat-item">
-                    <span class="stat-val" id="count-total">13</span>
-                    <span class="stat-label">Total Builds</span>
-                </div>
-                <div class="stat-item">
                     <span class="stat-val">99.8%</span>
                     <span class="stat-label">Aura Rating</span>
                 </div>
@@ -1258,10 +1248,10 @@
             },
             {
                 id: "iitianschool",
-                name: "IITian School",
-                type: "JEE COACHING IN BHUBHANESHWAR",
-                beforeUrl: "https://iitianschool.in/",
-                afterUrl: "/iitianschool/index.html",
+                name: "IITian's School",
+                type: "JEE & NEET Prep",
+                beforeUrl: "https://iitianschool.netlify.app/",
+                afterUrl: "https://iitianschool.in",
                 category: "entrance",
                 categoryLabel: "JEE / NEET Prep",
                 auraScore: 1390,
@@ -1375,6 +1365,81 @@
                 brandGlow: "rgba(236, 72, 153, 0.12)",
                 letter: "S",
                 specs: ["Online Prep", "Doubt Support", "Test Series", "Lightweight"]
+            },
+            {
+                id: "study-point",
+                name: "Study Point",
+                type: "Boards & Test Prep",
+                beforeUrl: "",
+                afterUrl: "https://somsubhra-mukherjee.github.io/study_point",
+                category: "entrance",
+                categoryLabel: "Boards & Test Prep",
+                auraScore: 1120,
+                desc: "Clean, conversion-optimized portal for localized academic tutoring and board preparation. Features structured course cards and a direct WhatsApp inquiry flow.",
+                brandColor: "#6366F1", // Indigo
+                brandGlow: "rgba(99, 102, 241, 0.12)",
+                letter: "S",
+                specs: ["Boards Prep", "Local Tuition", "Inquiry Forms", "Fast Load"]
+            },
+            {
+                id: "brics-academy",
+                name: "BRICS Academy",
+                type: "CA, CS & CMA Coaching",
+                beforeUrl: "https://bricsacademy.com",
+                afterUrl: "https://somsubhra-mukherjee.github.io/brics_academy/",
+                category: "professional",
+                categoryLabel: "Professional / Accounts",
+                auraScore: 1340,
+                desc: "Commerce coaching portal redesigned for premium performance. Upgrades old legacy tables into sleek curriculum navigation, batch lists, and interactive query cards.",
+                brandColor: "#3B82F6", // Blue
+                brandGlow: "rgba(59, 130, 246, 0.12)",
+                letter: "B",
+                specs: ["Commerce Hub", "CA & CS Prep", "Bengaluru", "Sleek UX"]
+            },
+            {
+                id: "innovative-study-circle",
+                name: "Innovative Study Circle",
+                type: "Class VIII - XII & PUC Coaching",
+                beforeUrl: "https://www.isc.guru",
+                afterUrl: "https://somsubhra-mukherjee.github.io/Innovative-Study-Circle",
+                category: "entrance",
+                categoryLabel: "JEE / NEET Prep",
+                auraScore: 1250,
+                desc: "Modern digital interface for a premium foundation academy. Streamlines multi-branch locations, board curriculum timelines, and direct call-to-actions.",
+                brandColor: "#10B981", // Emerald
+                brandGlow: "rgba(16, 185, 129, 0.12)",
+                letter: "I",
+                specs: ["CBSE / ICSE", "Foundation Prep", "Multi-branch", "Clean UI"]
+            },
+            {
+                id: "vanik-institute",
+                name: "Vanik Institute",
+                type: "UPSC, IAS & Banking Coaching",
+                beforeUrl: "https://vanik.org",
+                afterUrl: "https://sourasish-mukherjee1904.github.io/vanik_ias/",
+                category: "professional",
+                categoryLabel: "Professional / IAS",
+                auraScore: 1470,
+                desc: "Elite portal redesign for Odisha's premier civil services training institute. Features custom current affairs grids, live batch updates, and high-performance forms.",
+                brandColor: "#F97316", // Orange
+                brandGlow: "rgba(249, 115, 22, 0.12)",
+                letter: "V",
+                specs: ["IAS & UPSC", "Banking Prep", "Daily Feed", "Odisha & WB"]
+            },
+            {
+                id: "ims-bhubaneswar",
+                name: "IMS Bhubaneswar",
+                type: "CAT, GMAT & CLAT Coaching",
+                beforeUrl: "https://www.imsindia.com",
+                afterUrl: "https://somsubhra-mukherjee.github.io/ims",
+                category: "professional",
+                categoryLabel: "Professional / MBA",
+                auraScore: 1390,
+                desc: "High-end visual overhaul for Nayapalli's elite MBA prep center. Leverages interactive CAT percentile guides, student success sliders, and structured schedules.",
+                brandColor: "#EF4444", // Red
+                brandGlow: "rgba(239, 68, 68, 0.12)",
+                letter: "I",
+                specs: ["CAT & GMAT", "Bhubaneswar", "Percentile Prep", "Premium UI"]
             }
         ];
 
@@ -1543,8 +1608,6 @@
 
             renderData(filteredRedesigns, redesignGrid, false);
             renderData(filteredLive, liveGrid, true);
-            
-            document.getElementById('count-total').innerText = filteredRedesigns.length + filteredLive.length;
         }
 
         searchInput.addEventListener('input', (e) => {
