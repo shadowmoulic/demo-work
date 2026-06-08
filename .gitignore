@@ -6,6 +6,7 @@ dist/
 *.log
 .DS_Store
 .env*
+ecom-revamp
 
 # Dataset files — downloaded locally, not committed to git
 data/*.csv
