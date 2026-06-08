@@ -11,5 +11,8 @@ sys.path.insert(0, str(agent_dir))
 os.environ["PYTHONPATH"] = str(agent_dir)
 
 # Import the FastAPI app from the coaching agent's main backend file
-# pyrefly: ignore [missing-import]
 from backend.main import app
+
+# Wrap with Mangum so Vercel's serverless runtime (AWS Lambda-style) can invoke it
+from mangum import Mangum
+handler = Mangum(app, lifespan="off")

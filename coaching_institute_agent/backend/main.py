@@ -45,16 +45,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Serve outputs folder as static files (for screenshots etc)
+# Serve outputs & frontend as static files (local only — Vercel serves these via CDN)
 import os
 from backend.utils.file_manager import BASE_OUTPUT_DIR
-outputs_dir = str(BASE_OUTPUT_DIR)
-os.makedirs(outputs_dir, exist_ok=True)
-app.mount("/outputs", StaticFiles(directory=outputs_dir), name="outputs")
 
-# Serve frontend folder
-frontend_dir = str(Path(__file__).resolve().parent.parent / "frontend")
-app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
+if not os.getenv("VERCEL"):
+    outputs_dir = str(BASE_OUTPUT_DIR)
+    os.makedirs(outputs_dir, exist_ok=True)
+    app.mount("/outputs", StaticFiles(directory=outputs_dir), name="outputs")
+
+    frontend_dir = str(Path(__file__).resolve().parent.parent / "frontend")
+    app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
+
 
 
 # ── Request/Response models ─────────────────────────────────────────────────
