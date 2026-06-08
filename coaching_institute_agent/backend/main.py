@@ -82,28 +82,28 @@ class AuditRequest(BaseModel):
 #     error: str
 
 class AuditResponse(BaseModel):
-    success: bool
-    url: str
-    slug: str
-    audit: str
-    generated_prompt: str
-    html_code: str
-    eval_score: float
-    eval_score_cta: int
-    eval_score_hierarchy: int
-    eval_score_sections: int
-    eval_score_trust: int
-    eval_score_mobile: int
-    eval_passed: bool
-    eval_hard_fail: bool
-    eval_hard_fail_reason: str
-    eval_issues: str
-    iterations: int
-    audit_file_path: str
-    redesign_file_path: str
-    screenshot_path: str
-    status: str
-    error: str
+    success: bool = True
+    url: str = ""
+    slug: str = ""
+    audit: str = ""          # kept for backward compat — not used in response path
+    generated_prompt: str = ""
+    html_code: str = ""      # kept for backward compat — not used in response path
+    eval_score: float = 0.0
+    eval_score_cta: int = 0
+    eval_score_hierarchy: int = 0
+    eval_score_sections: int = 0
+    eval_score_trust: int = 0
+    eval_score_mobile: int = 0
+    eval_passed: bool = False
+    eval_hard_fail: bool = False
+    eval_hard_fail_reason: str = ""
+    eval_issues: str = ""
+    iterations: int = 0
+    audit_file_path: str = ""
+    redesign_file_path: str = ""
+    screenshot_path: str = ""
+    status: str = ""
+    error: str = ""
 
 
 # ── Build workflow once at startup ──────────────────────────────────────────
@@ -232,13 +232,16 @@ async def run_audit(request: AuditRequest):
         # )
 
 
+        # Return lightweight response — html_code and audit are fetched separately
+        # via GET /history/{slug} to avoid sending a 200KB JSON payload that browsers
+        # may fail to parse ("Unexpected end of JSON input")
         return AuditResponse(
             success=True,
             url=url,
             slug=slug,
-            audit=final_state["audit"],
-            generated_prompt=final_state.get("generated_prompt", ""),
-            html_code=final_state["html_code"],
+            audit="",              # fetched via /history/{slug}
+            generated_prompt="",   # fetched via /history/{slug}
+            html_code="",          # fetched via /history/{slug}
             eval_score=final_state["eval_score"],
             eval_score_cta=final_state.get("eval_score_cta", 0),
             eval_score_hierarchy=final_state.get("eval_score_hierarchy", 0),
@@ -247,8 +250,8 @@ async def run_audit(request: AuditRequest):
             eval_score_mobile=final_state.get("eval_score_mobile", 0),
             eval_passed=final_state["eval_passed"],
             eval_hard_fail=final_state.get("eval_hard_fail", False),
-            eval_hard_fail_reason=final_state.get("eval_hard_fail_reason", "None"),
-            eval_issues=final_state["eval_issues"],
+            eval_hard_fail_reason=final_state.get("eval_hard_fail_reason", ""),
+            eval_issues=final_state.get("eval_issues", ""),
             iterations=final_state["iteration"],
             audit_file_path=audit_path,
             redesign_file_path=redesign_path,
