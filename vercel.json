@@ -3,6 +3,9 @@
     "trailingSlash": false,
     "rewrites": [
         { "source": "/api/(.*)", "destination": "/api/index.py" },
+        { "source": "/coaching_institute_agent", "destination": "/coaching_institute_agent/frontend/index.html" },
+        { "source": "/coaching_institute_agent/", "destination": "/coaching_institute_agent/frontend/index.html" },
+        { "source": "/coaching_institute_agent/(.*)", "destination": "/coaching_institute_agent/frontend/$1" },
         { "source": "/business-audit", "destination": "/business-audit/index.html" },
         { "source": "/business-audit/", "destination": "/business-audit/index.html" },
         { "source": "/bodhih-ttt", "destination": "/bodhih-ttt/index.html" },
