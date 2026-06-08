@@ -2,6 +2,8 @@
     "cleanUrls": true,
     "trailingSlash": false,
     "rewrites": [
+        { "source": "/business-audit", "destination": "/business-audit/index.html" },
+        { "source": "/business-audit/", "destination": "/business-audit/index.html" },
         { "source": "/bodhih-ttt", "destination": "/bodhih-ttt/index.html" },
         { "source": "/bodhih-ttt/", "destination": "/bodhih-ttt/index.html" },
         { "source": "/POC/ignite-global", "destination": "/POC/ignite-global/index.html" },
